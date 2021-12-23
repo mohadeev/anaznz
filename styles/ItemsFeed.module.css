@@ -1,0 +1,16 @@
+.items.div{
+    color:  white;
+    background-color: red;
+}
+.banner_div{
+    width: 100%;
+    height: 500px;
+    background-image: url("https://previews.123rf.com/images/scyther5/scyther52004/scyther5200400006/145787253-beauty-background-with-facial-cosmetic-products-with-empty-copy-space-makeup-skin-care-concept-with-.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.item_div{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background-color: #EAEDED;
+}

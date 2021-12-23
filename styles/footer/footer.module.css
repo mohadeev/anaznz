@@ -1,0 +1,25 @@
+.div_footer{
+    width: 100%;
+    height: 400px;
+    background-color: red;
+    background-image: url("https://www.teahub.io/photos/full/177-1777854_wallpaper-desert-hill-dusk-sand-dunes-desert-dunes.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.ovely{
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  background-image: linear-gradient(to bottom,  #071c55 , rgba(255, 255, 255, 0));
+}
+.div_wayes{
+  width: 100%;
+  height: 50px;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('/my-app/public/header.png');
+}
