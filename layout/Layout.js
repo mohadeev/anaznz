@@ -14,8 +14,8 @@ const Layout = ({ children }) => {
           rel="stylesheet"
         />
       </head>
-      <Header />
-      {children}
+      <Header /> 
+       {children}
       <Footer />
     </div>
   );
