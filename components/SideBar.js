@@ -10,7 +10,6 @@ const SideBar = () => {
   const [Document, setDocumenr] = useState();
 
   useEffect(() => {
-
     setRefCurrent(reff.current);
 
     setwindow(window);
@@ -22,19 +21,16 @@ const SideBar = () => {
       ) {
         RefCurrent.className = Style.div_style3;
       } else if (document.documentElement.scrollTop < 1000) {
-        RefCurrent.className = Style.div_style1
-
+        RefCurrent.className = Style.div_style1;
       } else if (document.documentElement.scrollTop >= 1000) {
         RefCurrent.className = Style.div_style2;
       }
     };
-  });
+  },);
 
-
-const AskForContactForm =()=>{
-          RefCurrent.className = Style.div_style2;
-
-}
+  const AskForContactForm = () => {
+    RefCurrent.className = Style.div_style2;
+  };
   return (
     <div className={Style.div_mom}>
       <div ref={reff} className={Style.div_style1} onClick={AskForContactForm}>

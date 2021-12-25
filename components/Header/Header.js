@@ -13,7 +13,6 @@ const Header = () => {
   useEffect(() => {
     setWindowScreen(window.screen.width);
     setWindow(window);
-
     if (WindowScreen > 400) {
       setHide(true);
     } else if (WindowScreen <= 400) {
@@ -21,7 +20,7 @@ const Header = () => {
     } else {
       setHide(true);
     }
-  }, []);
+  }, [Window, Hide, WindowScreen]);
 
   const LogoMenuShow = () => {
     if (WindowScreen > 400) {

@@ -90,7 +90,6 @@ const Fmmm = () => {
           tag4,
         }) => (
           <TourLayout
-            TourName={tourname}
             key={id}
             Tour_imnage={image}
             Image1={image1}
@@ -150,7 +149,7 @@ const Fmmm = () => {
               <div>
                 <h5 className={Style.title_tour_bem}>Reviews</h5>
                 {ReviewArray.map(({ textreview }) => (
-                  <Review TextReview={textreview} />
+                  <Review TextReview={textreview} key={Math.random()}/>
                 ))}
       
               </div>

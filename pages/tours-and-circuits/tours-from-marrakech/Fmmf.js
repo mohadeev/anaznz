@@ -72,7 +72,6 @@ const Fmmf = () => {
           discount,
         }) => (
           <TourLayout
-            TourName={tourname}
             key={id}
             Tour_imnage={image}
             Image1={image1}
