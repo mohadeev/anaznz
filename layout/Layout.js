@@ -3,6 +3,7 @@ import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Style from "../styles/Layout-css/Layout.module.css";
 
+
 const Layout = ({ children }) => {
   return (
     <div className={Style.div_layout}>
@@ -14,6 +15,7 @@ const Layout = ({ children }) => {
           rel="stylesheet"
         />
       </head>
+
       <Header /> 
        {children}
       <Footer />

@@ -40,6 +40,7 @@ const TourLayout = ({
       <div className={Style.second_child}>
         <MainTour> {children}</MainTour>
         <SideBar />
+        {/*this is was 4:55*/}
       </div>
     </div>
   );
