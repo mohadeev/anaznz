@@ -5,7 +5,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width:  100%;
+  width: 100%;
   right: 0;
   top: 0;
   left: 0;
@@ -25,7 +25,7 @@
   background-repeat: no-repeat;
   position: relative;
   left: 60px;
-  TOP: 60px;
+  top: 60px;
 }
 .div_nav_bar {
   width: 80%;
@@ -44,6 +44,9 @@
   color: white;
   font-family: Playfair Display;
 }
+.div_nav_bar_mobile_icon {
+  display: none;
+}
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE START CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE START CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE START CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
@@ -52,7 +55,70 @@
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE START CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE START CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE START CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-
+@media screen and (max-width: 400px) {
+  .header {
+    position: relative;
+    background-image: url("../public/images/header.png");
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    right: 0;
+    top: 0;
+    left: 0;
+    height: 80px;
+    justify-items: center;
+    background-size: cover;
+    padding-top: 40px;
+    background-position: top;
+    max-width: 400px;
+  }
+  .logo {
+    width: 200px;
+    height: 200px;
+    margin: 0 1%;
+    object-fit: contain;
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 60px;
+    top: 60px;
+  }
+  .div_nav_bar {
+    width: 80%;
+  }
+  .div_nav_bar_mobile_icon {
+    display: flex;
+    color: white;
+    background-color: red;
+    position: absolute;
+    right: 0;
+  }
+  .ul_nav_bar {
+    position: relative;
+    right: 10px;
+    background-color: #071c55;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 100px;
+    z-index: 10;
+    border: 2px solid red;
+  }
+  .li_nav_bar {
+    list-style: none;
+    margin: 0 20px;
+  }
+  .li_nav_bar > a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-family: Playfair Display;
+  }
+}
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE END CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE END CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE END CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/

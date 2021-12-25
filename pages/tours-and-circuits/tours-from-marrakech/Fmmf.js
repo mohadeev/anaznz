@@ -55,12 +55,12 @@ const Fmmf = () => {
   ]);
 
   return (
-    <TourLayout>
+    <TourLayout TourName={"df"}>
       <div>
         {SeoArray.map(({ seotile, desc }) => (
           <Seo key={id} SeoTile={seotile} DescMata={desc} />
         ))}
-        {TourArray.map(
+        {/* {TourArray.map(
           ({
             image,
             image1,
@@ -93,7 +93,7 @@ const Fmmf = () => {
               Discount={discount}
             />
           )
-        )}
+        )} */}
         <div className={Style.div_itenbery}>
           {TourItinirary.map(({ overview }) => (
             <SingleItit key={id} Overview={overview} />
@@ -101,7 +101,6 @@ const Fmmf = () => {
           {/*NORMAL DAYS GO HERE*/}
           <div>
             {MarrakechtoDades.map(({ day, tour }) => (
-
               <NoralDay key={id} Day={day} DayNumer={"11"} TourDay={tour} />
             ))}
 

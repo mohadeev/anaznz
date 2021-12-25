@@ -1,0 +1,8 @@
+.MainTour {
+  width: 65%;
+}
+@media screen and (max-width: 400px) {
+  .MainTour {
+    width: 100%;
+  }
+}

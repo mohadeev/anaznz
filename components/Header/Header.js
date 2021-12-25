@@ -3,6 +3,8 @@ import Style from "../../styles/Header.module.css";
 import Link from "next/link";
 import LiveCHat from "../LiveChat/LiveCHat";
 import Image from "next/image";
+import { TiThMenu } from "@react-icons/all-files/ti/TiThMenu";
+
 
 const Header = () => {
   const [Url, setUrl] = useState(
@@ -22,7 +24,7 @@ const Header = () => {
           backgroundImage: `url('/images/header.png')`,
         }}
       >
-        <Link href={`${Url}`}>
+        <Link href="/" passHref={true}>
           <div
             className={Style.logo}
             style={{
@@ -30,6 +32,9 @@ const Header = () => {
             }}
           ></div>
         </Link>
+        <div className={Style.div_nav_bar_mobile_icon}>
+          <TiThMenu />
+        </div>
         <div className={Style.div_nav_bar}>
           <ul className={Style.ul_nav_bar}>
             <li className={Style.li_nav_bar}>

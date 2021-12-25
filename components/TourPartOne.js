@@ -26,13 +26,13 @@ const TourPartOne = ({
   const Tag = (tags) => {
     return (
       <div className={Style.each_tage_item}>
-      <span>#</span>
-        <p>{tags}</p>
+        <p><span>#</span>{tags}</p>
       </div>
     );
   };
   return (
     <div className={Style.tourpaertone_container}>
+        <div className={Style.tourpaertone_container1}>
       <div
         style={{ backgroundImage: `url(${Tour_imnage})` }}
         className={Style.div_image_banner}
@@ -46,6 +46,8 @@ const TourPartOne = ({
           </div>
         </div>
       </div>
+          </div>
+
       <div className={Style.div_info_tour}>
         {/* //start of the div  */}
         <div className={Style.div_info_images}>
