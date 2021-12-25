@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Style from "../styles/Layout-css/Layout.module.css";
 
-
 const Layout = ({ children }) => {
+  const [Sckroll, setSckroll] = useState(null);
+  useEffect(() => {
+  }, []);
+  
+  console.log(setSckroll);
   return (
     <div className={Style.div_layout}>
       <head>
@@ -16,8 +20,8 @@ const Layout = ({ children }) => {
         />
       </head>
 
-      <Header /> 
-       {children}
+      <Header />
+      {children}
       <Footer />
     </div>
   );

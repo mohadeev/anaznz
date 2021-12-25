@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { FaMapSigns } from "@react-icons/all-files/fa/FaMapSigns";
 import { IoIosArrowDown } from "@react-icons/all-files/io/IoIosArrowDown";
 import { IoIosArrowUp } from "@react-icons/all-files/io/IoIosArrowUp";
-
 import Style from "../../styles/toursModal/Tour-ItitniretyItems.module.css";
 
 //666;

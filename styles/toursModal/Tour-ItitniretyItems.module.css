@@ -3,6 +3,7 @@
   font-size: 17.5px;
   padding: 0;
   margin: 0;
+  margin: 10px 0 ;
 }
 #overview {
   color: #666;
@@ -84,7 +85,7 @@
     color: #071c55;
     font-size: 17.5px;
     padding: 0;
-    margin: 0;
+    margin-bottom: 10px;
   }
   #overview {
     color: #666;
@@ -102,7 +103,9 @@
     padding: 0;
     margin: 0;
     margin-left: 20px;
+
     text-align: justify;
+
   }
   .title_tour_title {
     padding: 0;

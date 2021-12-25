@@ -77,7 +77,7 @@ const Header = () => {
               <Link href="/">Excursions</Link>
             </li>
             <li className={Style.li_nav_bar}>
-              <Link href="/tours-and-circuits/tours-from-marrakech/Fmmf">
+              <Link href="/tours-and-circuits/tours-from-marrakech/Fmmm">
                 About us
               </Link>
             </li>

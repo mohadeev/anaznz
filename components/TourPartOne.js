@@ -22,31 +22,38 @@ const TourPartOne = ({
   Nights,
   Price,
   Discount,
+  Tag1,
+  Tag2,
+  Tag3,
+  Tag4,
 }) => {
   const Tag = (tags) => {
     return (
       <div className={Style.each_tage_item}>
-        <p><span>#</span>{tags}</p>
+        <p>
+          <span>#</span>
+          {tags}
+        </p>
       </div>
     );
   };
   return (
     <div className={Style.tourpaertone_container}>
-        <div className={Style.tourpaertone_container1}>
-      <div
-        style={{ backgroundImage: `url(${Tour_imnage})` }}
-        className={Style.div_image_banner}
-      >
-        <div className={Style.div_overley_tour}>
-          <div>
-            <h1 className={Style.tour_title}>{TourName}</h1>
-            <h2 className={Style.tour_category}>
-              <FaLocationArrow /> {Category}
-            </h2>
+      <div className={Style.tourpaertone_container1}>
+        <div
+          style={{ backgroundImage: `url(${Tour_imnage})` }}
+          className={Style.div_image_banner}
+        >
+          <div className={Style.div_overley_tour}>
+            <div>
+              <h1 className={Style.tour_title}>{TourName}</h1>
+              <h2 className={Style.tour_category}>
+                <FaLocationArrow /> {Category}
+              </h2>
+            </div>
           </div>
         </div>
       </div>
-          </div>
 
       <div className={Style.div_info_tour}>
         {/* //start of the div  */}
@@ -102,11 +109,10 @@ const TourPartOne = ({
               <span className={Style.span_duration_tour}>5.5</span>
             </span>
             <div className={Style.tag_item}>
-              {Tag("Tours From Marrakech Desert")}
-              {Tag("Tours From Marrakech Desert Tours")}
-              {Tag("Tours  Marrakech  Tours")}
-              {Tag("Tours From Marrakech Desert Tours")}
-              {Tag("Tours  Marrakech Desert")}
+              {Tag(Tag1)}
+              {Tag(Tag2)}
+              {Tag(Tag3)}
+              {Tag(Tag4)}
             </div>
           </div>
           <div className={Style.div_info_tour_second_secondchild}>

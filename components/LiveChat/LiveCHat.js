@@ -1,13 +1,15 @@
-import React , {useRef , useState , useEffect} from 'react';
+import React, { useRef, useState, useEffect } from "react";
 import { AiOutlineSend } from "@react-icons/all-files/ai/AiOutlineSend";
 import Style from "../../styles/LiveChat/LiveChat.module.css";
- import { BsChatSquareDotsFill } from "@react-icons/all-files/bs/BsChatSquareDotsFill";
-import Image from 'next/image' 
+import { BsChatSquareDotsFill } from "@react-icons/all-files/bs/BsChatSquareDotsFill";
+import { FaArrowAltCircleUp} from "@react-icons/all-files/fa/FaArrowAltCircleUp";
+
+
+import Image from "next/image";
 function LiveCHat() {
- 
   //   const toHideForm = useRef(null);
 
-  //   const [ShowEl, setShowEl] = useState(true); 
+  //   const [ShowEl, setShowEl] = useState(true);
 
   //   const HideFunction = () => {
   //     if (ShowEl === false) {
@@ -35,41 +37,49 @@ function LiveCHat() {
   //     }, 6000);
   //   };
 
-    var Space = "---------------";
-    const [quiMessage, setquiMessage] = useState("");
+  //Take to top
 
-    var windowObjectReference;
 
-    function openRequestedPopup() {
-      if (window.screen.width >= 500) {
-        windowObjectReference = window.open(
-          "https://web.whatsapp.com/send?phone=0034643635962&text=Your Message :" +
-            quiMessage +
-            "%0A" +
-            Space.repeat(6) +
-            "%0AAbout : " +
-            document.title +
-            "%0ATo: " +
-            "Support Ur Excursions"
-        );
-      } else if (window.screen.width <= 500) {
-        windowObjectReference = window.open(
-          "https://api.whatsapp.com/send?phone=34643635962&text=Your Message :" +
-            quiMessage +
-            "%0A" +
-            Space.repeat(3) +
-            "%0AAbout : " +
-            document.title +
-            "%0ATo: " +
-            "Support Ur Excursions"
-        );
-      }
+   const TakeToTop = () => {
+       document.body.scrollTop = 600;
+       document.documentElement.scrollTop = 0;
+   };
+
+  var Space = "---------------";
+  const [quiMessage, setquiMessage] = useState("");
+
+  var windowObjectReference;
+
+  function openRequestedPopup() {
+    if (window.screen.width >= 500) {
+      windowObjectReference = window.open(
+        "https://web.whatsapp.com/send?phone=0034643635962&text=Your Message :" +
+          quiMessage +
+          "%0A" +
+          Space.repeat(6) +
+          "%0AAbout : " +
+          document.title +
+          "%0ATo: " +
+          "Support Ur Excursions"
+      );
+    } else if (window.screen.width <= 400) {
+      windowObjectReference = window.open(
+        "https://api.whatsapp.com/send?phone=34643635962&text=Your Message :" +
+          quiMessage +
+          "%0A" +
+          Space.repeat(3) +
+          "%0AAbout : " +
+          document.title +
+          "%0ATo: " +
+          "Support Ur Excursions"
+      );
     }
-
-  const [HideElment, setHideElment] = useState(true)
-  const hideForm =()=>{
-    setHideElment(!HideElment);
   }
+
+  const [HideElment, setHideElment] = useState(true);
+  const hideForm = () => {
+    setHideElment(!HideElment);
+  };
   return (
     <div>
       {HideElment ? (
@@ -115,10 +125,11 @@ function LiveCHat() {
       <button className={Style.buttonOfWHatIcon} onClick={hideForm}>
         <BsChatSquareDotsFill />
       </button>
+      <button className={Style.buttonOfTopIcon} onClick={TakeToTop}>
+        <FaArrowAltCircleUp />
+      </button>
     </div>
   );
 }
 
-export default LiveCHat
-
-
+export default LiveCHat;

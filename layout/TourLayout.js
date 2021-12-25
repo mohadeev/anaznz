@@ -19,6 +19,11 @@ const TourLayout = ({
   Nights,
   Price,
   Discount,
+  tag2,
+  Tag1,
+  Tag2,
+  Tag3,
+  Tag4,
 }) => {
   return (
     <div className={Style.div_layout_div_css}>
@@ -36,6 +41,10 @@ const TourLayout = ({
         Nights={Nights}
         Price={Price}
         Discount={Discount}
+        Tag1={Tag1}
+        Tag2={Tag2}
+        Tag3={Tag3}
+        Tag4={Tag4}
       />
       <div className={Style.second_child}>
         <MainTour> {children}</MainTour>

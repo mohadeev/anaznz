@@ -11,8 +11,9 @@ import {
   NoralDay,
   StyledalDay,
 } from "../../../components/SingleItit/SingleItit";
+import Review from "../../../components/Reviews/Review";
 
-const Fmmf = () => {
+const Fmmm = () => {
   const id = "fmmf";
   const [TourArray, setTourArray] = useState([
     {
@@ -36,6 +37,10 @@ const Fmmf = () => {
       nights: 4,
       price: 123,
       discount: 20,
+      tag1: "Tours From Marrakech",
+      tag2: "Tours From Marrakech",
+      tag3: "Tours From Marrakech",
+      tag4: "Tours From Marrakech",
     },
   ]);
 
@@ -52,7 +57,16 @@ const Fmmf = () => {
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis harum similique fugiat temporibus libero commodi aspernatur quasi doloremque, velit molestias! Enim molestiae eos accusantium placeat quisquam pariatur voluptas deleniti minima. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis harum similique fugiat temporibus libero commodi aspernatur quasi doloremque, velit molestias! Enim molestiae eos accusantium placeat quisquam pariatur voluptas deleniti minima.",
     },
   ]);
-
+  const [ReviewArray, setReviewArray] = useState([
+    {
+      textreview:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis harum similique fugiat temporibus libero commodi aspernatur quasi doloremque, velit molestias! Enim molestiae eos accusantium placeat quisquam pariatur voluptas deleniti minima. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis harum similique fugiat temporibus libero commodi aspernatur quasi doloremque, velit molestias! Enim molestiae eos accusantium placeat quisquam pariatur voluptas deleniti minima.",
+    },
+    {
+      textreview:
+        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis harum similique fugiat temporibus libero commodi aspernatur quasi doloremque, velit molestias! Enim molestiae eos accusantium placeat quisquam pariatur voluptas deleniti minima. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis harum similique fugiat temporibus libero commodi aspernatur quasi doloremque, velit molestias! Enim molestiae eos accusantium placeat quisquam pariatur voluptas deleniti minima.",
+    },
+  ]);
   return (
     <>
       {TourArray.map(
@@ -70,6 +84,10 @@ const Fmmf = () => {
           nights,
           price,
           discount,
+          tag1,
+          tag2,
+          tag3,
+          tag4,
         }) => (
           <TourLayout
             TourName={tourname}
@@ -87,6 +105,10 @@ const Fmmf = () => {
             Nights={nights}
             Price={price}
             Discount={discount}
+            Tag1={tag1}
+            Tag2={tag2}
+            Tag3={tag3}
+            Tag4={tag4}
           >
             <div className={Style.div_itenbery}>
               {/*oOVERVIEW GO HERE*/}
@@ -125,6 +147,13 @@ const Fmmf = () => {
                   />
                 ))}
               </div>
+              <div>
+                <h5 className={Style.title_tour_bem}>Reviews</h5>
+                {ReviewArray.map(({ textreview }) => (
+                  <Review TextReview={textreview} />
+                ))}
+      
+              </div>
             </div>
           </TourLayout>
         )
@@ -133,4 +162,4 @@ const Fmmf = () => {
   );
 };
 
-export default Fmmf;
+export default Fmmm;

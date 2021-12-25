@@ -30,6 +30,23 @@
   z-index: 10000;
   cursor: pointer;
 }
+.buttonOfTopIcon{
+  display : flex ; 
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #061C54;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  right: 30px;
+  bottom: 10px;
+  border: none;
+  color: white;
+  z-index: 10000;
+  cursor: pointer;
+  font-size: 20px;
+}
 .div_live_chat {
   font-family: Poppins;
   font-size: 14px;
@@ -143,7 +160,7 @@
     text-align: center;
   }
   .THide_Form {
-    display: none;
+    display: static;
   }
   .Show_Form {
     display: block;
@@ -261,29 +278,29 @@
   background-color: #f8f8f8;
   margin: auto;
   border-radius: 4px;
-  margin-right: 60px;
+  margin-right: 0px;
 }
 .div_Contact_Form > input {
   width: 80%;
   margin: auto;
   color: #666;
   outline: none;
-  height: 50px;
+  height: 40px;
   border: 1px solid #eaeaea;
   border-radius: 4px;
-  padding: 0 20px;
-  margin-bottom: 30px;
+  padding: 0 10px;
+  margin-bottom: 10px;
 }
 .div_Contact_Form > textarea {
   width: 80%;
   margin: auto;
   color: #666;
   outline: none;
-  height: 150px;
+  height: 100px;
   border: 1px solid #eaeaea;
   border-radius: 4px;
   padding: 0 20px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 .contact_us_btn {
   background-color: #f3941e;
