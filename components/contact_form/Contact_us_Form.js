@@ -27,7 +27,7 @@ function Contact_us_Form() {
     }
     return (
       <div className={Style.div_of_form}>
-        <form>
+        <form action="https://formsubmit.co/moroccostartour@gmail.com" method="POST" to="/">
           <div className={Style.div_Contact_Form}>
             <span className={Style.TextContact_form}>
               <IoIosArrowUp /> Your Name : {name}
@@ -91,10 +91,9 @@ function Contact_us_Form() {
               value={message}
               onChange={messageHandler}
             />
-            <button
+            <button 
               className={Style.contact_us_btn}
               type="submit"
-              onClick={resetForm}
             >
               {" "}
               {sent} Book Now <IoIosArrowUp />{" "}

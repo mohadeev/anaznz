@@ -3,18 +3,25 @@ import Seo from "../../../components/Seo";
 import TourLayout from "../../../layout/TourLayout";
 import Style from "../../../styles/toursModal/tourItinerary.module.css";
 import SingleItit from "../../../components/SingleItit/SingleItit";
-import {
-  MarrakechtoDades,
-  MarrakechtMerzouga,
-} from "../../../DaysData/FromMarrakech";
-import {
-  NoralDay,
-  StyledalDay,
-} from "../../../components/SingleItit/SingleItit";
-import Review from "../../../components/Reviews/Review";
+import { DayTour } from "../../../DaysData/Days";
+import { useSelector } from "react-redux";
 
-const Fmmm = () => {
-  const id = "fmmf";
+import Review from "../../../components/Reviews/Review";
+import {
+  Included,
+  IncludesConatainer,
+  NotIncludesConatainer,
+} from "../../../components/includes/Includes";
+import ReviewNote, {
+  ReviewAlays,
+} from "../../../components/ReviewNote/ReviewNote";
+import Tags, { TagItm } from "../../../components/Tags/Tags";
+import Note from "../../../components/Note/Note";
+
+const Index = () => {
+  const Counter = useSelector((state) => state.main);
+  const id = "5MMF";
+  //INFO ABOUT FIRST PART OF THE TOUR GO HERE
   const [TourArray, setTourArray] = useState([
     {
       image:
@@ -37,34 +44,63 @@ const Fmmm = () => {
       nights: 4,
       price: 123,
       discount: 20,
-      tag1: "Tours From Marrakech",
+      tag1: "Tours From Sahara Desert Tours",
       tag2: "Tours From Marrakech",
       tag3: "Tours From Marrakech",
       tag4: "Tours From Marrakech",
     },
   ]);
-
+  //SEO GO HERE
   const [SeoArray, setSeoArray] = useState([
     {
-      seotile: "THis this the seo title",
-      desc: "this is the descreption of seo",
-      meta: "this is meta about twiter and facebook",
+      descmeta: "this is the meta data for seo",
+      seotile: "Sahara Desert Tours",
+      imageseo:
+        "https://www.topsaharatrips.com/images/merzouga-quad-biking.webp",
     },
   ]);
+  // THIS IS OVERVIEW TEXT
   const [TourItinirary, setTourItinirary] = useState([
     {
       overview:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis harum similique fugiat temporibus libero commodi aspernatur quasi doloremque, velit molestias! Enim molestiae eos accusantium placeat quisquam pariatur voluptas deleniti minima. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis harum similique fugiat temporibus libero commodi aspernatur quasi doloremque, velit molestias! Enim molestiae eos accusantium placeat quisquam pariatur voluptas deleniti minima.",
     },
   ]);
+  //REVIEWS GO HERE
   const [ReviewArray, setReviewArray] = useState([
     {
+      personname: "Mohamed Skendoul",
+      postdate: "20/12/2010",
       textreview:
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis harum similique fugiat temporibus libero commodi aspernatur quasi doloremque, velit molestias! Enim molestiae eos accusantium placeat quisquam pariatur voluptas deleniti minima. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis harum similique fugiat temporibus libero commodi aspernatur quasi doloremque, velit molestias! Enim molestiae eos accusantium placeat quisquam pariatur voluptas deleniti minima.",
     },
+  ]);
+  // HIGHTLIGHT GO HERE
+  const [TagsArrau, setTagsArrau] = useState([
+    "Morocco",
+    "Desert Tours",
+    "Desert Tours",
+    "Desert Tours",
+    "Desert Tours",
+    "Desert Tours",
+  ]);
+  const [AllDays, setAllDays] = useState([
     {
-      textreview:
-        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis harum similique fugiat temporibus libero commodi aspernatur quasi doloremque, velit molestias! Enim molestiae eos accusantium placeat quisquam pariatur voluptas deleniti minima. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis harum similique fugiat temporibus libero commodi aspernatur quasi doloremque, velit molestias! Enim molestiae eos accusantium placeat quisquam pariatur voluptas deleniti minima.",
+      dayNumer: "1",
+      tourId: "MAR-OUR-DES",
+      Isfirst: true,
+      blockstyle: "none",
+    },
+    { dayNumer: "2", tourId: "MARR-HIG-OUR", blockstyle: "block" },
+    {
+      dayNumer: "3",
+      tourId: "DES-GOR-MER",
+      blockstyle: "block",
+    },
+    {
+      dayNumer: "4",
+      tourId: "DES-OUR-MARR",
+      blockstyle: "block",
     },
   ]);
   return (
@@ -90,6 +126,7 @@ const Fmmm = () => {
           tag4,
         }) => (
           <TourLayout
+            // First Area of the Tour
             key={id}
             Tour_imnage={image}
             Image1={image1}
@@ -109,49 +146,53 @@ const Fmmm = () => {
             Tag3={tag3}
             Tag4={tag4}
           >
+            {SeoArray.map(({ descmeta, seotile, imageseo }) => (
+              <Seo
+                SeoTile={seotile}
+                DescMeta={descmeta}
+                ImageSeo={imageseo}
+                key={Math.random()}
+              />
+            ))}
             <div className={Style.div_itenbery}>
-              {/*oOVERVIEW GO HERE*/}
+              {/*OVERVIEW GO HERE*/}
               {TourItinirary.map(({ overview }) => (
-                <SingleItit key={id} Overview={overview} />
+                <SingleItit key={id} Overview={overview} MytourName="sdkjsd" />
               ))}
               {/*NORMAL DAYS GO HERE*/}
               <div>
-                {MarrakechtoDades.map(({ day, tour }) => (
-                  <NoralDay key={id} Day={day} DayNumer={"11"} TourDay={tour} />
-                ))}
-
-                {MarrakechtMerzouga.map(({ day, tour, id }) => (
-                  <StyledalDay
-                    key={id}
-                    sDay={day}
-                    sDayNumer={"02"}
-                    sTourDay={tour}
-                  />
-                ))}
-
-                {MarrakechtMerzouga.map(({ day, tour, id }) => (
-                  <StyledalDay
-                    key={id}
-                    sDay={day}
-                    sDayNumer={"03"}
-                    sTourDay={tour}
-                  />
-                ))}
-                {MarrakechtMerzouga.map(({ day, tour, id }) => (
-                  <StyledalDay
-                    key={id}
-                    sDay={day}
-                    sDayNumer={"03"}
-                    sTourDay={tour}
+                {AllDays.map(({ dayNumer, tourId, Isfirst, blockstyle }) => (
+                  <DayTour
+                    DayNumer={dayNumer}
+                    TourId={tourId}
+                    IsFirst={Isfirst}
+                    Blockstyle={blockstyle}
                   />
                 ))}
               </div>
+              <Note />
+              {/*DIV INCLUDES GO HERE */}
+              <h5 className={Style.title_tour_bem}>
+                Tour Price Includes and Excludes
+              </h5>
+              <div className={Style.div_includes}>
+                <IncludesConatainer></IncludesConatainer>
+                <NotIncludesConatainer />
+              </div>
+              {/* DIV / REVIEWS GO HERE*/}
               <div>
+                <Tags>{TagsArrau.map((item) => TagItm(item))}</Tags>
                 <h5 className={Style.title_tour_bem}>Reviews</h5>
-                {ReviewArray.map(({ textreview }) => (
-                  <Review TextReview={textreview} key={Math.random()}/>
+                <ReviewAlays />
+                {ReviewArray.map(({ textreview, personname, postdate }) => (
+                  <Review
+                    TextReview={textreview}
+                    PersonName={personname}
+                    PostDate={postdate}
+                    key={Math.random()}
+                  />
                 ))}
-      
+                <ReviewNote />
               </div>
             </div>
           </TourLayout>
@@ -161,4 +202,4 @@ const Fmmm = () => {
   );
 };
 
-export default Fmmm;
+export default Index;

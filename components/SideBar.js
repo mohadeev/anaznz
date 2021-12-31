@@ -11,9 +11,7 @@ const SideBar = () => {
 
   useEffect(() => {
     setRefCurrent(reff.current);
-
     setwindow(window);
-
     window.onscroll = function (ev) {
       if (
         Window.innerHeight + window.scrollY >=
@@ -26,7 +24,7 @@ const SideBar = () => {
         RefCurrent.className = Style.div_style2;
       }
     };
-  },);
+  }, [Window , RefCurrent]);
 
   const AskForContactForm = () => {
     RefCurrent.className = Style.div_style2;

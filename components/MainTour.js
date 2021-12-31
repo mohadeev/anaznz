@@ -5,7 +5,6 @@ import Review from './Reviews/Review'
 const MainTour = ({ children}) => {
     return <div className={Style.MainTour}>
     {children} 
-    
     </div>
 }
 

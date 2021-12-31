@@ -5,5 +5,7 @@
 @media screen and (max-width: 400px) {
   .MainTour {
     width: 100%;
+      margin : 0;
+
   }
 }

@@ -30,7 +30,7 @@ const TourPartOne = ({
   const Tag = (tags) => {
     return (
       <div className={Style.each_tage_item}>
-        <p>
+        <p className={Style.iteeems_tags}>
           <span>#</span>
           {tags}
         </p>

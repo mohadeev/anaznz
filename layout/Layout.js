@@ -5,9 +5,8 @@ import Style from "../styles/Layout-css/Layout.module.css";
 
 const Layout = ({ children }) => {
   const [Sckroll, setSckroll] = useState(null);
-  useEffect(() => {
-  }, []);
-  
+  useEffect(() => {}, []);
+
   console.log(setSckroll);
   return (
     <div className={Style.div_layout}>
@@ -15,7 +14,7 @@ const Layout = ({ children }) => {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@100;200;300;400;600;700;800;900&display=swap"
           rel="stylesheet"
         />
       </head>

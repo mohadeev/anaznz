@@ -3,7 +3,8 @@ import Style from "../../styles/Header.module.css";
 import Link from "next/link";
 import LiveCHat from "../LiveChat/LiveCHat";
 import { TiThMenu } from "@react-icons/all-files/ti/TiThMenu";
-import { AiOutlineClose } from "@react-icons/all-files/Ai/AiOutlineClose";
+import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
+import Socialmedia from "../socialmedia/Socialmedia";
 
 const Header = () => {
   const [Window, setWindow] = useState("");
@@ -11,6 +12,7 @@ const Header = () => {
   const [WindowScreen, setWindowScreen] = useState("");
 
   useEffect(() => {
+
     setWindowScreen(window.screen.width);
     setWindow(window);
     if (WindowScreen > 400) {
@@ -21,6 +23,9 @@ const Header = () => {
       setHide(true);
     }
   }, [Window, Hide, WindowScreen]);
+
+
+
 
   const LogoMenuShow = () => {
     if (WindowScreen > 400) {
@@ -59,16 +64,15 @@ const Header = () => {
           )}
         </div>
 
-        <div className={Hide ? Style.div_nav_bar : Style.div_nav_bar_hide }>
+        <div className={Hide ? Style.div_nav_bar : Style.div_nav_bar_hide}>
           <ul className={Style.ul_nav_bar}>
-            
             <li className={Style.li_nav_bar}>
               <Link href="/" passHref={true}>
                 Home
               </Link>
             </li>
             <li className={Style.li_nav_bar}>
-              <Link href="/tours-and-circuits/tours-from-marrakech/Fmmf">
+              <Link href="/tours-and-circuits/tours-from-marrakech/3-days-from-marrakech-to-merzouga">
                 Tours & Cuircuits
               </Link>
             </li>
@@ -76,29 +80,25 @@ const Header = () => {
               <Link href="/">Excursions</Link>
             </li>
             <li className={Style.li_nav_bar}>
-              <Link href="/tours-and-circuits/tours-from-marrakech/Fmmm">
+              <Link href="/tours-and-circuits/tours-from-marrakech/3-days-from-marrakech-to-merzouga">
                 About us
               </Link>
             </li>
             <li className={Style.li_nav_bar}>
-              <Link href="/">
-                Contact us
-              </Link>
+              <Link href="/">Contact us</Link>
             </li>
             <li className={Style.li_nav_bar}>
-              <Link href="">
-                FaQ
-              </Link>
+              <Link href="">FaQ</Link>
             </li>
             <li className={Style.li_nav_bar}>
-              <Link href="/">
-                Blog
-              </Link>
+              <Link href="/">Blog</Link>
             </li>
           </ul>
         </div>
+        <div className={Style.div_socail__icons}>
+          <Socialmedia />
+        </div>
       </div>
-      <div></div>
     </>
   );
 };

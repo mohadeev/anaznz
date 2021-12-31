@@ -1,7 +1,5 @@
 import React from "react";
-import Header from "../components/Header/Header";
 import Style from "../styles/Home.module.css";
-import Fmmf from "./tours-and-circuits/tours-from-marrakech/Fmmf";
 
 const index = ({ datas }) => {
   return (

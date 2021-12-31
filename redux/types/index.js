@@ -1,0 +1,1 @@
+export const TYPES = "SHOW_THE_TOUR";

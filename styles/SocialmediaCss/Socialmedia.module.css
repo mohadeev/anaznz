@@ -1,30 +1,16 @@
-.div_itenbery {
-  background-color: white;
-  color: #666;
-  font-family: poppins;
-  font-size: 15px;
-  height: auto;
-  width: 100%;
-}
-.title_tour_bem {
-  color: #071c55;
-  font-size: 17.5px;
-  padding: 0;
-  margin: 40px 0;
-}
-.div_includes {
-  display: grid;
-  grid-template-columns: 60% 40%;
-}
-.div_includes {
-  border: 2px solid #f3941e;
-  border-radius: 10px;
-  padding: 0 50px;
+.div_Socialmedia {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+  color: #ffffff;
+  position: absolute;
+  right: 60px;
 }
+.each_socail {
+  font-size: 17px;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE START CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE START CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE START CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
@@ -34,35 +20,13 @@
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE START CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE START CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 @media screen and (max-width: 400px) {
-  .div_itenbery {
-    background-color: white;
-    color: #666;
-    font-family: poppins;
-    font-size: 15px;
-    height: auto;
-    margin-left: 0%;
-    padding-right: 0%;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    width: 100%;
-    max-width: 400px;
-  }
-  .title_tour_bem {
-    color: #071c55;
-    font-size: 17.5px;
-    padding: 0;
-    margin: 40px 0;
-  }
-  
-  .div_includes {
-    border: 2px solid #f3941e;
-    border-radius: 10px;
-    padding: 0 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-  }
+  .div_Socialmedia {
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+  position: absolute;
+  right: 60px;
+}
 }
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE END CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE END CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
@@ -72,3 +36,4 @@
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE END CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE END CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE END CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
