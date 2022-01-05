@@ -1,0 +1,17 @@
+.index_container {
+  max-width: 1400px;
+  margin: auto;
+  height: auto;
+  margin-bottom: 100px;
+}
+.fg {
+  position: absolute;
+}
+.people_container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0 5%;
+  flex-wrap: wrap;
+}

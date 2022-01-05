@@ -1,10 +1,11 @@
 import React, { useState, useRef } from "react";
 import Style from "../../styles/NoteCss/NoteCss.module.css";
+import Link from "next/link";
 import { AiFillInfoCircle } from "@react-icons/all-files/ai/AiFillInfoCircle";
 import { ImPlus } from "@react-icons/all-files/im/ImPlus";
 import { ImMinus } from "@react-icons/all-files/im/ImMinus";
 
-const Note = () => {
+const Note = ({ TourName }) => {
   return (
     <div className={Style.div_note}>
       <div className={Style.NOTE}>
@@ -12,8 +13,8 @@ const Note = () => {
         <AiFillInfoCircle /> <h5 className={Style.title_tour_bem}>Note</h5>
       </div>
       <p id={Style.overview} className={Style.title_tour_content}>
-        If this current itinerary from Marrakech does not match what you’re
-        looking for, Contact us We provide customized trips in Morocco according
+        If this current itinerary Tour <b>{TourName}</b> does not match what you’re
+        looking for,<b><Link href="/contact-us" passHref={true}>Contact us</Link></b>  We provide customized trips in Morocco according
         to your duration of stay and your preferences. You can come with your
         family, relatives, friends or all of them. Just let us know your
         duration, what you wish to do in the state and we’ll plan the itinerary

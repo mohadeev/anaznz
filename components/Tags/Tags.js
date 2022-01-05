@@ -2,12 +2,11 @@ import Style from "../../styles/TagsCss/Tags.module.css";
 import { Faq } from "../Faq/Faq";
 import { AdditionalInfo } from "../AdditionalInfo/AdditionalInfo";
 
-
-const Tags = ({ children }) => {
+const Tags = ({ children, TourName }) => {
   return (
     <div>
+      <Faq TourName={TourName} />
       <AdditionalInfo />
-      <Faq />
       <h5 className={Style.title_tour_bem}>Hightls on This Tour</h5>
       <div className={Style.div__tags}>
         <a className={Style.item}>Morocco Star tour</a>
@@ -24,6 +23,6 @@ const Tags = ({ children }) => {
 
 export default Tags;
 
-export const TagItm =(NewTag)=>{
+export const TagItm = ({ NewTag }) => {
   return <a className={Style.item}>{NewTag}</a>;
-}
+};

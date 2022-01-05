@@ -1,0 +1,7 @@
+.about_dest_container {
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+}

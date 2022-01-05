@@ -93,7 +93,7 @@ export const AdditionalInfo = () => {
   return (
     <>
       <div className={Style.NOTE}>
-        <h5 className={Style.title_tour_bem}>FAQ</h5>
+        <h5 className={Style.title_tour_bem}>Tour info</h5>
       </div>
       {FaqTourArray.map(({ info, moreinfo }) => (
         <FaqTour

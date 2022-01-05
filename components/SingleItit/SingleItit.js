@@ -5,7 +5,7 @@ import { IoIosArrowUp } from "@react-icons/all-files/io/IoIosArrowUp";
 import Style from "../../styles/toursModal/Tour-ItitniretyItems.module.css";
 
 //666;
-const SingleItit = ({ Overview }) => {
+const SingleItit = ({ Overview  }) => {
   return (
     <div>
       <h5 className={Style.title_tour_bem}>Overview</h5>

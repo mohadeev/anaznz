@@ -35,17 +35,25 @@ export const FaqTour = ({ Answer, FaqTour }) => {
   );
 };
 
-export const Faq = () => {
+export const Faq = ({ TourName }) => {
   const [FaqTourArray, setFaqTour] = useState([
     {
       faqtour: "Do I need a sleeping bag for the overnight in the Desert?",
-      answer:
-        "No, you don’t need a sleeping bag, at our 3 days Marrakech to Fes desert tour, you will stay at an equipped desert camp with all amenities.",
+      answer: (
+        <p>
+          No, you don’t need a sleeping bag, at our {TourName}, you will stay at
+          an equipped desert camp with all amenities.
+        </p>
+      ),
     },
     {
       faqtour: "Do I need a sleeping bag for the overnight in the Desert?",
-      answer:
-        "No, you don’t need a sleeping bag, at our 3 days Marrakech to Fes desert tour, you will stay at an equipped desert camp with all amenities.",
+      answer: (
+        <p>
+          No, you don’t need a sleeping bag, at our {TourName} , you will stay
+          at an equipped desert camp with all amenities.
+        </p>
+      ),
     },
   ]);
 

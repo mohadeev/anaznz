@@ -12,7 +12,6 @@ const Header = () => {
   const [WindowScreen, setWindowScreen] = useState("");
 
   useEffect(() => {
-
     setWindowScreen(window.screen.width);
     setWindow(window);
     if (WindowScreen > 400) {
@@ -23,9 +22,6 @@ const Header = () => {
       setHide(true);
     }
   }, [Window, Hide, WindowScreen]);
-
-
-
 
   const LogoMenuShow = () => {
     if (WindowScreen > 400) {
@@ -72,7 +68,7 @@ const Header = () => {
               </Link>
             </li>
             <li className={Style.li_nav_bar}>
-              <Link href="/tours-and-circuits/tours-from-marrakech/3-days-from-marrakech-to-merzouga">
+              <Link href="/tours-and-circuits/">
                 Tours & Cuircuits
               </Link>
             </li>
@@ -80,12 +76,12 @@ const Header = () => {
               <Link href="/">Excursions</Link>
             </li>
             <li className={Style.li_nav_bar}>
-              <Link href="/tours-and-circuits/tours-from-marrakech/3-days-from-marrakech-to-merzouga">
+              <Link href="/about-us">
                 About us
               </Link>
             </li>
             <li className={Style.li_nav_bar}>
-              <Link href="/">Contact us</Link>
+              <Link href="/contact-us">Contact us</Link>
             </li>
             <li className={Style.li_nav_bar}>
               <Link href="">FaQ</Link>

@@ -3,54 +3,69 @@ import { IoIosArrowDown } from "@react-icons/all-files/io/IoIosArrowDown";
 import { IoIosArrowUp } from "@react-icons/all-files/io/IoIosArrowUp";
 import Style from "../styles/toursModal/Tour-ItitniretyItems.module.css";
 import { useSelector, useDispatch } from "react-redux";
-import { Index } from "../redux/actions/index";
 
-export const DayTour = ({ DayNumer, TourId, IsFirst, Blockstyle }) => {
-  const Hided = useSelector((state) => state.main);
+export const DayTour = ({
+  DayNumer,
+  TourId,
+  TourName,
+  IsFirst,
+  Blockstyle,
+  FocuseOne,
+  FocuseTwo,
+  FocuseTree,
+  FocuseFour,
+}) => {
   const [HideElment, setHided] = useState(true);
   const hidElenet = useRef();
   const [Dayyyys, setDayyyys] = useState([""]);
-  const dispatch = useDispatch();
   const Disss = () => {
     setHided(!HideElment);
   };
+  const [HostName, setHostName] = useState("");
+  useEffect(() => {
+    setHostName(window.location.hostname);
+  });
 
   useEffect(() => {
     const Window = <b>{window.document.title}</b>;
-
+    const TourPrograme = <b>{TourName}</b>;
+    const FocuseKeyone = <b>{FocuseOne}</b>;
+    const FocuseKeyTwo = <b>{FocuseTwo}</b>;
+    const FocuseKeyTree = <b>{FocuseTree}</b>;
+    const FocuseKeyFour = <b>{FocuseFour}</b>;
     setDayyyys([
       {
         id: "MAR-OUR-DES",
-        day: "Marrakech - High Atlas - AitBenHaddou - Dades Valley",
+        day: "Marrakech - High Atlas - AitBenHaddou - Dades Valley.",
         tour: (
           <p>
-            Your 3 Days Tour From Marrakech to Marrakech and Merzouga around the
-            eastern half of Morocco you will travel in style in a modern
-            air-conditioned 4WD/minibus or any services you had booked. Our
-            Staff will pick you up from your Location Hotel or Airport... Our
-            Tour Will start at 08:30 AM and escort you to the departure point.
-            We will travel over the High Atlas Mountain range and descend into
-            the Kasbah of Ait Ben Haddou. Ait Ben Haddou fortified since the
-            11th century during the Almoravid period. , The strategic importance
-            of the site is due to its location in the Onila valley as well as
-            one of the main trans-Saharan trade routes. The Tizi-n-Tika pass,
-            accessible by this road, was one of the few to cross the Atlas
-            Mountains, crossing Marrakech and the Draa Valley on the edge of the
-            Sahara. Other kasbahs and palaces were located along this route,
-            such as the neighboring Tamdaghet to the north. Here you will feel
-            almost like you have stepped back in time to the days of gladiators,
-            desert nomads, and ancient trading markets. Lunch on the first day
-            will be taken in the Kasbah at Ait Ben Haddou after the sightseeing
-            tour has finished.Our next stop on our first day will be at
-            Ouarzazate. you will enjoy the scenery of a city where most common
-            movies have filmed such as “The Mummy (1999 & 2001)”, “Lawrence of
-            Arabia (1962)”, and “Gladiator (2000)” without forgetting “Game of
-            Thrones” in 2013 are among the many films which have taken in a city
-            called The Gateway to the Desert.In the city, we can take stop at a
-            café before venturing onto the Dades Valley. Once there you can
-            relax and unwind in your private room at a local traditional Riad in
-            Dades with an en-suite bathroom and enjoy the culinary delights of a
-            Moroccan evening dinner.
+            Your {TourPrograme}around the eastern half of Morocco you will
+            travel in style in a modern air-conditioned 4WD/minibus or any
+            services you had booked. Our Staff will pick you up from your
+            Location Hotel or Airport... your
+            {FocuseKeyone} Will start at 08:30 AM and escort you to the
+            departure point. We will travel over the High Atlas Mountain range
+            and descend into the Kasbah of Ait Ben Haddou. Ait Ben Haddou
+            fortified since the 11th century during the Almoravid period. , The
+            strategic importance of the site is due to its location in the Onila
+            valley as well as one of the main trans-Saharan trade routes. The
+            Tizi-n-Tika pass, accessible by this road, was one of the few to
+            cross the Atlas Mountains, crossing Marrakech and the Draa Valley on
+            the edge of the Sahara. Other kasbahs and palaces were located along
+            this route, such as the neighboring Tamdaghet to the north. Here you
+            will feel almost like you have stepped back in time to the days of
+            gladiators, desert nomads, and ancient trading markets. Lunch on the
+            first day will be taken in the Kasbah at Ait Ben Haddou after the
+            sightseeing tour has finished.Our next stop on our first day will be
+            at Ouarzazate. you will enjoy the scenery of a city where most
+            common movies have filmed such as “The Mummy (1999 & 2001)”,
+            “Lawrence of Arabia (1962)”, and “Gladiator (2000)” without
+            forgetting “Game of Thrones” in 2013 are among the many films which
+            have taken in a city called The Gateway to the Desert.In the city,
+            we can take stop at a café before venturing onto the Dades Valley.
+            Once there you can relax and unwind in your private room at a local
+            traditional Riad in Dades with an en-suite bathroom and enjoy the
+            culinary delights of a Moroccan evening dinner.
           </p>
         ),
       },
@@ -96,6 +111,83 @@ export const DayTour = ({ DayNumer, TourId, IsFirst, Blockstyle }) => {
           </p>
         ),
       },
+      {
+        id: "MARR-FES",
+        day: "Marrakech - Fes.",
+        tour: <p>Tour not avalible</p>,
+      },
+      {
+        id: "MARR-CAS",
+        day: "Marrakech - Casablanca.",
+        tour: <p>Tour not avalible</p>,
+      },
+      {
+        id: "MARR-VIT",
+        day: "Marrakech - Casablanca.",
+        tour: (
+          <p>
+            Investigating the Marrakech souks is an unmissable experience, and
+            this day tour will ensure you make the most of your time. Walk with
+            your guide through the labyrinth of market stalls, craft shops, and
+            craftsmen's districts, where you'll learn about medicinal herbs, see
+            a rug woven demonstration, see where leather hides are being dyed,
+            and bargain for gifts and souvenirs. exploring Marrakech . "southern
+            pearl" (the red city of Morocco). and the second oldest Imperial
+            city which has for centuries been an important stop for traders and
+            travelers. The guide ensures that you will see the most important
+            spots with historical and cultural interests including the Bahia
+            Palace, Saadian tombs, Ben Youssef Koranic school, as well as the
+            largest traditional souk in Morocco. After lunch in a typical
+            Moroccan restaurant near the main square, you’ll visit the Koutoubia
+            mosque, Djemaa el-Fna, the famous UNESCO World Heritage Site which
+            is one of the main cultural spaces in Marrakech.. Then head to
+            Majorelle garden for a visit. Thereafter, you’ll have free time to
+            walk, explore many more things about Marrakesh and also its
+            citizens’ lifestyle on your own. Check into your accommodation.
+          </p>
+        ),
+      },
+      {
+        id: "MARR-CHI-ESS",
+        day: "Marrakech - Chichaoua  Essaouira.",
+        tour: (
+          <p>
+            Your trip from Marrakech to Essaouira starts with a drive through
+            the Haouz plain. In the village of Chichaoua, halfway, you will make
+            a stop for a cup of coffee before continuing your journey. On the
+            road to Essaouira, you will pass through the argan tree forest where
+            you will see some nanny goats climbing the trees. Be sure to stop
+            and take some photos before driving on to Essaouira. To see how
+            argan oil (also called liquid gold or Moroccan oil) is extracted,
+            visit a local women's cooperative and learn how some fine cosmetics
+            are made on-site from the rich argan oil. From here, you will travel
+            on to Essaouira. Upon arrival, you can explore the wonderful city at
+            your leisure. From experience, it is easy to discover Essaouira on
+            your own: The locals are very friendly, the medina is fairly small
+            (compared to other old cities in Morocco) and the local streets are
+            fine. You definitely don't need a guide to visit the city. You can
+            easily explore the medina on your own, as the streets are arranged
+            facing each other, unlike any other maze-like medinas in Morocco.
+            First, you can visit the port with its fishery port and the old
+            Portuguese forts. Here you can still see the medieval cannons lined
+            up and overlooking the Atlantic Ocean. Continue to the medina (old
+            town) with its well-preserved 18th-century fortress. Century. The
+            most important landmark of the medina is the scala, built to protect
+            against foreign aggression from the sea. Continue to Bab Laalouj
+            (one of the main gates of Essaouira) and then to the Mellah (the old
+            Jewish quarter). On the way there, various art stores, galleries,
+            souvenir stores, and thuya wood art stores are lined up. You can
+            have a tasty seafood lunch at one of the local cafes before heading
+            to the Kasbah, which is known as a military bastion. If you love the
+            seaside, you can take a walk on the Mogador sandy beach and watch
+            the residents play beach ball. If you are brave enough, you can also
+            join a game for a few minutes. The local people in Essaouira are
+            very friendly! If not, you can take a sunbath while watching the
+            amateurs play kitesurfing or windsurfing. In the late afternoon,
+            drive point where your riad/hotel is located dinner and overnight.
+          </p>
+        ),
+      },
       //---------------------------MARRAKECH-END---------------------------//
 
       //----------------------------------BORDER-------------------------------------------------//
@@ -104,27 +196,26 @@ export const DayTour = ({ DayNumer, TourId, IsFirst, Blockstyle }) => {
 
       {
         id: "DES-GOR-MER",
-        day: "Dades Valley - Todra Gourges - Erfoud - Merzouga Desert",
+        day: "Dades Valley - Todra Gourges - Erfoud - Merzouga Desert.",
         tour: (
           <p>
-            After Breakfast and showering at your Hotel, we will depart our 3
-            Days Tour From Marrakech to Marrakech and Merzouga from Dades Valley
-            heading to Sahara Desert Merzouga passing from Todra Gorges (the
-            highest gorge in Morocco where alpinists make their break, we have a
-            short walk through its grey and pink high canyons and take a break
-            and picture for good memories ) and also contains a river, palm
-            trees, also currently one of the most popular rock climbing
-            destinations in Morocco. after this visit, continue towards Tinjdad
-            and Touroug where we’ll have lunch then to Erfoud which will feel
-            the beginning Saharan oasis of Tafilalet, we will continue our way
-            to, arriving at Merzouga Sahara Desert. you will be welcomed by a
-            Saharan cup of tea enjoy the view of the Erg Chaabi in Camp next to
-            the Dunes of Merzouga, after a while, you will take Camels for a
-            Ride into Erg Chaabi Dunes to enjoy watching the fantastic Calm
-            sunset letter on you will continue to Camp where your dinner will be
-            served to you by traditional way, after dinner you can join Berber
-            Nomads party and enjoy Sky with full of Billions of Starts overnight
-            in your Traditional camp.
+            After Breakfast and showering at your Hotel, we will depart your{" "}
+            {TourPrograme} from Dades Valley heading to Sahara Desert Merzouga
+            passing from Todra Gorges (the highest gorge in Morocco where
+            alpinists make their break, we have a short walk through its grey
+            and pink high canyons and take a break and picture for good memories
+            ) and also contains a river, palm trees, also currently one of the
+            most popular rock climbing destinations in Morocco. after this
+            visit, continue towards Tinjdad and Touroug where we’ll have lunch
+            then to Erfoud which will feel the beginning Saharan oasis of
+            Tafilalet, we will continue our way to, arriving at Merzouga Sahara
+            Desert. you will be welcomed by a Saharan cup of tea enjoy the view
+            of the Erg Chaabi in Camp next to the Dunes of Merzouga, after a
+            while, you will take Camels for a Ride into Erg Chaabi Dunes to
+            enjoy watching the fantastic Calm sunset letter on you will continue
+            to Camp where your dinner will be served to you by traditional way,
+            after dinner you can join Berber Nomads party and enjoy Sky with
+            full of Billions of Starts overnight in your Traditional camp.
           </p>
         ),
       },
@@ -174,8 +265,8 @@ export const DayTour = ({ DayNumer, TourId, IsFirst, Blockstyle }) => {
             will have some libre time for lunch in the city and in the afternoon
             we resume our trip to Marrakech arriving at around 8 pm. Transfer to
             the hotel or your Airport or whatever location in Marrakech and end
-            of our services. and hope you had enjoyed our 3 Days Tour From
-            Marrakech to Marrakech and Merzouga's services.
+            of our services. and hope you had enjoyed your {TourPrograme} to
+            Marrakech and Merzouga's services.
           </p>
         ),
       },
@@ -224,19 +315,17 @@ export const DayTour = ({ DayNumer, TourId, IsFirst, Blockstyle }) => {
         day: "Merzouga Desert - Ziz Valley - Azrou - Ifran - Fes.",
         tour: (
           <p>
-            Continuing our 4 Days Tour From Marrakech to Fes and Merzouga , wake
-            up to watch the sunrise over the dune near the camp, you will have a
-            delicious breakfast and take a shower at the camp, will continue
-            towards Fez through the Ziz Valley the second longest river in
-            Morocco, we will cross the middle atlas mountains where we will
-            enjoy amazing views, free time for lunch in a restaurant then in the
-            afternoon we will head towards Fez we will stop in the cedar forest
-            in Azrou where we will see the wild monkeys, a short walk in the
-            forest to take pictures.... We will stop in Ifrane, the little
-            Switzerland of Morocco, and finally arrive in Fez in the late
-            afternoon to drop you off at your hotel where will be end of our 4
-            Days Tour From Marrakech to Fes and Merzouga services with amazing
-            stories and unforgettable memories in your mind.
+            Continuing our {TourPrograme} , wake up to watch the sunrise over
+            the dune near the camp, you will have a delicious breakfast and take
+            a shower at the camp, will continue towards Fez through the Ziz
+            Valley the second longest river in Morocco, we will cross the middle
+            atlas mountains where we will enjoy amazing views, free time for
+            lunch in a restaurant then in the afternoon we will head towards Fez
+            we will stop in the cedar forest in Azrou where we will see the wild
+            monkeys, a short walk in the forest to take pictures.... We will
+            stop in Ifrane, the little Switzerland of Morocco, and finally
+            arrive in Fez in the late afternoon to drop you off at your hotel
+            where will be end of Day of your {FocuseKeyTwo} overnight in Hotel/Raid.
           </p>
         ),
       },
@@ -316,6 +405,43 @@ export const DayTour = ({ DayNumer, TourId, IsFirst, Blockstyle }) => {
             and watch the sunset. Dinner is served under a Berber tent with
             Berber drum music. We spend the night in your private tent with a
             Bullion starry sky.
+          </p>
+        ),
+      },
+      //----------------------------Gourges END---------------------------//
+
+      //----------------------------------BORDER-------------------------------------------------//
+
+      //----------------------------FES BEGIN---------------------------//
+      {
+        id: "FES-IFR-MER",
+        day: "Fes - Ifran - Azrou - Ziz Valley - Merzouga Desert.",
+        tour: (
+          <p>
+            Pick up from your locations: riad/hotel ext... in Fes, around 8:30
+            am by our Staff Driver, Guide... and start your 5-day desert tour
+            from Fes to Marrakech via Merzouga, and ride to Merzouga via the
+            Middle Atlas Mountains, we will enjoy a pleasant driving through
+            Berber villages... We will stop in the lovely town of Ifrane ( known
+            as the "Moroccan Switzerland"), a charming ski area, and proceed to
+            Azrou, a major craft center specializing in the working of
+            cedarwood. We stop in the cedar forest and take pictures of the
+            monkies Then we carry on to Zaida small village, we continue our
+            travel day towards the city of Midelt, where you can have a lunch
+            break. next on the way to Errachidia, you will notice how the
+            scenery changes, giving a touch of the desert. You will cross the
+            road of Paris Dakar, the tent of the Berber nomads who live in the
+            loneliness of the Sahara. Once you arrive at the famous dunes of Erg
+            Chebbi, we are pleased to ready camels and there is an hour for you
+            to enjoy a camel ride and observe the magnificent sunset while you
+            ride on the camel leading to the camp Oasis where is the luxurious
+            or standard according to your booking details, the tent where you
+            will spend the night. Witness the beautiful sunset as you ride to
+            the oasis where there is a camp. A full night in a typical nomadic
+            tent or beneath a spectacular starry sky outside the tent in the
+            Merzouga desert dune will give you truly remarkable recollections of
+            your desert trip. You can also choose to spend the night with an
+            experienced camel guide drumming.
           </p>
         ),
       },

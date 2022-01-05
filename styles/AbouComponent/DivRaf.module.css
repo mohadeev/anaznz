@@ -1,0 +1,73 @@
+/*-----------------------Reflect div---------------------*/
+.reflect_div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+  margin-bottom: 100px;
+}
+.reflect_div_contenet {
+  flex-basis: 40%;
+}
+.reflect_div_contenet > h3 {
+  font-size: 30px;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  color: #071c55;
+  text-align: start;
+}
+.reflect_div_contenet > h4 {
+  font-size: 15px;
+  font-family: "Permanent Marker", cursive;
+  text-align: start;
+  color: #f3941e;
+  margin-top: 100px;
+}
+.reflect_div_contenet > p {
+  font-size: 16px;
+  color: #666;
+  text-align: start;
+  margin: 0px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 10px;
+}
+.div_of_to_reflect_divs {
+  width: 35%;
+  height: 500px;
+  border-radius: 5px;
+  background-image: url("../../public/images/merzouga-images/desert-images/desert-images2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.div_to_reflect1 {
+  width: 60%;
+  height: 60%;
+  background-image: url("http://zwin.io/react/viaje/assets/img/others/10.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  top: 300px;
+  right: 100px;
+  border-radius: 5px;
+}
+/*--------------------------------------------*/
+.SomeText {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  font-family: poppins;
+  color: #666;
+  font-size: 16px;
+  text-align: center;
+}
+.SomeText > h3 {
+  color: #071c55;
+  font-size: 25px;
+  font-family: Playfair Display;
+}

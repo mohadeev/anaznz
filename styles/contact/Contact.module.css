@@ -1,0 +1,38 @@
+.father_div_contact_us {
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.first_div_contact_us {
+  width: 60%;
+  padding: 0 20%;
+  margin: 100px 0;
+  font-family: "Poppins", sans-serif;
+  color: #666;
+  font-weight: 100;
+}
+
+.second_child__div_contact_us {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  position: relative;
+}
+.second_child__div_contact_us > div {
+  width: 50%;
+    position: relative;
+
+}
+.div_omage_cantact_us {
+  background-image: url("https://demo2wpopal.b-cdn.net/triply/wp-content/uploads/2020/11/contact-img-1.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
