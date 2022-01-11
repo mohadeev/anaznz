@@ -22,7 +22,7 @@ const Title3 = ({ TitleConntet }) => {
 export default SomeText;
 export const Button = ({ UlrButton, TextButton, Width }) => {
   return (
-    <Link href={`${UlrButton ? UlrButton : "#"}`}>
+    <Link href={`${UlrButton ? UlrButton : "#"}`} passHref={true}>
       <button
         style={{ width: `${Width}` }}
         className={Style.button_home_explore}
