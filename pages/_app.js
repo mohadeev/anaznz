@@ -7,16 +7,15 @@ import Layout from "../layout/Layout";
 // import { store } from "../redux/store";
 
 // const store = createStore(rooteReducer);
-function MyApp({ Component, pageProps }) {
+
+ function MyApp({ Component, pageProps }) {
   return (
     <Layout>
-          <Component {...pageProps} />
+      <html>
+        <Component {...pageProps} />
+      </html>
     </Layout>
   );
 }
 
-
-// const makeStore = () => store;
- export default MyApp
-
-// export default withRedux(makeStore)(MyApp);
+export default MyApp;

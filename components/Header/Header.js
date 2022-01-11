@@ -54,7 +54,7 @@ const Header = () => {
     { name: "Blog", link: "/coming-soon" },
   ]);
   return (
-    <>
+    <div>
       <div
         className={Style.header}
         style={{
@@ -93,7 +93,7 @@ const Header = () => {
         </div>
       </div>
       <LiveCHat />
-    </>
+    </div>
   );
 };
 export default Header;

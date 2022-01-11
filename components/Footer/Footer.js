@@ -89,7 +89,7 @@ const Footer = () => {
           <div className={Style.mune_itmes}>
             <b className={Style.quickLink}>Quick Link </b>
             {MenuData.map(({ name, link }) => (
-              <li key={Mth.random()} className={Style.li_nav_bar}>
+              <li key={Math.random()} className={Style.li_nav_bar}>
                 <Link href={link} passHref={true}>
                   {name}
                 </Link>

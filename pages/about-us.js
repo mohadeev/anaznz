@@ -6,7 +6,7 @@ import { CardName } from "../components/home_components/HomeDestenatons";
 import SomeText from "../components/AbouComponent/SomeText";
 import { ReviewComponet } from "../components/Reviews/Review";
 
-const Index = () => {
+const index = () => {
   const AboutGuids = [
     {
       image: "/../../../images/team/said.jpg",
@@ -100,4 +100,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default index;

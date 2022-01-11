@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/Link";
+import Link from "next/link";
 import Style from "../../styles/AbouComponent/someText.module.css";
 
 const SomeText = ({ TitleConntet, Content, Flag }) => {
@@ -22,7 +22,7 @@ const Title3 = ({ TitleConntet }) => {
 export default SomeText;
 export const Button = ({ UlrButton, TextButton, Width }) => {
   return (
-    <Link href={`${UlrButton ? UlrButton : "#"}`}>
+    <Link href={`${UlrButton ? UlrButton : "#"}`} passHref={true}>
       <button
         style={{ width: `${Width}` }}
         className={Style.button_home_explore}
