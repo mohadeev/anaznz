@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "next/Link";
+import Link from "next/link";
 import Style from "../../styles/AbouComponent/someText.module.css";
 
 const SomeText = ({ TitleConntet, Content, Flag }) => {
