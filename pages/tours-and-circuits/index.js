@@ -3,6 +3,7 @@ import Link from "next/link";
 import FirstPart from "../../components/FirstPart/FirstPart";
 import HomeDestenatons from "../../components/home_components/HomeDestenatons";
 import SomeText from "../../components/AbouComponent/SomeText";
+import Style from '../../styles/Tours/ToursandCuits.module.css'
 const Index = () => {
   const [WhatAboutSercuits, setWhatAboutSercuits] = useState([
     {
@@ -36,7 +37,14 @@ const Index = () => {
   const WhyTrustUs =
     "We are a wholesale / retail receptive travel agency specialized in private and tailor-made routes and circuits throughout Morocco, and what we offer you is to discover Morocco in the best possible way: advised, guided and attended by authentic experts in a single destination so that you feel safe and in good hands.";
   return (
-    <div style={{ maxWidth: "1400px", margin: "auto" }}>
+    <div className={Style.div_constainer_tours}
+      style={{
+        maxWidth: "1400px",
+        margin: "auto",
+        width: "100% ",
+        overflow: "hidden",
+      }}
+    >
       <FirstPart
         TourName={"Discover The Morocco Tours and Circuits"}
         Tour_imnage={
@@ -51,6 +59,8 @@ const Index = () => {
         <SomeText TitleConntet={name} Content={contnet} key={Math.random()} />
       ))}
       <FirstPart
+        Waves={true}
+        MarginBottom={"100px"}
         BgPostion={"Top"}
         Tour_imnage={"/../../../images/ibrahim/ibrahim.jpg"}
         Desc={WhyTrustUs}

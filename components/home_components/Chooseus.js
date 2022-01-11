@@ -4,28 +4,56 @@ import { FaMedal } from "@react-icons/all-files/fa/FaMedal";
 import { FaTrophy } from "@react-icons/all-files/fa/FaTrophy";
 import { FaThumbsUp } from "@react-icons/all-files/fa/FaThumbsUp";
 import { FaCheck } from "@react-icons/all-files/fa/FaCheck";
+import { GiTeamIdea } from "@react-icons/all-files/gi/GiTeamIdea";
+import { FaComments } from "@react-icons/all-files/fa/FaComments";
+import { RiTeamFill } from "@react-icons/all-files/ri/RiTeamFill";
+import { FaMapSigns } from "@react-icons/all-files/fa/FaMapSigns";
+
+
+
+
 
 const Chooseus = () => {
   const [WhyUsItems, setWhyUsItems] = useState([
     {
-      name: "Licensed tour operator",
+      name: "Licensed tour operator.",
       image: <FaMedal />,
       text: "We are a fully licensed and registered Moroccan tour company.",
     },
     {
-      name: "Satisfaction guaranteed",
-      image: <FaTrophy />,
-      text: "We follow the strict guide lines set by our mother company: EXTRA MILE.",
+      name: "Expert Local Berber Team.",
+      image: <GiTeamIdea />,
+      text: "Our expert team will assist you 24/7 to answer your questions quickly, clearly and help you to book your suitable Tour.",
     },
     {
-      name: "Best price guaranteed",
+      name: "Excellent Customer Reviews.",
+      image: <FaComments />,
+      text: "We are recommended by our happy clients on Tripadvisor, Travel blogs, Guidebooks and many other worldwide websites...",
+    },
+    {
+      name: "Friendly & Knowledgeable Guides.",
+      image: <RiTeamFill />,
+      text: "Our local Guides will ensure your safety & comfort while you are enjoying your Morocco desert trips visiting the most spectacular sights around the country.",
+    },
+    {
+      name: "Years of Experciance.",
+      image: <FaTrophy />,
+      text: " we have more than 12 years of experience in the Tourism center fields and the necessary know-how to offer the best Travel company.",
+    },
+    {
+      name: "Best price guaranteed.",
       image: <FaThumbsUp />,
       text: "Take advantage of our buying power and benefit from the best rates.",
     },
     {
-      name: "Instant confirmation",
+      name: "Instant confirmation.",
       image: <FaCheck />,
       text: "Check availability, book your tour and receive an instant confirmation.",
+    },
+    {
+      name: <p> Best Accommodation  <br /> & Custom Tours.</p> ,
+      image: <FaMapSigns />,
+      text: "We offer the best Tours & Accommodation that suit your needs and requirements.",
     },
   ]);
   // useEffect(() => {
@@ -41,7 +69,7 @@ const Chooseus = () => {
   return (
     <div className={Style.div_Cooseus_container}>
       <h5 className={Style.what_to_know_about_tit}>
-        <span>Four Reason </span> Why Choose Us
+        <span>Eight Reason </span> Why Choose Us
       </h5>
       <div className={Style.why_us_items_container}>
         {WhyUsItems.map(({ name, image, text }) => (

@@ -3,6 +3,7 @@ import { IoIosArrowDown } from "@react-icons/all-files/io/IoIosArrowDown";
 import { IoIosArrowUp } from "@react-icons/all-files/io/IoIosArrowUp";
 import Style from "../styles/toursModal/Tour-ItitniretyItems.module.css";
 import { useSelector, useDispatch } from "react-redux";
+import Link from "next/link";
 
 export const DayTour = ({
   DayNumer,
@@ -14,6 +15,7 @@ export const DayTour = ({
   FocuseTwo,
   FocuseTree,
   FocuseFour,
+  IsLast,
 }) => {
   const [HideElment, setHided] = useState(true);
   const hidElenet = useRef();
@@ -33,6 +35,32 @@ export const DayTour = ({
     const FocuseKeyTwo = <b>{FocuseTwo}</b>;
     const FocuseKeyTree = <b>{FocuseTree}</b>;
     const FocuseKeyFour = <b>{FocuseFour}</b>;
+    const LearnMoreAboutThis = ({ UrlToLearn }) => {
+      return (
+        <>
+          <br />
+          {IsLast ? (
+            <p>
+              Where Will Be end of our <b>{TourName}</b>
+            </p>
+          ) : (
+            ""
+          )}
+          <Link href={`${UrlToLearn ? UrlToLearn : "#"}`} passHref={true}>
+            <b>
+              <i>Learn Moro About this day </i>
+            </b>
+          </Link>
+        </>
+      );
+    };
+    const Staff = ({ UrlToLearn }) => {
+      return (
+        <Link href={"/about-us"} passHref={true}>
+          <b style={{ cursor: "pointer" }}>Staff</b>
+        </Link>
+      );
+    };
     setDayyyys([
       {
         id: "MAR-OUR-DES",
@@ -41,7 +69,7 @@ export const DayTour = ({
           <p>
             Your {TourPrograme}around the eastern half of Morocco you will
             travel in style in a modern air-conditioned 4WD/minibus or any
-            services you had booked. Our Staff will pick you up from your
+            services you had booked. Our <Staff /> will pick you up from your
             Location Hotel or Airport... your
             {FocuseKeyone} Will start at 08:30 AM and escort you to the
             departure point. We will travel over the High Atlas Mountain range
@@ -66,6 +94,7 @@ export const DayTour = ({
             Once there you can relax and unwind in your private room at a local
             traditional Riad in Dades with an en-suite bathroom and enjoy the
             culinary delights of a Moroccan evening dinner.
+            <LearnMoreAboutThis UrlToLearn={""} />
           </p>
         ),
       },
@@ -74,12 +103,15 @@ export const DayTour = ({
         day: "Marrakech - High Atlas - AitBenHaddou - Ouarzazate.",
         tour: (
           <p>
-            Your 5 Days Tour From Marrakech to Fes and Merzouga around the
-            eastern half of Morocco you will travel in style in a modern
-            air-conditioned 4WD / minibus or any service you had booked. Our
-            staff will pick you up at your Hotel or Airport. Your 5 Days Tour
-            From Marrakech to Fes and Merzouga will start at 08:30 AM and we
-            will escort you to the starting point. and our driver will take us
+            Your {FocuseKeyFour} around the eastern half of Morocco you will
+            travel in style in a modern air-conditioned 4WD / minibus or any
+            service you had booked. Our{" "}
+            <Link href={"/about-us"}>
+              <b>staff</b>
+            </Link>{" "}
+            will pick you up at your Hotel or Airport. Your 5 Days Tour From
+            Marrakech to Fes and Merzouga will start at 08:30 AM and we will
+            escort you to the starting point. and our driver will take us
             through the High Atlas Mountains. The rugged beauty and height of
             these peaks will have you glued to the window in our minibus as we
             wind through the mountain roads. Along the way are several Berber
@@ -95,31 +127,39 @@ export const DayTour = ({
             for several movies set in biblical times, ancient Arab legends, or
             films set thousands of years ago. Sodom and Gomorrah (1963), The Man
             Who Wanted to be King (1975), and The Jewel of the Nile (1985) all
-            used the ancient fortified village of Kasbah Ait Ben Haddou. Our 5
-            Days Tour From Marrakech to Fes and Merzouga , where we will tour
-            this city and see the movie studios. Ouarzazate is a highly prized
-            location for film producers, many of which flock here especially for
-            its old buildings, golden scenery, and stunning backdrops. One gets
-            the feeling of having taken a trip back in time while exploring the
-            antique kasbahs, the golden clay edifices, and don't be amazed if
-            you see a Hollywood film team shooting a movie here. Among the
-            blockbusters filmed here are the classic Bond movie Daylight (1987),
-            Lawrence of Arabia (1962), and The Last Temptation of Christ (1988).
-            Afterward, we will continue our 5 Days Tour From Marrakech to Fes
-            and Merzouga to a traditional Hotel or Riad depending on what you
-            book to spend the night in your accommodation.
+            used the ancient fortified village of Kasbah Ait Ben Haddou. Our{" "}
+            {FocuseKeyTwo} , where we will tour this city and see the movie
+            studios. Ouarzazate is a highly prized location for film producers,
+            many of which flock here especially for its old buildings, golden
+            scenery, and stunning backdrops. One gets the feeling of having
+            taken a trip back in time while exploring the antique kasbahs, the
+            golden clay edifices, and don't be amazed if you see a Hollywood
+            film team shooting a movie here. Among the blockbusters filmed here
+            are the classic Bond movie Daylight (1987), Lawrence of Arabia
+            (1962), and The Last Temptation of Christ (1988). Afterward, we will
+            continue our {TourPrograme} to a traditional Hotel or Riad depending
+            on what you book to spend the night in your accommodation.
+            <LearnMoreAboutThis />
           </p>
         ),
       },
       {
         id: "MARR-FES",
         day: "Marrakech - Fes.",
-        tour: <p>Tour not avalible</p>,
+        tour: (
+          <p>
+            Tour not avalible <LearnMoreAboutThis />
+          </p>
+        ),
       },
       {
         id: "MARR-CAS",
         day: "Marrakech - Casablanca.",
-        tour: <p>Tour not avalible</p>,
+        tour: (
+          <p>
+            Tour not avalible <LearnMoreAboutThis />{" "}
+          </p>
+        ),
       },
       {
         id: "MARR-VIT",
@@ -144,6 +184,7 @@ export const DayTour = ({
             Majorelle garden for a visit. Thereafter, you’ll have free time to
             walk, explore many more things about Marrakesh and also its
             citizens’ lifestyle on your own. Check into your accommodation.
+            <LearnMoreAboutThis />
           </p>
         ),
       },
@@ -185,6 +226,7 @@ export const DayTour = ({
             very friendly! If not, you can take a sunbath while watching the
             amateurs play kitesurfing or windsurfing. In the late afternoon,
             drive point where your riad/hotel is located dinner and overnight.
+            <LearnMoreAboutThis Url={"#"} />
           </p>
         ),
       },
@@ -216,6 +258,7 @@ export const DayTour = ({
             to Camp where your dinner will be served to you by traditional way,
             after dinner you can join Berber Nomads party and enjoy Sky with
             full of Billions of Starts overnight in your Traditional camp.
+            <LearnMoreAboutThis Url={"#"} />
           </p>
         ),
       },
@@ -234,6 +277,7 @@ export const DayTour = ({
             in Ouarzazate before we continue our way to Marrakech across the
             high Atlas Mountains; in the evening we will reach to Marrakech drop
             you off on your accommodation.
+            <LearnMoreAboutThis Url={"#"} />
           </p>
         ),
       },
@@ -267,6 +311,7 @@ export const DayTour = ({
             the hotel or your Airport or whatever location in Marrakech and end
             of our services. and hope you had enjoyed your {TourPrograme} to
             Marrakech and Merzouga's services.
+            <LearnMoreAboutThis Url={"#"} />
           </p>
         ),
       },
@@ -307,6 +352,57 @@ export const DayTour = ({
             why not an hour of quad riding in the dunes to end the day (not
             included in the price of the trip). The night is spent in the camp
             next to the dunes.
+            <LearnMoreAboutThis Url={"#"} />
+          </p>
+        ),
+      },
+      {
+        id: "MER-DRA-OUR",
+        day: "Merzouga Desert -  Nkoub - Draa Valley - Agdez - Ouarzazate.",
+        tour: (
+          <p>
+            On this Day of our (tour), early in the morning in order to see the
+            sunrise. after a wholesome Breakfast in your Camp, you will meet our{" "}
+            <Link href={"/about-us"}>
+              <b>staff</b>
+            </Link>{" "}
+            (driver/guide), Then, you will drive to Ouarzazate through Rissani
+            (Alaouite dynasty cradle) to visit its traditional weekly market,
+            when we are lucky enough to be here on one of the market days
+            (Sunday, Tuesday and Thursday), then we will drive across a
+            pre-dessert dry region in which we will see Acacia trees typical of
+            these environments. On the road to the Draa valley, we will have
+            some stops to appreciate the magnificent sight of the River that
+            gave its name to the valley. It is the very longest River in
+            Morocco. Our 5-day desert trip from Marrakech continues to reach
+            Ouarzazate, where we cross the Ancient Atlas. We will have some free
+            time for lunch in the city and afterward, we will resume our travel
+            to Ouarzazate, arriving in the late afternoon-evening, have dinner
+            and spend a night in the Hotel at Morocco's Hollywood.
+          </p>
+        ),
+      },
+      {
+        id: "MER-SAF-MER",
+        day: "Merzouga - Tissardmine Oasis - Safsaf Desert Oasis - Merzouga.",
+        tour: (
+          <p>
+            Today's day trip begins on a 4×4 excursion to Safsaf Oasis morning
+            at 8:00 am from your accommodation in the area of Erg Chebbi and we
+            will drive to Safsaf Oasis, near the Algerian border (about 1 km).
+            During the Trip, we will stop as often as you like to admire the
+            beautiful landscape. We stop to visit a nomadic family with whom we
+            have a traditional welcome tea in the comforting shadow of a Berber
+            tent. We continue our journey until we reach our destination, the
+            SafSaf oasis. It is a spectacular place located between uninhabited
+            high hills, a wild palm tree with lush vegetation, and a river of
+            the same name (SafSaf) where you can bathe. In this paradisiacal
+            environment, we will have lunch. We will leave SafSaf and embark on
+            a path that will lead us to the oasis of Tissardmine with its great
+            contrasts between water, vegetation, rock, and sand. We will stop to
+            admire it and take photos and then continue our way to your
+            accommodation.
+            <LearnMoreAboutThis Url={"#"} />
           </p>
         ),
       },
@@ -325,7 +421,36 @@ export const DayTour = ({
             monkeys, a short walk in the forest to take pictures.... We will
             stop in Ifrane, the little Switzerland of Morocco, and finally
             arrive in Fez in the late afternoon to drop you off at your hotel
-            where will be end of Day of your {FocuseKeyTwo} overnight in Hotel/Raid.
+            where will be end of Day of your {FocuseKeyTwo} overnight in
+            Hotel/Raid.
+            <LearnMoreAboutThis Url={"#"} />
+          </p>
+        ),
+      },
+      {
+        id: "MER-GOR-DES",
+        day: "Merzouga Desert - Rissani - Todra Gorges - Dades Valley.",
+        tour: (
+          <p>
+            On this Day Trip on our {TourPrograme}, you will wake up early in
+            the morning in order to watch the beautiful Sunrise, after that, a
+            healthy breakfast will be waiting for you in the Camp. After
+            Breakfast we will leave the Desert towards Rissani where we will
+            visit the market (market days: Tuesday, Thursday, and Saturday), we
+            will then continue to Erfoud where we can visit the manufactures of
+            petrified marble if we haven't visited them yet we can skip them and
+            head to the palm groves of Touroug and Tinjdad. An hour later we
+            reach one of the most beautiful places of the High Atlas, the Todra
+            Gorge. The river course has carved out the rocky gorge and it is
+            very popular with climbers because of its beauty and high rock
+            walls. Time at leisure to have lunch in this beautiful place. A
+            short walk through the gorges is highly advisable to better enjoy
+            the beauty of the landscape. In the afternoon we continue to the
+            Dades Valley, also known as the fig Valley. We will drive through
+            Boumalne Dades and stop at the "monkey legs". Dinner and overnight
+            at your accommodation in the Dades Gorges where be end day of your{" "}
+            {FocuseKeyFour}.
+            <LearnMoreAboutThis Url={"#"} />
           </p>
         ),
       },
@@ -374,6 +499,30 @@ export const DayTour = ({
             village of Tamtattouchte with gorgeous red earthen houses located at
             the other end of the gorge, overnight in Hotel or Riad according or
             any accommodation you have booked.
+            <LearnMoreAboutThis Url={"#"} />
+          </p>
+        ),
+      },
+      {
+        id: "OUR-HIG-MARR",
+        day: "Ouarazazate - High Atlas - Marrakech.",
+        tour: (
+          <p>
+            On this Day of our (tour), After breakfast in your Hotel in
+            Ouarzazate, there is such Activities to do and attraction to see
+            such as Kasbah Taourirt, if you have time you may want to have an
+            hour to feel the like you in the American city Hollywood you can
+            have a ticket to visit one of the largest Astudio where serval
+            American Movies were shot or taking Quad Bike as well otherwise we
+            will travel back from Ouarzazate to Marrakech through High Atlas
+            journeys by Tizi n'Tichka make stops along the way to enjoy the
+            Magnificent views of these Mountains (1660 m high) and Authentic
+            Berber villages, Fantastic and Wonderful scenery and landscapes
+            along the way, For lunch, we will eat in a restaurant in the heart
+            of the Atlas. then we will move on to Marrakech, will arrive in
+            Marrakech in the evening. Eventual. Once we arrive, our <Staff />{" "}
+            will drop you off at your accommodation in Marrakech.{" "}
+            <LearnMoreAboutThis Url={"#"} />
           </p>
         ),
       },
@@ -383,7 +532,7 @@ export const DayTour = ({
 
       //----------------------------Gourges BEGIN---------------------------//
       {
-        id: "OUR-DES-GOR",
+        id: "GOR-TIN-MER",
         day: "Todra Gourges - Tinjdad - Erfoud - Merzouga Desert.",
         tour: (
           <p>
@@ -405,6 +554,7 @@ export const DayTour = ({
             and watch the sunset. Dinner is served under a Berber tent with
             Berber drum music. We spend the night in your private tent with a
             Bullion starry sky.
+            <LearnMoreAboutThis Url={"#"} />
           </p>
         ),
       },
@@ -419,29 +569,63 @@ export const DayTour = ({
         tour: (
           <p>
             Pick up from your locations: riad/hotel ext... in Fes, around 8:30
-            am by our Staff Driver, Guide... and start your 5-day desert tour
-            from Fes to Marrakech via Merzouga, and ride to Merzouga via the
-            Middle Atlas Mountains, we will enjoy a pleasant driving through
-            Berber villages... We will stop in the lovely town of Ifrane ( known
-            as the "Moroccan Switzerland"), a charming ski area, and proceed to
-            Azrou, a major craft center specializing in the working of
-            cedarwood. We stop in the cedar forest and take pictures of the
-            monkies Then we carry on to Zaida small village, we continue our
-            travel day towards the city of Midelt, where you can have a lunch
-            break. next on the way to Errachidia, you will notice how the
-            scenery changes, giving a touch of the desert. You will cross the
-            road of Paris Dakar, the tent of the Berber nomads who live in the
-            loneliness of the Sahara. Once you arrive at the famous dunes of Erg
-            Chebbi, we are pleased to ready camels and there is an hour for you
-            to enjoy a camel ride and observe the magnificent sunset while you
-            ride on the camel leading to the camp Oasis where is the luxurious
-            or standard according to your booking details, the tent where you
-            will spend the night. Witness the beautiful sunset as you ride to
-            the oasis where there is a camp. A full night in a typical nomadic
-            tent or beneath a spectacular starry sky outside the tent in the
-            Merzouga desert dune will give you truly remarkable recollections of
-            your desert trip. You can also choose to spend the night with an
-            experienced camel guide drumming.
+            am by our <Staff /> Driver, Guide... and start your {TourPrograme} ,
+            and ride to Merzouga via the Middle Atlas Mountains, we will enjoy a
+            pleasant driving through Berber villages... We will stop in the
+            lovely town of Ifrane ( known as the "Moroccan Switzerland"), a
+            charming ski area, and proceed to Azrou, a major craft center
+            specializing in the working of cedarwood. We stop in the cedar
+            forest and take pictures of the monkies Then we carry on to Zaida
+            small village, we continue our travel day towards the city of
+            Midelt, where you can have a lunch break. next on the way to
+            Errachidia, you will notice how the scenery changes, giving a touch
+            of the desert. You will cross the road of Paris Dakar, the tent of
+            the Berber nomads who live in the loneliness of the Sahara. Once you
+            arrive at the famous dunes of Erg Chebbi, we are pleased to ready
+            camels and there is an hour for you to enjoy a camel ride and
+            observe the magnificent sunset while you ride on the camel leading
+            to the camp Oasis where is the luxurious or standard according to
+            your booking details, the tent where you will spend the night.
+            Witness the beautiful sunset as you ride to the oasis where there is
+            a camp. A full night in a typical nomadic tent or beneath a
+            spectacular starry sky outside the tent in the Merzouga desert dune
+            will give you truly remarkable recollections of your desert trip.
+            You can also choose to spend the night with an experienced camel
+            guide drumming.
+            <LearnMoreAboutThis />
+          </p>
+        ),
+      },
+      {
+        id: "VIT-FES-DAY",
+        day: "Full Day To Visit Fes - Fes sightseeing - Fes Guided Tour",
+        tour: (
+          <p>
+            On this Day of Our (Tour), it is time to start exploring this
+            fascinating city, one of the great attractions on this (Tour ). It
+            will be accompanied by our official guide, in your languish, with
+            whom you will meet at the hotel or at the agreed place. else if you
+            have guide official guide you will not need a local guide because
+            our guides know every part of Morocco The guided tour, which will
+            take place in the morning to the main monuments of the city oldest
+            Fes city by walking on its crowded souks (markets), epic alleyways,
+            will take you through the and the most emblematic places of the
+            medina declared a World Heritage Site by UNESCO. Some of those
+            places can be the Karaouine mosque and the university it houses (one
+            of the oldest in the world), the Bou Inania and Attarin madrasas,
+            the most popular squares such as Nejjarine, the souks, and more
+            authentic artisan quarters such as that of the tanners ... and a
+            long etcetera. The medina of Fez is one of the largest in North
+            Africa, so some sights can be left out of the morning itinerary. For
+            this reason, the free afternoon of this day can be a good complement
+            to continue discovering the city: the Mellah (Jewish quarter), the
+            Royal Palace with its spectacular Golden Gates or museums such as
+            Borj Nord are some interesting proposals for this moment. Or, the
+            shops and popular establishments in the center, since the crafts of
+            this city is one of the most prestigious in the whole country. The
+            options are numerous and will result in an intense day, with a
+            well-deserved rest at night in the riad in the medina.
+            <LearnMoreAboutThis />
           </p>
         ),
       },
@@ -451,7 +635,7 @@ export const DayTour = ({
   return (
     <>
       {Dayyyys.filter((x) => x.id === TourId).map(({ id, day, tour }) => (
-        <div key={id} className={Style.first_item}>
+        <div key={id} className={Style.first_item} style={{ width: "100%" }}>
           <div className={Style.first_child_item}>
             <span className={Style.day_tour_name_item}>{DayNumer}</span>
             <h3 onClick={Disss} className={Style.title_tour_title}>
@@ -474,7 +658,7 @@ export const DayTour = ({
                 HideElment ? { display: "none" } : { display: `${Blockstyle}` }
               }
             >
-              {tour}
+              {tour}{" "}
             </p>
             <p
               className={Style.title_tour_content}

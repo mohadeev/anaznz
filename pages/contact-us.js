@@ -24,7 +24,7 @@ function Contact_us() {
         
       </div>
       <div className={Style.second_child__div_contact_us}>
-        <div>
+        <div className={Style.div_container}>
           <div className={Style.div_omage_cantact_us}>
             <ContactPlk />
           </div>

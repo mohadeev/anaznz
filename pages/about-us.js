@@ -4,26 +4,51 @@ import FirstPart from "../components/FirstPart/FirstPart";
 import Style from "../styles/AbouComponent/aboutpage.module.css";
 import { CardName } from "../components/home_components/HomeDestenatons";
 import SomeText from "../components/AbouComponent/SomeText";
+import { ReviewComponet } from "../components/Reviews/Review";
 
 const Index = () => {
   const AboutGuids = [
     {
-      image: "/../../../images/team/ibrahim.jpg",
-      name: "Ibrahim",
-      massion: "CEO and Pro Guid of UE",
-      about: `Ibrahim CEO and Founder of Ur Excursion Company, he at age of 28 years old.  born and raised in southeastern Morocco which Desert. he has been working in tourism for over the last 10 years. He works as a camel guide in the Desert, then to the expert driver/guide, and now he is the CEO of Ur Excursion Company. Likewise, he is humorous and active all the time. Ibrahim speaks several languages such as Berber, Arabic, English, Franche , and Spanish.`,
+      image: "/../../../images/team/said.jpg",
+      name: "Said",
+      massion: "Founder / CEO , Service Coordinator",
+      about: ``,
     },
     {
       image: "/../../../images/team/mohamed.jpg",
       name: "Mohamed",
-      massion: "Pro Web-Full Stuck Devloper , Technical Director in UE",
-      about: `Mohamed is 24 years old. born in southeastern Morocco, He is Pro Developer. and he is living in Spain, and he Build UE`,
+      massion: "Software Engineer / Technical Director at UE",
+      about: ``,
     },
     {
-      image: "/../../../images/team/said.jpg",
-      name: "Said",
-      massion: "profesional Tourism expert / co-founder of UE",
-      about: `Said is 38 year old, born and raised in the southeast of Morocco. He has been working in tourism for 15 over last years and his first job was a camel guide as must of resaidence of  Merzouga Desert. He is also an experienced driver/guide. Moreover, he is humorous and always active. Last but not least, he speaks several languages such as Berber, Arabic, English, French, Spanish, Italian, a little Chinese and Japanese.`,
+      image: "/../../../images/team/ibrahim.jpg",
+      name: "Ibrahim",
+      massion: "co-founder / Program Manager ",
+      about: ``,
+    },
+    {
+      image: "/../../../images/team/ali.jpg",
+      name: "Ali",
+      massion: "Tourism expert / Document Manager",
+      about: ``,
+    },
+    {
+      image: "/../../../images/team/mohamed-saadi.jpg",
+      name: "Mohamed",
+      massion: "Tourism expert / Financial Director",
+      about: ``,
+    },
+    {
+      image: "/../../../images/team/hami-saadi.jpg",
+      name: "Hammi",
+      massion: "Tourism expert /Profesional Guid / Diver at UE",
+      about: ``,
+    },
+    {
+      image: "/../../../images/team/mohamed-elbaz.jpg",
+      name: "Mohamed",
+      massion: "Tourism expert / Commercial / Marketing manager",
+      about: ``,
     },
   ];
   const Team = (
@@ -45,14 +70,21 @@ const Index = () => {
   );
   return (
     <div className={Style.index_container}>
-      <FirstPart
-        TourName={"About Us"}
-        Tour_imnage={
-          "https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/71/28/39/marruecos-star-tour.jpg"
-        }
-      />{" "}
+      <div className={Style.div_firstpart}>
+        <FirstPart
+          BgPostion={"bottom"}
+          TourName={"About Us"}
+          Tour_imnage={
+            "https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/71/28/39/marruecos-star-tour.jpg"
+          }
+        />
+      </div>{" "}
       <DivRaf />
-      <SomeText TitleConntet={"Our Team"} Content={Team} />
+      <ReviewComponet />
+      <div className={Style.div_some_text}>
+        {" "}
+        <SomeText TitleConntet={"Our Team"} Content={Team} />
+      </div>
       <div className={Style.people_container}>
         {AboutGuids.map(({ image, name, about, massion }) => (
           <CardName

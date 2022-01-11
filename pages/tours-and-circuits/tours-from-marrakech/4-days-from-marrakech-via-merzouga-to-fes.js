@@ -20,15 +20,13 @@ const Index = () => {
   const id = "5MMF";
   const SeoTitle =
     " Best 4 Day Merzouga Desert Tour Marrakech to Fes - Private & Shared. ";
-  const ProgramName =
-    " 4 Day Merzouga Desert Trip Marrakech to Fes. ";
+  const ProgramName = " 4 Day Merzouga Desert Trip Marrakech to Fes. ";
 
   const FocuseKeyone = " 4 day morocco itinerary Marrakech Fes. ";
   const FocuseKeyTwo = " 4 Day Sahara Desert Tour Morocco.";
   const FocuseKeyTree =
     " Marrakech to Fes 4 days desert Tour via Dades & Merzouga Sahara. ";
-  const FocuseKeyFour =
-    " 4 Days Tour from Marrakech Via Merzouga Desert ";
+  const FocuseKeyFour = " 4 Days Tour from Marrakech Via Merzouga Desert ";
 
   //INFO ABOUT FIRST PART OF THE TOUR GO HERE
   const [TourArray, setTourArray] = useState([
@@ -284,6 +282,7 @@ const Index = () => {
       dayNumer: "4",
       tourId: "MER-IFR-FES",
       blockstyle: "block",
+      IsLast: true,
     },
   ]);
   return (
@@ -341,20 +340,23 @@ const Index = () => {
               ))}
               {/*NORMAL DAYS GO HERE*/}
               <div>
-                {AllDays.map(({ dayNumer, tourId, Isfirst, blockstyle }) => (
-                  <DayTour
-                    DayNumer={dayNumer}
-                    TourId={tourId}
-                    IsFirst={Isfirst}
-                    key={tourId}
-                    Blockstyle={blockstyle}
-                    TourName={ProgramName}
-                    FocuseOne={FocuseKeyone}
-                    FocuseTwo={FocuseKeyTwo}
-                    FocuseTree={FocuseKeyTree}
-                    FocuseFour={FocuseKeyFour}
-                  />
-                ))}
+                {AllDays.map(
+                  ({ dayNumer, tourId, Isfirst, blockstyle, IsLast }) => (
+                    <DayTour
+                      DayNumer={dayNumer}
+                      TourId={tourId}
+                      IsFirst={Isfirst}
+                      key={tourId}
+                      Blockstyle={blockstyle}
+                      TourName={ProgramName}
+                      FocuseOne={FocuseKeyone}
+                      FocuseTwo={FocuseKeyTwo}
+                      FocuseTree={FocuseKeyTree}
+                      FocuseFour={FocuseKeyFour}
+                      IsLast={IsLast}
+                    />
+                  )
+                )}
               </div>
               <Note TourName={ProgramName} />
               {/*DIV INCLUDES GO HERE */}

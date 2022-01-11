@@ -8,7 +8,7 @@
 }
 .what_to_know_about_tit > span {
   font-family: Permanent Marker;
-  color : #f3941e;
+  color: #f3941e;
   font-weight: 400;
   font-size: 15px;
 }
@@ -20,6 +20,7 @@
   height: auto;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   flex-wrap: wrap;
   column-gap: 10px;
   justify-content: center;
@@ -56,4 +57,21 @@
   text-align: center;
   background-color: white;
   font-size: 14px;
+}
+
+
+@media screen and (max-width: 1000px){
+  .why_us_items_container {
+  background-image: url("../../public/images/h1_shape-4.png");
+  width: 100%;
+  background-repeat: no-repeat;
+  height: auto;
+  display: grid;
+  flex-direction: 50% 50%;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
 }

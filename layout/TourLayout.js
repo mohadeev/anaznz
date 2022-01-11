@@ -13,6 +13,13 @@ const TourLayout = ({
   Image4,
   Image5,
   Image6,
+  BgPostion,
+  Image1Postion,
+  Image2Postion,
+  Image3Postion,
+  Image4Postion,
+  Image5Postion,
+  Image6Postion,
   TourName,
   Category,
   Days,
@@ -35,6 +42,13 @@ const TourLayout = ({
         Image4={Image4}
         Image5={Image5}
         Image6={Image6}
+        BgPostion={BgPostion}
+        Image1Postion={Image1Postion}
+        Image2Postion={Image2Postion}
+        Image3Postion={Image3Postion}
+        Image4Postion={Image4Postion}
+        Image5Postion={Image5Postion}
+        Image6Postion={Image6Postion}
         TourName={TourName}
         Category={Category}
         Days={Days}

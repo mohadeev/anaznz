@@ -6,6 +6,11 @@
   position: relative;
 }
 
+
+
+
+
+
 .anamimation {
   position: relative;
   width: 1400px;
@@ -60,3 +65,66 @@
   border: none;
   text-align: center;
 }
+
+
+
+@media screen and (max-width: 1000px) {
+  .div_layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+  width: 500px;
+  position: relative;
+  overflow: hidden;
+}
+.anamimation {
+  width : 100%;
+  overflow: hidden;
+  position: static;
+  max-width: 1000px;
+  height: 500px;
+  background-color: #071c55e0;
+  font-family: poppins;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sun {
+
+  width: 200px;
+  height: 200px;
+  position: relative;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: orbit;
+  animation-duration: 600ms;
+  top: 10%;
+  left: 0%;
+}
+.dot {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffffffe0;
+}
+
+
+.anamimationbbbb {
+  background-color: #f3941e;
+  color: white;
+  font-size: 15px;
+  width: 130px;
+  margin-bottom: 20px;
+  padding: 10px 10px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+}
+ }

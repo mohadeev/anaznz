@@ -6,6 +6,16 @@ import { TiThMenu } from "@react-icons/all-files/ti/TiThMenu";
 import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
 import Socialmedia from "../socialmedia/Socialmedia";
 
+export const MenuData = [
+  { name: "Home", link: "/" },
+  { name: "Tours & Excursions", link: "/tours-and-circuits" },
+  { name: "About us", link: "/about-us" },
+  { name: "Contact us", link: "/contact-us" },
+  { name: "FaQ", link: "/coming-soon" },
+  { name: "Our Shop", link: "/coming-soon" },
+  { name: "Blog", link: "/coming-soon" },
+];
+
 const Header = () => {
   const [Window, setWindow] = useState("");
   const [Hide, setHide] = useState(true);
@@ -21,22 +31,30 @@ const Header = () => {
     } else {
       setHide(true);
     }
-  }, [Window, Hide, WindowScreen]);
+  }, []);
 
   const LogoMenuShow = () => {
-    if (WindowScreen > 400) {
+    if (WindowScreen > 1000) {
       setHide(true);
     }
   };
   const HideMenu = () => {
-    if (WindowScreen <= 400) {
+    if (WindowScreen <= 1000) {
       setHide(!Hide);
     }
   };
 
+  const [ArrayItemsHeader, setArrayItemsHeader] = useState([
+    { name: "Home", link: "/" },
+    { name: "Tours & Excursions", link: "/tours-and-circuits" },
+    { name: "About us", link: "/about-us" },
+    { name: "Contact us", link: "/contact-us" },
+    { name: "FaQ", link: "/coming-soon" },
+    { name: "Our Shop", link: "/coming-soon" },
+    { name: "Blog", link: "/coming-soon" },
+  ]);
   return (
     <>
-      <LiveCHat />
       <div
         className={Style.header}
         style={{
@@ -59,43 +77,24 @@ const Header = () => {
             <TiThMenu onClick={HideMenu} />
           )}
         </div>
-
         <div className={Hide ? Style.div_nav_bar : Style.div_nav_bar_hide}>
           <ul className={Style.ul_nav_bar}>
-            <li className={Style.li_nav_bar}>
-              <Link href="/" passHref={true}>
-                Home
-              </Link>
-            </li>
-            <li className={Style.li_nav_bar}>
-              <Link href="/tours-and-circuits/">
-                Tours & Cuircuits
-              </Link>
-            </li>
-            <li className={Style.li_nav_bar}>
-              <Link href="/">Excursions</Link>
-            </li>
-            <li className={Style.li_nav_bar}>
-              <Link href="/about-us">
-                About us
-              </Link>
-            </li>
-            <li className={Style.li_nav_bar}>
-              <Link href="/contact-us">Contact us</Link>
-            </li>
-            <li className={Style.li_nav_bar}>
-              <Link href="">FaQ</Link>
-            </li>
-            <li className={Style.li_nav_bar}>
-              <Link href="/">Blog</Link>
-            </li>
+            {MenuData.map(({ link, name }) => (
+                <li key={Math.random()} className={Style.li_nav_bar}>
+                  <Link href={link} passHref={true}>
+                    {name}
+                  </Link>
+                </li>
+            ))}
           </ul>
         </div>
         <div className={Style.div_socail__icons}>
           <Socialmedia />
         </div>
       </div>
+      <LiveCHat />
     </>
   );
 };
 export default Header;
+

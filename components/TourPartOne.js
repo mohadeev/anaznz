@@ -1,12 +1,11 @@
-import React from "react";
-import { FaLocationArrow } from "@react-icons/all-files/fa/FaLocationArrow";
-import { HiLocationMarker } from "@react-icons/all-files/hi/HiLocationMarker";
-import { AiFillStar } from "@react-icons/all-files/ai/AiFillStar";
-import { IoIosPeople } from "@react-icons/all-files/io/IoIosPeople";
-import { IoIosArrowDropdownCircle } from "@react-icons/all-files/io/IoIosArrowDropdownCircle";
-import { AiFillCalendar } from "@react-icons/all-files/ai/AiFillCalendar";
-import { FaMapSigns } from "@react-icons/all-files/fa/FaMapSigns";
+import React, { useState, useRef, useEffect, useCallback } from "react";
+
 import Style from "../styles/TourPartOne/TourPartOne.module.css";
+import { IoIosArrowBack } from "@react-icons/all-files/io/IoIosArrowBack";
+import { IoIosArrowForward } from "@react-icons/all-files/io/IoIosArrowForward";
+import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
+import FirstPart from "./FirstPart/FirstPart";
+import SecondInfo from "./SecondInfo";
 
 const TourPartOne = ({
   Tour_imnage,
@@ -16,6 +15,13 @@ const TourPartOne = ({
   Image4,
   Image5,
   Image6,
+  BgPostion,
+  Image1Postion,
+  Image2Postion,
+  Image3Postion,
+  Image4Postion,
+  Image5Postion,
+  Image6Postion,
   TourName,
   Category,
   Days,
@@ -27,6 +33,120 @@ const TourPartOne = ({
   Tag3,
   Tag4,
 }) => {
+  const [ArrayImages, setArrayImages] = useState([
+    Tour_imnage,
+    Image1,
+    Image2,
+    Image3,
+    Image4,
+    Image5,
+    Image6,
+  ]);
+
+  const DivSlider = useRef();
+  const [i, seti] = useState(0);
+  const [SlideImage, setSlideImage] = useState(ArrayImages[0]);
+
+  const ojb = useRef();
+
+  const SlideimageHide = () => {
+    DivSlider.current.style.visibility = "hidden";
+    seti(0);
+  };
+  const [SlideBackP, setSlideBackP] = useState("");
+
+  const SlideimagesHow = (e) => {
+    DivSlider.current.style.visibility = "visible";
+    if (e.target.id === "imaga_1") {
+      seti(0);
+      setSlideImage(ArrayImages[0]);
+    } else if (e.target.id === "imaga_2") {
+      seti(i + 1);
+      setSlideImage(ArrayImages[1]);
+      setSlideBackP(Image1Postion);
+    } else if (e.target.id === "imaga_3") {
+      seti(i + 2);
+      setSlideImage(ArrayImages[2]);
+      setSlideBackP(Image2Postion);
+    } else if (e.target.id === "imaga_4") {
+      seti(i + 3);
+      setSlideImage(ArrayImages[3]);
+      setSlideBackP(Image3Postion);
+    } else if (e.target.id === "imaga_5") {
+      seti(i + 4);
+      setSlideImage(ArrayImages[4]);
+      setSlideBackP(Image4Postion);
+    } else if (e.target.id === "imaga_6") {
+      seti(i + 5);
+      setSlideImage(ArrayImages[5]);
+      setSlideBackP(Image5Postion);
+    } else if (e.target.id === "imaga_7") {
+      seti(i + 6);
+      setSlideImage(ArrayImages[6]);
+      setSlideBackP(Image6Postion);
+    }
+    ojb.current.style.right = "100px";
+  };
+  // useEffect(() => {
+  //   document.addEventListener("scroll", SlideimageHide);
+  // });
+  const SlideRight = () => {
+    if (i === ArrayImages.length - 1) {
+      seti(0);
+      setSlideImage(ArrayImages[0]);
+    } else if (i === 0) {
+      setSlideImage(ArrayImages[1]);
+      seti(i + 1);
+      setSlideBackP(Image1Postion);
+    } else if (i === 1) {
+      setSlideImage(ArrayImages[2]);
+      seti(i + 1);
+      setSlideBackP(Image2Postion);
+    } else if (i === 2) {
+      setSlideImage(ArrayImages[3]);
+      setSlideBackP(Image3Postion);
+      seti(i + 1);
+    } else if (i === 3) {
+      setSlideImage(ArrayImages[4]);
+      setSlideBackP(Image4Postion);
+
+      seti(i + 1);
+    } else if (i === 4) {
+      setSlideImage(ArrayImages[5]);
+      setSlideBackP(Image5Postion);
+      seti(i + 1);
+    } else if (i === 5) {
+      setSlideImage(ArrayImages[6]);
+      seti(i + 1);
+      setSlideBackP(Image6Postion);
+    }
+  };
+
+  const SlideLeft = () => {
+    if (i === 0) {
+      setSlideImage(ArrayImages[6]);
+      seti(6);
+    } else if (i === 6) {
+      seti(i - 1);
+      setSlideImage(ArrayImages[5]);
+    } else if (i === 5) {
+      seti(i - 1);
+      setSlideImage(ArrayImages[4]);
+    } else if (i === 4) {
+      seti(i - 1);
+      setSlideImage(ArrayImages[3]);
+    } else if (i === 3) {
+      seti(i - 1);
+      setSlideImage(ArrayImages[2]);
+    } else if (i === 2) {
+      seti(i - 1);
+      setSlideImage(ArrayImages[1]);
+      setSlideBackP(Image1Postion);
+    } else if (i === 1) {
+      seti(i - 1);
+      setSlideImage(ArrayImages[0]);
+    }
+  };
   const Tag = (tags) => {
     return (
       <div className={Style.each_tage_item}>
@@ -39,122 +159,119 @@ const TourPartOne = ({
   };
   return (
     <div className={Style.tourpaertone_container}>
-      <div className={Style.tourpaertone_container1}>
+      <div ref={DivSlider} className={Style.div_slide_images_container}>
+        {" "}
+        <button onMouseDown={SlideLeft} className={Style.slide_row}>
+          {" "}
+          <IoIosArrowBack />{" "}
+        </button>
         <div
-          style={{ backgroundImage: `url(${Tour_imnage})` }}
-          className={Style.div_image_banner}
+          ref={ojb}
+          style={{
+            backgroundImage: `url(${SlideImage})`,
+            backgroundPosition: `${SlideBackP}`,
+          }}
+          className={Style.div_slide_images}
         >
-          <div className={Style.div_overley_tour}>
-            <div>
-              <h1 className={Style.tour_title}>{TourName}</h1>
-              <h2 className={Style.tour_category}>
-                <FaLocationArrow /> {Category}
-              </h2>
-            </div>
+          <div className={Style.div_overley_tour_slider}>
+            <AiOutlineClose className={Style.close} onClick={SlideimageHide} />
           </div>
-        </div>
+        </div>{" "}
+        <button className={Style.slide_row} onMouseDown={SlideRight}>
+          {" "}
+          <IoIosArrowForward />{" "}
+        </button>
       </div>
 
-      <div className={Style.div_info_tour}>
-        {/* //start of the div  */}
-        <div className={Style.div_info_images}>
+      <FirstPart
+        TourName={TourName}
+        BgPostion={BgPostion}
+        Category={Category}
+        Tour_imnage={Tour_imnage}
+        Tour={true}
+      />
+
+      <div className={Style.div_second_father}>
+        <div className={Style.div_info_tour}>
+          {/* //start of the div  */}
           <div
+            onClick={SlideimagesHow}
+            id="imaga_2"
             className={Style.div_info_1}
-            style={{ backgroundImage: `url(${Image1})` }}
+            style={{
+              backgroundImage: `url(${Image1})`,
+              backgroundPosition: `${Image1Postion ? Image1Postion : "center"}`,
+            }}
           ></div>
           <div
+            onClick={SlideimagesHow}
+            id="imaga_3"
             className={Style.div_info_2}
-            style={{ backgroundImage: `url(${Image2})` }}
+            style={{
+              backgroundImage: `url(${Image2})`,
+              backgroundPosition: `${Image2Postion ? Image2Postion : "center"}`,
+            }}
           ></div>
           <div className={Style.div_info_3}>
-            <div className={Style.firstchild_images}>
-              <div
-                style={{ backgroundImage: `url(${Image3})` }}
-                className={Style.div_info_3_1}
-              ></div>
-              <div
-                style={{ backgroundImage: `url(${Image4})` }}
-                className={Style.div_info_3_1}
-              ></div>
-            </div>
+            <div
+              onClick={SlideimagesHow}
+              id="imaga_4"
+              style={{
+                backgroundImage: `url(${Image3})`,
+                backgroundPosition: `${
+                  Image3Postion ? Image3Postion : "center"
+                }`,
+              }}
+              className={Style.div_info_3_1}
+            ></div>
+            <div
+              onClick={SlideimagesHow}
+              id="imaga_5"
+              style={{
+                backgroundImage: `url(${Image4})`,
+                backgroundPosition: `${
+                  Image4Postion ? Image4Postion : "center"
+                }`,
+              }}
+              className={Style.div_info_3_1}
+            ></div>
 
-            <div className={Style.lastchild_images}>
-              <div
-                style={{ backgroundImage: `url(${Image5})` }}
-                className={Style.div_info_3_1}
-              ></div>
-              <div
-                style={{ backgroundImage: `url(${Image6})` }}
-                className={Style.div_info_3_1}
-              ></div>
-            </div>
+            <div
+              onClick={SlideimagesHow}
+              id="imaga_6"
+              style={{
+                backgroundImage: `url(${Image5})`,
+                backgroundPosition: `${
+                  Image5Postion ? Image5Postion : "center"
+                }`,
+              }}
+              className={Style.div_info_3_1}
+            ></div>
+            <div
+              onClick={SlideimagesHow}
+              id="imaga_7"
+              style={{
+                backgroundImage: `url(${Image6})`,
+                backgroundPosition: `${
+                  Image6Postion ? Image6Postion : "center"
+                }`,
+              }}
+              className={Style.div_info_3_1}
+            ></div>
           </div>
+          {/* //end of the div  */}
         </div>
-        {/* //end of the div  */}
-        <div className={Style.div_info_tour_second}>
-          <div className={Style.div_info_tour_second_firstchild}>
-            <h3 className={Style.h3_morocco_tours}>
-              <HiLocationMarker /> Morocco Tours{" "}
-            </h3>
-            <h2 className={Style.tour_name_second_div}>{TourName}</h2>
-            <span className={Style.span_duration_tour}>
-              {Days} Days / {Nights} Nights
-            </span>
-            <span className={Style.span_rating_tour}>
-              {Array(5)
-                .fill()
-                .map((_, i) => (
-                  <AiFillStar key={Math.random()} />
-                ))}{" "}
-              <span className={Style.span_duration_tour}>5.5</span>
-            </span>
-            <div className={Style.tag_item}>
-              {Tag(Tag1)}
-              {Tag(Tag2)}
-              {Tag(Tag3)}
-              {Tag(Tag4)}
-            </div>
-          </div>
-          <div className={Style.div_info_tour_second_secondchild}>
-            <div className={Style.div_second_firstchidl}>
-              <p className={Style.just_book_now}>
-                {"Just booked! Get your spot before it's too"}
-                late.
-              </p>
-              <p className={Style.price_p_items}>
-                <span className={Style.span_duration}>
-                  <span
-                    className={Style.fgklfglfglkfgl}
-                    style={{ color: "white", textDecoration: "none" }}
-                  >
-                    From :{" "}
-                  </span>
-                  {Price} $
-                </span>
-                <span className={Style.span_duration}>{Discount} $</span>
-              </p>
-            </div>
-            <div className={Style.icons_items_tours_see}>
-              <span className={Style.icons_items_tour_see}>
-                <IoIosPeople className={Style.icons_svg} /> Privat / Shared
-              </span>
-              <span className={Style.icons_items_tour_see}>
-                <IoIosArrowDropdownCircle className={Style.icons_svg} /> Free
-                Cancellation
-              </span>
-              <span className={Style.icons_items_tour_see}>
-                <FaMapSigns className={Style.icons_svg} /> Attractions
-              </span>
-              <span className={Style.icons_items_tour_see}>
-                <AiFillCalendar className={Style.icons_svg} /> Possibility to
-                Modify
-              </span>
-              <span className={Style.icons_items_tour_see}>
-                <AiFillStar className={Style.icons_svg} /> Luxury / Standard
-              </span>
-            </div>
-          </div>
-        </div>
+        <SecondInfo
+          Discount={Discount}
+          TourName={TourName}
+          Days={Days}
+          Nights={Nights}
+          Price={Price}
+          Tag1={Tag1}
+          Tag2={Tag2}
+          Tag3={Tag3}
+          Tag4={Tag4}
+        />{" "}
       </div>
     </div>
   );

@@ -62,80 +62,59 @@ const HomeDestenatons = ({ LayoutName, ArraySlice }) => {
       desc: `
           Fes Desert Trips is among the popular Tours you can do if you start your Travel in Morocco by Fes. In Sahara Camel Trips, we organize the top Morocco Fes Desert Trips that will allow you to explore the most authentic Morocco. Take one of our desert tours in Fes to appreciate the beautiful scenery and the charm of the Sahara desert.`,
       image: "/../../../images/fes-images/fes-images.jpg",
-      url: "/comaing-soon",
+      url: "/tours-and-circuits/tours-from-fes",
     },
     {
       name: "Merzouga / off Road",
       desc: `
-          The Best Desert Tours in Marrakech will enable you to explore the
-          beauties of Southern Morocco and discover the desert of Sahara up
-          Close and Personal. Take one of our Desert Tours in Marrakech and get
-          to know original Morocco.`,
+          The Merzouga Desert Activities is something you should never miss during your trip to Morocco and has to be on the TOP of your bucket list. A lot of Travelers Travel to Morocco to visit the sahara desert`,
       image:
         "/../../../images/merzouga-images/camels-images/desert-camels-merzouga-10.jpg",
-      url: "/comaing-soon",
+      url: "//tours-and-circuits/tours-from-merzouga",
     },
     {
       name: "Casablanca",
       desc: `
-          The Best Desert Tours in Marrakech will enable you to explore the
-          beauties of Southern Morocco and discover the desert of Sahara up
-          Close and Personal. Take one of our Desert Tours in Marrakech and get
-          to know original Morocco.`,
+          The Morocco Casablanca Tours are perfect for anyone wishing to experience beautiful imperial cities, Atlas Mountains, verdant valleys, valleys, old kasbahs and Sahara Desert. Throughout our Tours in Casablanca you will experience the very best that the Morocco has to Offer.`,
       image: "/../../../images/casablanca-images/casablanca-images.jpg",
-      url: "/comaing-soon",
+      url: "/coming-soon",
     },
     {
       name: "Tangier",
       desc: `
-          The Best Desert Tours in Marrakech will enable you to explore the
-          beauties of Southern Morocco and discover the desert of Sahara up
-          Close and Personal. Take one of our Desert Tours in Marrakech and get
-          to know original Morocco.`,
+          With our Tangier Itineraries you can visit the Blue City of Morocco " Chefchaouen", take in the stunning views of the mountains of the Middle and High Atlas, enjoy camel trekking, and a night in the Sahara Desert. `,
       image: "/../../../images/tangier-images/tangier-images.jpg",
-      url: "/comaing-soon",
+      url: "/coming-soon",
     },
     {
       name: "Ouarzazate",
       desc: `
-          The Best Desert Tours in Marrakech will enable you to explore the
-          beauties of Southern Morocco and discover the desert of Sahara up
-          Close and Personal. Take one of our Desert Tours in Marrakech and get
-          to know original Morocco.`,
+          Errachidia Deserts offers To enjoy Camel Trekking in Merzouga Desert (Erg Chebbi Dunes) in Southeast Morocco, you need 6 - 7 hours from Fes or 8 - 9 hours from Marrakech, meaning many many hours in the car. To reduce the journey time, it is also possible to take a flight from Marrakech or Casablanca`,
       image:
         "/../../../images/ait-ben-haddou-images/ourzazate-aitbenhadou3.jpg",
-      url: "/comaing-soon",
+      url: "/coming-soon",
     },
     {
       name: "Agadir",
       desc: `
-          The Best Desert Tours in Marrakech will enable you to explore the
-          beauties of Southern Morocco and discover the desert of Sahara up
-          Close and Personal. Take one of our Desert Tours in Marrakech and get
-          to know original Morocco.`,
+          Agadir is a major contemporary city located in the southern region of  Morocco. It is especially attractive for its location, being surrounded by the Anti atlas. The Sahara Desert along the Atlantic coast with many National Parks and secluded beaches, all of which are easily accessible.`,
       image: "/../../../images/agadir-images/agadir-images.jpg",
-      url: "/comaing-soon",
+      url: "/coming-soon",
     },
 
     {
       name: "Rabat",
       desc: `
-          The Best Desert Tours in Marrakech will enable you to explore the
-          beauties of Southern Morocco and discover the desert of Sahara up
-          Close and Personal. Take one of our Desert Tours in Marrakech and get
-          to know original Morocco.`,
+          Rabat, the country's capital, the city merits a special mention. The city has been known as the "City of Gardens" since the beginning As we have already mentioned, Rabat is a perfect combination of an ancient and a modern city and one of the most dynamic and commercial cities in the country.`,
       image: "/../../../images/rabat-images/rabat-images.webp",
-      url: "/comaing-soon",
+      url: "/coming-soon",
     },
     {
       name: "Errachidia",
       desc: `
-          The Best Desert Tours in Marrakech will enable you to explore the
-          beauties of Southern Morocco and discover the desert of Sahara up
-          Close and Personal. Take one of our Desert Tours in Marrakech and get
-          to know original Morocco.`,
+          Errachidia Deserts offers To enjoy Camel Trekking in Merzouga Desert (Erg Chebbi Dunes) in Southeast Morocco, you need 6 - 7 hours from Fes or 8 - 9 hours from Marrakech, meaning many many hours in the car. To reduce the journey time, it is also possible to take a flight from Marrakech or Casablanca`,
       image: "/../../../images/errachidia-images/errachidia-images.jpg",
-      url: "/comaing-soon",
+      url: "/coming-soon",
     },
     {
       name: "Ceuta",
@@ -145,7 +124,7 @@ const HomeDestenatons = ({ LayoutName, ArraySlice }) => {
           Close and Personal. Take one of our Desert Tours in Marrakech and get
           to know original Morocco.`,
       image: "/../../../images/choune/choune.jpg",
-      url: "/comaing-soon",
+      url: "/coming-soon",
     },
     {
       name: "Theme Trips to Morocco",
@@ -156,7 +135,7 @@ const HomeDestenatons = ({ LayoutName, ArraySlice }) => {
           to know original Morocco.`,
       image:
         "https://turismomarruecos.net/wp-content/uploads/2020/10/viaje-de-novios-a-marruecos-home.jpg.webp",
-      url: "/comaing-soon",
+      url: "/coming-soon",
     },
     {
       name: "Events and Fistival Tours",
@@ -166,7 +145,7 @@ const HomeDestenatons = ({ LayoutName, ArraySlice }) => {
           Close and Personal. Take one of our Desert Tours in Marrakech and get
           to know original Morocco.`,
       image: "/../../../images/event/event.jpg",
-      url: "/comaing-soon",
+      url: "/coming-soon",
     },
     {
       name: "Luxury Travel to Morocco",
@@ -177,7 +156,7 @@ const HomeDestenatons = ({ LayoutName, ArraySlice }) => {
           to know original Morocco.`,
       image:
         "https://facibeni.com/i/2019/04/moroccan-bridal-inspiration-at-palais-namaskar-101-2048x1067.jpg",
-      url: "/comaing-soon",
+      url: "/coming-soon",
     },
     {
       name: "Shared Trips / Group Trips",
@@ -188,7 +167,7 @@ const HomeDestenatons = ({ LayoutName, ArraySlice }) => {
           to know original Morocco.`,
       image:
         "/../../../images/merzouga-images/desert-images/desert-images5.jpg",
-      url: "/comaing-soon",
+      url: "/coming-soon",
     },
     {
       name: "Cooking Class / Food Tours",
@@ -198,7 +177,7 @@ const HomeDestenatons = ({ LayoutName, ArraySlice }) => {
           Close and Personal. Take one of our Desert Tours in Marrakech and get
           to know original Morocco.`,
       image: "/../../../images/food-images/morocco-food5.jpg",
-      url: "/comaing-soon",
+      url: "/coming-soon",
     },
   ]);
 
@@ -271,14 +250,14 @@ export const CardName = ({ DeImage, Name, About, Massion }) => {
   };
   return (
     <div
-      style={{ flexBase: "30%", width: "30%" }}
+      // style={{width: "100%" }}
       onMouseOver={Animation}
       onMouseLeave={Animation2}
       className={Style.container_des_card2}
     >
       <div
         className={Style.div_image}
-        style={{ backgroundImage: `url(${DeImage})`, height: "350px" }}
+         style={{ backgroundImage: `url(${DeImage})`,height: "350px"}}
       >
         <div ref={BakcChange} className={Style.ovely}></div>
       </div>

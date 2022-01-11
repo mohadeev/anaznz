@@ -1,7 +1,24 @@
 .about_dest_container {
+    width: 100%;
   max-width: 1400px;
   display: flex;
   flex-direction: column;
   margin: auto;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-width: 1000px){
+  .about_dest_container {
+    width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
 }

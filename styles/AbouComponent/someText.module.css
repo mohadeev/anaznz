@@ -1,0 +1,31 @@
+.SomeText {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  font-family: poppins;
+  color: #666;
+  font-size: 16px;
+  text-align: center;
+}
+.SomeText > h3 {
+  color: #071c55;
+  font-size: 25px;
+  font-family: Playfair Display;
+}
+
+.button_home_explore {
+  background-color: #f3941e;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  width: 100%;
+  padding: 10px 10px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  margin: 50px auto ;
+  border: none;
+}

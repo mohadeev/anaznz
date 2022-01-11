@@ -1,4 +1,5 @@
 .div_review {
+  background-color: rgb(255, 255, 255);
   box-shadow: 10px 10px 40px #f7f8fa;
   border-radius: 10px;
   padding: 10px;
@@ -7,6 +8,7 @@
   flex-direction: row;
   justify-items: center;
   margin: 40px 0;
+  height: auto;
 }
 .div_image {
   width: 10%;
@@ -18,6 +20,8 @@
   flex-direction: column;
   text-align: start;
   justify-content: start;
+  height: auto;
+  padding: 0;
 }
 .div_staricons {
   display: flex;
@@ -27,6 +31,7 @@
   margin: 4px 0;
 }
 .title_tour_bem {
+  font-family: Playfair Display;
   color: #071c55;
   font-size: 17.5px;
   padding: 0;
@@ -127,6 +132,51 @@
   margin: 10px 0;
 }
 
+/*****************************************************************************************************/
+.div_ReviewComponet {
+  padding: 50px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.div_review_container{
+  flex-basis: 40%;
+  display: flex; 
+  flex-direction:column ;
+  
+}
+.div_photo_cleint {
+  border-radius: 5px;
+  width: 100%;
+  flex-basis: 40%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../../public/images/merzouga-images/camp-mages/camp-images-6.jpg");
+      box-shadow: 10px 10px 40px #B88266;
+
+}
+.anamimationbbbb {
+  background-color: #f3941e;
+  color: white;
+  font-size: 15px;
+  width: 130px;
+  margin-bottom: 20px;
+  padding: 10px 10px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+}
+
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE START CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE START CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE START CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
@@ -135,16 +185,17 @@
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE START CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE START CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE START CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1000px) {
   .div_review {
     box-shadow: 10px 10px 40px #f7f8fa;
     border-radius: 10px;
-    padding: 10px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
     margin: 40px 0;
+    width: 100%;
   }
   .div_image {
     width: 10%;
@@ -200,6 +251,7 @@
     background-color: #f8f8f8;
     padding: 10px;
     border-radius: 5px;
+    margin-bottom: 50px;
   }
   .contact_us_btn {
     background-color: #f3941e;
@@ -267,6 +319,53 @@
     background: #eeeeee;
     margin: 10px 0;
   }
+
+
+  /*.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-another div .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-*/
+  .div_ReviewComponet {
+  padding: 50px 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns :80% ;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-self: center;
+justify-self: center;
+}
+.div_review_container{
+  flex-basis: 100%;
+  display: flex; 
+  flex-direction:column ;
+  
+}
+.div_photo_cleint {
+  border-radius: 5px;
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../../public/images/merzouga-images/camp-mages/camp-images-6.jpg");
+  box-shadow: 10px 10px 40px #B88266;
+
+}
+.anamimationbbbb {
+  background-color: #f3941e;
+  color: white;
+  font-size: 15px;
+  width: 130px;
+  margin-bottom: 20px;
+  padding: 10px 10px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+}
 }
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE END CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE END CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/

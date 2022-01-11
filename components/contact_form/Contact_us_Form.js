@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { IoIosArrowUp } from "@react-icons/all-files/io/IoIosArrowUp";
-import Style from "../../styles/LiveChat/LiveChat.module.css";
+import Style from "../../styles/contactForm/contactForm.module.css";
 
 function Contact_us_Form() {
   const [name, setName] = useState("");
