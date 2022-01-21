@@ -1,5 +1,12 @@
 import React, { useState, useRef } from "react";
 import { IoIosArrowUp } from "@react-icons/all-files/io/IoIosArrowUp";
+import { FaCalendarCheck } from "@react-icons/all-files/fa/FaCalendarCheck";
+import { FaCalendarMinus } from "@react-icons/all-files/fa/FaCalendarMinus";
+import { FaUserAlt } from "@react-icons/all-files/fa/FaUserAlt";
+import { FaPhoneAlt } from "@react-icons/all-files/fa/FaPhoneAlt";
+import { FaEnvelopeOpenText } from "@react-icons/all-files/fa/FaEnvelopeOpenText";
+import { FaEnvelope } from "@react-icons/all-files/fa/FaEnvelope";
+
 import Style from "../../styles/contactForm/contactForm.module.css";
 
 function Contact_us_Form() {
@@ -49,7 +56,7 @@ function Contact_us_Form() {
       >
         <div className={Style.div_Contact_Form}>
           <span className={Style.TextContact_form}>
-            <IoIosArrowUp /> Your Name : {name}
+            <FaUserAlt /> Your Name : {name}
           </span>
           <input
             className={Style.input}
@@ -60,7 +67,7 @@ function Contact_us_Form() {
         </div>
         <div className={Style.div_Contact_Form}>
           <span className={Style.TextContact_form}>
-            <IoIosArrowUp /> Email Adress : {email}
+            <FaEnvelope /> Email Adress : {email}
           </span>
           <input
             placeholder="Enter Your Email"
@@ -71,14 +78,14 @@ function Contact_us_Form() {
 
         <div className={Style.div_Contact_Form}>
           <span className={Style.TextContact_form}>
-            <IoIosArrowUp /> Your Phone Number
+            <FaPhoneAlt /> Your Phone Number
           </span>
           <input placeholder="Enter Your Name" type="phone" />
         </div>
 
         <div className={Style.div_Contact_Form}>
           <span className={Style.TextContact_form}>
-            <IoIosArrowUp /> Departing Date
+            <FaCalendarCheck /> Departing Date
           </span>
           <input
             placeholder="Date"
@@ -90,7 +97,7 @@ function Contact_us_Form() {
         </div>
         <div className={Style.div_Contact_Form}>
           <span className={Style.TextContact_form}>
-            <IoIosArrowUp /> Returning Date
+            <FaCalendarMinus /> Returning Date
           </span>
           <input
             placeholder="Date"
@@ -103,7 +110,7 @@ function Contact_us_Form() {
 
         <div className={Style.div_Contact_Form}>
           <span className={Style.TextContact_form}>
-            <IoIosArrowUp /> Message : {message}
+            <FaEnvelopeOpenText /> Message : {message}
           </span>
           <textarea
             placeholder="Write us a Message and we will get you back soon"

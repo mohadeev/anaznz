@@ -26,21 +26,23 @@ const FirstPart = ({
         className={Style.div_image_banner}
       >
         <div className={Style.div_overley_tour} id="imaga_1">
-          <div className={Style.div_dicoration}>
-            <h3 className={Style.tour_title}>{TourName}</h3>{" "}
-            <div className={Style.dicoration_heart}></div>
-          </div>
-          <h2 className={Style.tour_category}>
-            {Category ? <FaLocationArrow /> : ""} {Category}
-          </h2>
-          {Desc ? <p className={Style.text_contnet}>{Desc}</p> : ""}{" "}
-          {Waves ? (
-            ""
-          ) : (
-            <div className={Style.div_buttom}>
-              <div className={Style.to_border}></div>
+          <div className={Style.width_fix_overfollw}>
+            <div className={Style.div_dicoration}>
+              <h3 className={Style.tour_title}>{TourName}</h3>{" "}
+              <div className={Style.dicoration_heart}></div>
             </div>
-          )}
+            <h2 className={Style.tour_category}>
+              {Category ? <FaLocationArrow /> : ""} {Category}
+            </h2>
+            {Desc ? <p className={Style.text_contnet}>{Desc}</p> : ""}{" "}
+            {Waves ? (
+              ""
+            ) : (
+              <div className={Style.div_buttom}>
+                <div className={Style.to_border}></div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

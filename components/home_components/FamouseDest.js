@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { MarrakechData } from "../../DaysData/MarrakechData";
 import Style from "../../styles/home_components/FamouseDest.module.css";
 const FamouseDest = () => {
   const [PpularTours, setPpularTours] = useState([
@@ -11,9 +10,9 @@ const FamouseDest = () => {
 
   return (
     <div className={Style.container_destnations}>
-      {PpularTours.map(({ id, flexBase }) => (
+      {/* {PpularTours.map(({ id, flexBase }) => (
         <MarrakechData WhatId={id} FlexBase={flexBase} key={Math.random()} />
-      ))}
+      ))} */}
     </div>
   );
 };

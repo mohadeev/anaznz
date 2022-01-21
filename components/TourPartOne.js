@@ -32,6 +32,9 @@ const TourPartOne = ({
   Tag2,
   Tag3,
   Tag4,
+  TourNameDis,
+  ImageTour,
+  PriceTour,
 }) => {
   const [ArrayImages, setArrayImages] = useState([
     Tour_imnage,
@@ -63,14 +66,18 @@ const TourPartOne = ({
     } else if (e.target.id === "imaga_2") {
       seti(i + 1);
       setSlideImage(ArrayImages[1]);
+      ojb.current.style.backgroundSize = "cover";
       setSlideBackP(Image1Postion);
     } else if (e.target.id === "imaga_3") {
       seti(i + 2);
       setSlideImage(ArrayImages[2]);
+      ojb.current.style.backgroundSize = "contain";
+
       setSlideBackP(Image2Postion);
     } else if (e.target.id === "imaga_4") {
       seti(i + 3);
       setSlideImage(ArrayImages[3]);
+      ojb.current.style.backgroundSize = "cover";
       setSlideBackP(Image3Postion);
     } else if (e.target.id === "imaga_5") {
       seti(i + 4);
@@ -98,12 +105,15 @@ const TourPartOne = ({
       setSlideImage(ArrayImages[1]);
       seti(i + 1);
       setSlideBackP(Image1Postion);
+      ojb.current.style.backgroundSize = "cover";
     } else if (i === 1) {
       setSlideImage(ArrayImages[2]);
       seti(i + 1);
       setSlideBackP(Image2Postion);
+      ojb.current.style.backgroundSize = "contain";
     } else if (i === 2) {
       setSlideImage(ArrayImages[3]);
+      ojb.current.style.backgroundSize = "cover";
       setSlideBackP(Image3Postion);
       seti(i + 1);
     } else if (i === 3) {
@@ -134,13 +144,17 @@ const TourPartOne = ({
       setSlideImage(ArrayImages[4]);
     } else if (i === 4) {
       seti(i - 1);
+      ojb.current.style.backgroundSize = "cover";
       setSlideImage(ArrayImages[3]);
     } else if (i === 3) {
       seti(i - 1);
+      ojb.current.style.backgroundSize = "contain";
       setSlideImage(ArrayImages[2]);
     } else if (i === 2) {
       seti(i - 1);
       setSlideImage(ArrayImages[1]);
+      ojb.current.style.backgroundSize = "cover";
+
       setSlideBackP(Image1Postion);
     } else if (i === 1) {
       seti(i - 1);
@@ -262,6 +276,9 @@ const TourPartOne = ({
           {/* //end of the div  */}
         </div>
         <SecondInfo
+          TourNameDis={TourName}
+          PriceTour={Price}
+          ImageTour={Tour_imnage}
           Discount={Discount}
           TourName={TourName}
           Days={Days}

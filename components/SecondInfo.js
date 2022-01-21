@@ -6,6 +6,7 @@ import { IoIosPeople } from "@react-icons/all-files/io/IoIosPeople";
 import { IoIosArrowDropdownCircle } from "@react-icons/all-files/io/IoIosArrowDropdownCircle";
 import { AiFillCalendar } from "@react-icons/all-files/ai/AiFillCalendar";
 import { FaMapSigns } from "@react-icons/all-files/fa/FaMapSigns";
+import ReduxComp from "./redux-comp/Redux-comp";
 
 const SecondInfo = ({
   TourName,
@@ -17,6 +18,10 @@ const SecondInfo = ({
   Tag2,
   Tag3,
   Tag4,
+  TourNameDis,
+  ImageTour,
+  PriceTour,
+  Descount,
 }) => {
   const [MainIcons, setMainIcons] = useState([
     {
@@ -94,6 +99,12 @@ const SecondInfo = ({
             </span>
             <span className={Style.span_duration}>{Discount} $</span>
           </p>
+          <ReduxComp
+            TourNameDis={TourNameDis}
+            ImageTour={ImageTour}
+            PriceTour={PriceTour}
+            Descount={Discount}
+          />
         </div>
         <div className={Style.icons_items_tours_see}>
           {MainIcons.map(({ icon, name }) => (

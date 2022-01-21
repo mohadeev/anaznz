@@ -3,9 +3,7 @@ import Link from "next/link";
 import Style from "../../../styles/AbouComponent/Deslouyt.module.css";
 import FirstPart from "../../../components/FirstPart/FirstPart";
 import DetlaisDes from "../../../components/AbouComponent/DetlaisDes";
-import { MarrakechData } from "../../../DaysData/MarrakechData";
 import SomeText, { Button } from "../../../components/AbouComponent/SomeText";
-
 
 const Index = () => {
   const [DestantonArry, setDestantonArry] = useState([
@@ -82,27 +80,15 @@ const Index = () => {
         TextButton="Exmpore More About Merzouga"
       />
       <SomeText TitleConntet={""} Content={""} />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          columnGap: "5%",
-          rowGap: "50px",
-          width: "90%",
-          margin: "auto",
-          marginTop: "0",
-          justifyContent: "center",
-        }}
-      >
-        {PpularTours.map(({ ID, flexBase }) => (
+      <div className={Style.div_tours}>
+        {/* {PpularTours.map(({ ID, flexBase }) => (
           <MarrakechData
             WhatId={ID}
             SeletElennt={true}
             FlexBase={flexBase}
             key={Math.random()}
           />
-        ))}
+        ))} */}
       </div>
     </div>
   );

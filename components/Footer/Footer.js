@@ -22,7 +22,7 @@ const Footer = () => {
     "/images/visa.png",
   ]);
   return (
-    <>
+    <div className={Style.div_footer_container}>
       <div
         style={{ backgroundImage: `url('/images/header.png')` }}
         className={Style.div_wayes}
@@ -121,7 +121,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

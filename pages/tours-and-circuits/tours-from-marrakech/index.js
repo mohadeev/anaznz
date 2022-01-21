@@ -3,8 +3,9 @@ import Link from "next/link";
 import Style from "../../../styles/AbouComponent/Deslouyt.module.css";
 import FirstPart from "../../../components/FirstPart/FirstPart";
 import DetlaisDes from "../../../components/AbouComponent/DetlaisDes";
-import { MarrakechData } from "../../../DaysData/MarrakechData";
+import { Fliter } from "../../../DaysData/Fliter/Fliter";
 import SomeText from "../../../components/AbouComponent/SomeText";
+import Seo from "../../../components/Seo";
 
 const Index = () => {
   const [DestantonArry, setDestantonArry] = useState([
@@ -31,9 +32,29 @@ const Index = () => {
     },
   ]);
   const [PpularTours, setPpularTours] = useState([{ ID: "MARR" }]);
+  const [SeoArray, setSeoArray] = useState([
+    {
+      descmeta: "",
+      seotitle:
+        "Tours from Marrakech, Desert Tour from Marrakech, Private Luxury Sahara Desert trip from Marrakech, Morocco excursions from Marrakech to Sahara Desert Top Tours And Curcuits From Marrakech for 2022 2023",
+      imageseo:
+        "https://www.topsaharatrips.com/images/merzouga-quad-biking.webp",
+      seaKeyword:
+        "Morocco Tours from Marrakech, Desert tour from Marrakech, Private Luxury Sahara Desert tour from Marrakech, excursions from Marrakech to Sahara Desert, Shared Group Desert tour from marrakech, Private Luxury trip from marrakech to sahara, Packages morocco desert tour from marrakech, desert tour starting from from Marrakech, Morocco trip to the desert sahara from marrakech, Sahara trip from marrakech to Chefchaouen, 5 Days desert trip from marrakech to erg chebbi, 5 Days Desert Tour starting from Casablanca to marrakech, Morocco Group desert tour from Marrakech, Shared 3 days desert tour from Marrakech, Luxury Sahara Desert Tours from Marrakech, Customized morocco tour from Marrakech, desert tour from Marrakech, morocco trip starting from marrakech, Private desert tour from marrakech, Morocco desert trip from marrakech, Morocco Tour starting From Marrakech To Sahara, Camel Trek from Marrakech, visit the sahara from marrakech, travel from marrakech to chefchaoune, camel trek from marrakech to tangier,desert tour from marrakech to chefchaouen, tours from Casablanca to sahara desert,Shared Group Marrakech Desert tour, Marrakech sahara Tour, morocco sahara excursions marrakech, sahara trip from marrakech, visit Sahara desert, travel Sahara desert,Best Marrakech Desert Trips, Morocco Desert Tours,  GO SAHARA TOURS MOROCCO, Sahara Camel Trek from Marrakech, Morocco desert Tours from Marrakech, 3, 4, 5 day sahara trip from Marrakech,  Travel to Visit Sahara desert starting from Marrakech, Marrakech Family Tour, Shared Group Tours for Couples, Students Group, Honeymoon, solo traveler desert tour from Marrakech",
+    },
+  ]);
 
   return (
     <div className={Style.about_dest_container}>
+      {SeoArray.map(({ descmeta, seotitle, imageseo, seaKeyword }) => (
+        <Seo
+          SeaKeyWord={seaKeyword}
+          SeoTitle={seotitle}
+          DescMeta={descmeta}
+          ImageSeo={imageseo}
+          key={Math.random() * 12}
+        />
+      ))}
       <FirstPart
         TourName={"Marrakech"}
         Category={"Morocco Tour in , From Marrakech "}
@@ -73,27 +94,17 @@ const Index = () => {
       )}
 
       <SomeText TitleConntet={""} Content={""} />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          flexWrap: "wrap",
-          columnGap: "5%",
-          rowGap: "50px",
-          width: "90%",
-          margin: "auto",
-          marginTop: "0",
-          justifyContent: "center",
-        }}
-      >
-        {PpularTours.map(({ ID, flexBase }) => (
+      <div className={Style.div_tours}>
+        {/* <Test /> */}
+        <Fliter FromWhere={0} />
+        {/* {PpularTours.map(({ ID, flexBase }) => (
           <MarrakechData
             WhatId={ID}
             SeletElennt={true}
             FlexBase={flexBase}
             key={Math.random()}
           />
-        ))}        
+        ))}         */}
       </div>
     </div>
   );

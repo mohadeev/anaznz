@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 
-const Seo = ({ SeoTitle, DescMeta, ImageSeo }) => {
+const Seo = ({ SeoTitle, DescMeta, ImageSeo, SeaKeyWord }) => {
   const [HostName, setHostName] = useState("");
   useEffect(() => {
     setHostName(window.location.href);
@@ -11,6 +11,10 @@ const Seo = ({ SeoTitle, DescMeta, ImageSeo }) => {
     <Head>
       <title>{SeoTitle} || Ur Excursions</title>
       <meta name="description" content={DescMeta} />
+      <meta
+        name="Keywords"
+        content={SeaKeyWord ? SeaKeyWord + " " + SeoTitle : SeoTitle}
+      />
       <meta
         name="robots"
         content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"

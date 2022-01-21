@@ -46,11 +46,15 @@
   justify-content: center;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .dicoration_heart {
-  width: 24px;
-  height: 25px;
+  /* position: absolute;
+  right: -22px; */
+  top: 10px;
+  width: 15px;
+  height: 15px;
   object-fit: contain;
   background-size: contain;
   background-repeat: no-repeat;
@@ -107,6 +111,7 @@
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE START CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 @media screen and (max-width: 1000px) {
   .div_image_banner {
+
     height: 400px;
     background-position: center;
     background-repeat: no-repeat;
@@ -123,7 +128,7 @@
     margin: auto;
   }
   .div_overley_tour {
-    width: 100%;
+    width : 100%;
     height: 600px;
     background-color: #071c5544;
     z-index: 0;
@@ -133,6 +138,12 @@
     position: relative;
     align-items: center;
     z-index: 0;
+    padding: 0 100px;
+  }
+  .width_fix_overfollw{
+    /* margin-right: 400px; */
+    width:  500px;
+
   }
   .text_contnet {
     max-width: 1000px;
@@ -141,7 +152,7 @@
     border-radius: 4px;
     color: white;
     padding: 40px;
-    position: absolute;
+    position: relative;
     top: 30%;
     right: 0;
   }
@@ -158,8 +169,8 @@
   }
 
   .dicoration_heart {
-    width: 16px;
-    height: 16px;
+    width: 10px;
+    height: 10px;
     object-fit: contain;
     background-size: contain;
     background-repeat: no-repeat;

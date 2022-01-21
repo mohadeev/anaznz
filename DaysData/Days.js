@@ -99,46 +99,58 @@ export const DayTour = ({
         ),
       },
       {
-        id: "MARR-HIG-OUR",
-        day: "Marrakech - High Atlas - AitBenHaddou - Ouarzazate.",
+        id: "MAR-OUR-DES",
+        day: "Marrakech - High Atlas - AitBenHaddou - Dades Valley.",
         tour: (
           <p>
-            Your {FocuseKeyFour} around the eastern half of Morocco you will
-            travel in style in a modern air-conditioned 4WD / minibus or any
-            service you had booked. Our{" "}
-            <Link href={"/about-us"}>
-              <b>staff</b>
-            </Link>{" "}
-            will pick you up at your Hotel or Airport. Your 5 Days Tour From
-            Marrakech to Fes and Merzouga will start at 08:30 AM and we will
-            escort you to the starting point. and our driver will take us
-            through the High Atlas Mountains. The rugged beauty and height of
-            these peaks will have you glued to the window in our minibus as we
-            wind through the mountain roads. Along the way are several Berber
-            villages and we will have the chance to stop and photograph the
-            towering scenery before heading to Kasbah Ait Ben Haddou. It will be
-            another couple of hours before we get here, but the landscape will
-            remain impressive at all times. Kasbah Ait Ben Haddou is a fortified
-            village that is home to a half dozen markets and merchants' houses.
-            Our tour of this ancient building will be guided. Just like
-            Ouarzazate - which will be the next stop on this tour - Kasbah Ait
-            Ben Haddou is a popular location for Hollywood film crews and
-            production companies. You will see exactly why it is a great setting
-            for several movies set in biblical times, ancient Arab legends, or
-            films set thousands of years ago. Sodom and Gomorrah (1963), The Man
-            Who Wanted to be King (1975), and The Jewel of the Nile (1985) all
-            used the ancient fortified village of Kasbah Ait Ben Haddou. Our{" "}
-            {FocuseKeyTwo} , where we will tour this city and see the movie
-            studios. Ouarzazate is a highly prized location for film producers,
-            many of which flock here especially for its old buildings, golden
-            scenery, and stunning backdrops. One gets the feeling of having
-            taken a trip back in time while exploring the antique kasbahs, the
-            golden clay edifices, and don't be amazed if you see a Hollywood
-            film team shooting a movie here. Among the blockbusters filmed here
-            are the classic Bond movie Daylight (1987), Lawrence of Arabia
-            (1962), and The Last Temptation of Christ (1988). Afterward, we will
-            continue our {TourPrograme} to a traditional Hotel or Riad depending
-            on what you book to spend the night in your accommodation.
+            Your {TourPrograme}around the eastern half of Morocco you will
+            travel in style in a modern air-conditioned 4WD/minibus or any
+            services you had booked. Our <Staff /> will pick you up from your
+            Location Hotel or Airport... your
+            {FocuseKeyone} Will start at 08:30 AM and escort you to the
+            departure point. We will travel over the High Atlas Mountain range
+            and descend into the Kasbah of Ait Ben Haddou. Ait Ben Haddou
+            fortified since the 11th century during the Almoravid period. , The
+            strategic importance of the site is due to its location in the Onila
+            valley as well as one of the main trans-Saharan trade routes. The
+            Tizi-n-Tika pass, accessible by this road, was one of the few to
+            cross the Atlas Mountains, crossing Marrakech and the Draa Valley on
+            the edge of the Sahara. Other kasbahs and palaces were located along
+            this route, such as the neighboring Tamdaghet to the north. Here you
+            will feel almost like you have stepped back in time to the days of
+            gladiators, desert nomads, and ancient trading markets. Lunch on the
+            first day will be taken in the Kasbah at Ait Ben Haddou after the
+            sightseeing tour has finished.Our next stop on our first day will be
+            at Ouarzazate. you will enjoy the scenery of a city where most
+            common movies have filmed such as “The Mummy (1999 & 2001)”,
+            “Lawrence of Arabia (1962)”, and “Gladiator (2000)” without
+            forgetting “Game of Thrones” in 2013 are among the many films which
+            have taken in a city called The Gateway to the Desert.In the city,
+            we can take stop at a café before venturing onto the Dades Valley.
+            Once there you can relax and unwind in your private room at a local
+            traditional Riad in Dades with an en-suite bathroom and enjoy the
+            culinary delights of a Moroccan evening dinner.
+            <LearnMoreAboutThis UrlToLearn={""} />
+          </p>
+        ),
+      },
+
+      {
+        id: "MARR-ARVL-DAY",
+        day: "Days Arival then Hotel",
+        tour: (
+          <p>
+            this tour is under constraction
+            <LearnMoreAboutThis />
+          </p>
+        ),
+      },
+      {
+        id: "MARR-DPRT-DAY",
+        day: "Marrakech to Airport",
+        tour: (
+          <p>
+            this tour is under constraction
             <LearnMoreAboutThis />
           </p>
         ),
@@ -153,17 +165,39 @@ export const DayTour = ({
         ),
       },
       {
-        id: "MARR-CAS",
+        id: "MARR-IPR-CSB",
         day: "Marrakech - Casablanca.",
         tour: (
           <p>
-            Tour not avalible <LearnMoreAboutThis />{" "}
+            After breakfast in your riad, our guide will meet you in the
+            reception to start your morocco trip taking the way to Casablanca
+            “the largest city in whole Morocco”. In Casablanca we will have
+            great chance to tour around the historical heritage of this Imperial
+            city. We will offer you rich opportunity to see the most important
+            things (the first big mosque in Morocco). After, we go to the.
+            hotel."Tour not avalible"
+            <LearnMoreAboutThis />{" "}
+          </p>
+        ),
+      },
+      {
+        id: "MARR-CSB-RBT",
+        day: "Marrakech - Casablanca - Rabat.",
+        tour: (
+          <p>
+            Breakfast. Highway transfer to Casablanca. Upon arrival, visit the
+            environment of the majestic and highest in the world Hassan Mosque.
+            Continuation of the route to Rabat, to visit the most outstanding
+            places: the Alcazaba of Oudayas, the Mausoleum of Mohammed V, and
+            the Tower of Hassan. Dinner and accommodation at Riad Zyo or
+            similar. "Tour not avalible"
+            <LearnMoreAboutThis />{" "}
           </p>
         ),
       },
       {
         id: "MARR-VIT",
-        day: "Marrakech - Casablanca.",
+        day: "Full Day To Visit Marrakech - Marrakech sightseeing - Marrakech Guided Tour",
         tour: (
           <p>
             Investigating the Marrakech souks is an unmissable experience, and
@@ -189,8 +223,8 @@ export const DayTour = ({
         ),
       },
       {
-        id: "MARR-CHI-ESS",
-        day: "Marrakech - Chichaoua  Essaouira.",
+        id: "MARR-CHI-ESS-MARR",
+        day: "Marrakech - Chichaoua - Essaouira - Marrakech.",
         tour: (
           <p>
             Your trip from Marrakech to Essaouira starts with a drive through
@@ -230,6 +264,73 @@ export const DayTour = ({
           </p>
         ),
       },
+      {
+        id: "MARR-DAY-OZD",
+        day: "Marrakech - Day Trip To Azoud - Marrakech.",
+        tour: (
+          <p>
+            Starting from Marrakech at 8:30, a day’s visit to the famous Ouzoud
+            waterfalls of about 100 metres in height and which constitute one of
+            the most spectacular natural beauty spots in Morocco. It is about a
+            three-hour drive to get there.The surrounding countryside offers red
+            cliffs, oleander and doves and, if you are lucky, you will catch a
+            glimpse of some Barbary apes. Bird-watchers will enjoy a trip to the
+            waterfalls, too, as will walkers who can enjoy the area at any time
+            of year, except perhaps the hottest summer months of July and
+            August.There are plenty of places to have lunch with a view over the
+            waterfalls from their terraces. And a short walk will bring you to
+            the top of the falls from where you can look down at their full
+            magnificence and at the river. The best view of the falls is from
+            the bottom – good exercise as well, as there are some 1000 steps!On
+            the road back to Marrakech at Demnate, we drive the six kilometres
+            to Imi-n-Ifri, which in the local dialect means “door to the cave”.
+            It is a natural rock bridge formed by an underground cave system
+            collapsing. The views from here are spectacular as the Méhasseur
+            River flows between the sheer, vertical rock walls. Your Ouzoud
+            Waterfalls full-day trip from Marrakech comes to an end by the end
+            of the afternoon.
+            <LearnMoreAboutThis Url={"#"} />
+          </p>
+        ),
+      },
+      {
+        id: "MARR-ORK-MARR",
+        day: "Marrakech – Ourika Valley – Marrakech",
+        tour: (
+          <p>
+            Your full day excursion to Ourika Valley will start at 09h00 AM with
+            a drive across the Houz Plains, and stop at local ladies Argan oil
+            cooperative to see how this liquid gold is extracted and some
+            cosmetic fine products are made. From here, we will continue to Tnin
+            Ourika, one of the largest Berber Souks in the area, where all the
+            Villagers from the Ourika Valley come once a week to trade & buy
+            their goods. From here, we will follow Ourika river driving next to
+            the stream up to the Berber village of Setti Fatma, where most of
+            the locals in Marrakech escape to summer heat and spend a day under
+            the shades of the walnut trees. For those who would like to explore
+            the Valley on foot, local hiking guides are available for hire to
+            walk you to some stunning cascades and back. If you fancy a lazy
+            day, relax at one of the cafés on the riverbank and enjoy the rest
+            of the day listening to the sound of the stream with the High Atlas
+            Mountains as a backdrop. Local cafés are available for a light lunch
+            and can accommodate all budgets. Drive back to Marrakech late in the
+            afternoon where your day trip to Ourika Valley will end with a drop
+            off at your hotel or Jamaa Elfna Square.
+            <LearnMoreAboutThis Url={"#"} />
+          </p>
+        ),
+      },
+      {
+        id: "MARR-LBR-DAY",
+        day: "lIbre Day to rest in the Hotel ",
+        tour: (
+          <p>
+            this is Day is under constraction
+            <LearnMoreAboutThis Url={"#"} />
+          </p>
+        ),
+      },
+
       //---------------------------MARRAKECH-END---------------------------//
 
       //----------------------------------BORDER-------------------------------------------------//
@@ -282,7 +383,7 @@ export const DayTour = ({
         ),
       },
 
-      //---------------------------DADES-END---------------------------//
+      //----f-----------------------DADES-END---------------------------//
 
       //----------------------------------BORDER-------------------------------------------------//
 
@@ -454,6 +555,34 @@ export const DayTour = ({
           </p>
         ),
       },
+      {
+        id: "MER-DRA-AGZ",
+        day: "Merzouga Desert - Rissani - Alnif - Draa Valley - Agdz.",
+        tour: (
+          <p>
+            On this Day Trip on our {TourPrograme}, you will wake up early in
+            the morning in order to watch the beautiful Sunrise, after that, a
+            healthy breakfast will be waiting for you in the Camp. After
+            Breakfast we will leave the Desert towards Rissani where we will
+            visit the market (market days: Tuesday, Thursday, and Saturday), we
+            will then continue to Erfoud where we can visit the manufactures of
+            petrified marble if we haven't visited them yet we can skip them and
+            head to the palm groves of Touroug and Tinjdad. An hour later we
+            reach one of the most beautiful places of the High Atlas, the Todra
+            Gorge. The river course has carved out the rocky gorge and it is
+            very popular with climbers because of its beauty and high rock
+            walls. Time at leisure to have lunch in this beautiful place. A
+            short walk through the gorges is highly advisable to better enjoy
+            the beauty of the landscape. In the afternoon we continue to the
+            Dades Valley, also known as the fig Valley. We will drive through
+            Boumalne Dades and stop at the "monkey legs". Dinner and overnight
+            at your accommodation in the Dades Gorges where be end day of your{" "}
+            {FocuseKeyFour}.
+            <LearnMoreAboutThis Url={"#"} />
+          </p>
+        ),
+      },
+
       //---------------------------MERZOUGA-END---------------------------//
 
       //----------------------------------BORDER-------------------------------------------------//
@@ -625,6 +754,226 @@ export const DayTour = ({
             this city is one of the most prestigious in the whole country. The
             options are numerous and will result in an intense day, with a
             well-deserved rest at night in the riad in the medina.
+            <LearnMoreAboutThis />
+          </p>
+        ),
+      },
+      {
+        id: "FES-SFRO-FES",
+        day: "Sefrou and Bhalil Day-Trip: from Fes.",
+        tour: (
+          <p>
+            Starting with a 10:00 AM pickup from you accommodation. Climb into
+            an air-conditioned vehicle to make the journey. First stop will be
+            Sefrou, know for its waterfalls, and unique land formations. Here
+            you can admire the shrine of Sidi-Al Bousserghine. Explore the town,
+            while learning about the architecture, the religious influences, and
+            the history. Visit the rich plant life of Oued Aggay. Grab lunch at
+            a restaurant in Sefou, before driving the road that climbs into
+            olive country. Bhalil and the famous cave paintings will provide you
+            with a rich insight into the history of the region. Then visit a
+            local family, where you can drink mint tea and learn about the local
+            daily life. To finish your day trip, your driver will return you to
+            your accommodation in Fes. this tour is under constraction
+            <LearnMoreAboutThis />
+          </p>
+        ),
+      },
+      {
+        id: "FES-MNKS-FES",
+        day: "From Fes to Meknes ",
+        tour: (
+          <p>
+            Pickup from your stay in Fez, Drive passing through Ain Lah, Royal
+            family firm, Zagotta, Dam Achahad & Rif mountain. *Stops to enjoy
+            the landscape, cool air, and capture photos. *Arrive at Volubilis an
+            attractive preserved Roman ruins. Together we will learn more about
+            the historical and the cultural Roman city by looking at the ruins
+            of the Arch of Caracalla, Basilica and Capitoline Temple. *Free time
+            to discover the place as you pleasant. *Next stop, town Moulay-
+            Idriss which built by Moulay Idriss. Opened just for Muslims, but it
+            gives you an excellent impression, by taking a look at the hallway
+            of the town. After lunch, *Discover walls with monumental gates
+            dating back to XVII-century as Royal Palace, Berdaïne Bab, Bab
+            Khemis, Bab Mansour and El Heri es-Souan huge granaries and stables
+            built by Moulay Ismail's soldiers. *Go to the underground channels
+            which bring fresh water from Middle Atlas Mountains *Stop in Moulay
+            Ismail Mausoleum *Visit Place-El-Hedim great monumental and other
+            places Drive Back to Fez city.
+            <LearnMoreAboutThis />
+          </p>
+        ),
+      },
+      {
+        id: "FES-DPRT-DAY",
+        day: "Fes - to AirPort",
+        tour: (
+          <p>
+            THIS TOUR IS UNDER CONSTRACTON
+            <LearnMoreAboutThis />
+          </p>
+        ),
+      },
+      {
+        id: "FES-LBR-DAY",
+        day: "lIbre Day to rest in the Hotel ",
+        tour: (
+          <p>
+            this is Day is under constraction
+            <LearnMoreAboutThis Url={"#"} />
+          </p>
+        ),
+      },
+      {
+        id: "FES-STAT-CSB",
+        day: "Fes - Meknes - Casablanca",
+        tour: (
+          <p>
+            this is Day is under constraction
+            <LearnMoreAboutThis Url={"#"} />
+          </p>
+        ),
+      },
+      //----------------------------FES END---------------------------//
+
+      //----------------------------------BORDER-------------------------------------------------//
+
+      //----------------------------AGDZ BEGIN---------------------------//
+      {
+        id: "AGZ-OUR-MAR",
+        day: "Agdz - Ourzazate - High Atlas - Marrakech.",
+        tour: (
+          <p>
+            On this Day of Our (Tour), it is time to start exploring this
+            fascinating city, one of the great attractions on this (Tour ). It
+            will be accompanied by our official guide, in your languish, with
+            whom you will meet at the hotel or at the agreed place. else if you
+            have guide official guide you will not need a local guide because
+            our guides know every part of Morocco The guided tour, which will
+            take place in the morning to the main monuments of the city oldest
+            Fes city by walking on its crowded souks (markets), epic alleyways,
+            will take you through the and the most emblematic places of the
+            medina declared a World Heritage Site by UNESCO. Some of those
+            places can be the Karaouine mosque and the university it houses (one
+            of the oldest in the world), the Bou Inania and Attarin madrasas,
+            the most popular squares such as Nejjarine, the souks, and more
+            authentic artisan quarters such as that of the tanners ... and a
+            long etcetera. The medina of Fez is one of the largest in North
+            Africa, so some sights can be left out of the morning itinerary. For
+            this reason, the free afternoon of this day can be a good complement
+            to continue discovering the city: the Mellah (Jewish quarter), the
+            Royal Palace with its spectacular Golden Gates or museums such as
+            Borj Nord are some interesting proposals for this moment. Or, the
+            shops and popular establishments in the center, since the crafts of
+            this city is one of the most prestigious in the whole country. The
+            options are numerous and will result in an intense day, with a
+            well-deserved rest at night in the riad in the medina.
+            <LearnMoreAboutThis />
+          </p>
+        ),
+      },
+      //----------------------------AGDZ END---------------------------//
+
+      //----------------------------------BORDER-------------------------------------------------//
+
+      //----------------------------CASABLANCA BEGIN---------------------------//
+      {
+        id: "CSB-RBT-CHF",
+        day: "Casablanca - Rabat - Ouazan - Chefchaouen.",
+        tour: (
+          <p>
+            this day is udner constraction
+            <LearnMoreAboutThis />
+          </p>
+        ),
+      },
+      {
+        id: "CSB-RBT-ASILA",
+        day: "Casablanca - Rabat - Ouazan - Asilah.",
+        tour: (
+          <p>
+            this day is udner constraction
+            <LearnMoreAboutThis />
+          </p>
+        ),
+      },
+      //----------------------------CASABLANCA END---------------------------//
+
+      //----------------------------------BORDER-------------------------------------------------//
+
+      //----------------------------CHEFCHAOUNE BEGIN---------------------------//
+      {
+        id: "CHF-VIT-FES",
+        day: " Chefchaouen - Chefchaouen Visit - evning Fes.",
+        tour: (
+          <p>
+            this day is udner constraction
+            <LearnMoreAboutThis />
+          </p>
+        ),
+      },
+      {
+        id: "CHF-VIT-DAY",
+        day: " Chefchaouen - Free Day Chefchaouen Visit.",
+        tour: (
+          <p>
+            this day is udner constraction
+            <LearnMoreAboutThis />
+          </p>
+        ),
+      },
+      {
+        id: "CHF-MKS-FES",
+        day: " Chefchaouen - Chefchaouen Visit - evning Fes.",
+        tour: (
+          <p>
+            this day is udner constraction
+            <LearnMoreAboutThis />
+          </p>
+        ),
+      },
+      {
+        id: "CHF-DIRICT-MKS-FES",
+        day: " Chefchaouen - Meknes - Moring depurt dictyle to - Fes.",
+        tour: (
+          <p>
+            this day is udner constraction
+            <LearnMoreAboutThis />
+          </p>
+        ),
+      },
+      //----------------------------CHEFCHAOUNE END---------------------------//
+
+      //----------------------------------BORDER-------------------------------------------------//
+
+      //----------------------------ASILA BEGIN---------------------------//
+      {
+        id: "ASILA-RIF-CHF",
+        day: "Asilah - via Rif -  Chefchaouen",
+        tour: (
+          <p>
+            this day is udner constraction
+            <LearnMoreAboutThis />
+          </p>
+        ),
+      },
+      {
+        id: "ASILAH-VIT-DAY",
+        day: "Vsit Alsilah Day",
+        tour: (
+          <p>
+            this day is udner constraction
+            <LearnMoreAboutThis />
+          </p>
+        ),
+      },
+      {
+        id: "ASILA-RIF-DIRCT-CHF",
+        day: "Asilah - via Rif -  Chefchaouen",
+        tour: (
+          <p>
+            {/* this tour will go derectl to chefchaouen this day is another */}
+            constraction
             <LearnMoreAboutThis />
           </p>
         ),

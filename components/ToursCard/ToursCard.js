@@ -12,6 +12,7 @@ const ToursCard = ({
   Desc,
   Popular,
   Days,
+  Nights,
   Price,
   Descount,
 }) => {
@@ -26,11 +27,11 @@ const ToursCard = ({
     },
     {
       icon: <FaClock />,
-      name: Days + " Days",
+      name: `${Days} Days / ${Nights} Nights`,
     },
   ]);
   return (
-    <Link href={`${Url}`} passHref={true}>
+    <Link href={`${Url ? Url : "#"}`} passHref={true}>
       <div
         style={{ backgroundImage: `${FlexBase}`, maxWidth: `${FlexBase}` }}
         className={Style.div_tourcard_contaainer}

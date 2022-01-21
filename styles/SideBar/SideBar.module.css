@@ -1,8 +1,10 @@
 .div_mom {
   position: relative;
+  height: 100%;
   width: 30%;
   height: auto;
   margin: 2.5%;
+  margin-right: 50px;
   object-fit: contain;
   align-items: center;
   justify-self: space-evenly;
@@ -24,24 +26,21 @@
 .div_style1 {
   width: 100%;
   z-index: 10;
-  max-width: 468.66666666666666666666666666667px;
   margin-right: 200px;
 }
 
 .div_style2 {
-  position: fixed;
-  width: 30%;
+  position: sticky;
+  width: 100%;
   z-index: 10;
   top: 120px;
-  max-width: 468.66666666666666666666666666667px;
   margin-right: 200px;
 }
 .div_style3 {
-  position: fixed;
-  width: 30%;
+  position: sticky;
+  width: 100%;
   z-index: 10;
-  bottom: 450px;
-  max-width: 468.66666666666666666666666666667px;
+  top: 100%;
   margin-right: 200px;
 }
 /*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PHONE START CSS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/

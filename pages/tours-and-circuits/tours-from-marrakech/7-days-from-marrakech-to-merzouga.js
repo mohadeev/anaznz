@@ -19,7 +19,7 @@ import Note from "../../../components/Note/Note";
 const Index = () => {
   const id = "5MMF";
   const SeoTitle =
-    "  7 Days Round Tour from Marrakech Via Merzouga Sahara Desert ";
+    " 7 Days Round Tour from Marrakech Via Merzouga Sahara Desert ";
   const ProgramName =
     " 7 Days Round Tour from Marrakech Via Merzouga Sahara Desert ";
 
@@ -32,28 +32,27 @@ const Index = () => {
   const [TourArray, setTourArray] = useState([
     {
       // FIRST IMAGES HERE / MARRAKECH - OR DESERT /
-      image:
-        "/../../../images/merzouga-images/desert-images/desert-images10.jpg",
+      image: "/../../../images/altas-images/altas-images-14.jpg",
 
       //THIS IMAGES SECOND IMAGES / FAMOUSE PLACE //
       image1:
-        "/../../../images/ait-ben-haddou-images/ourzazate-aitbenhadou5.jpg",
+        "/../../../images/ait-ben-haddou-images/ourzazate-aitbenhadou13.jpg",
       image1postion: "center",
 
       // A FOOD IMAGES /
 
-      image2: "/../../../images/food-images/morocco-food10.jpg",
+      image2: "/../../../images/marrakech-images/marrakech-images-7.jpg",
       image2postion: "top-center",
       // ACTIVTIES 1 / ANIMALS
       image3:
         // ACTIVTIES 2 CALM OR NATUTRE PLACE
-        "/../../../images/altas-images/altas-images-7.jpg",
+        "/../../../images/altas-images/altas-images-15.jpg",
 
-      image3postion: "",
+      image3postion: "bottom",
       image4:
         // ACTIVTIES 3 GROUP PEOPLPE
 
-        "/../../../images/merzouga-images/desert-images/desert-images11.jpg",
+        "/../../../images/merzouga-images/camels-images/desert-camels-merzouga-25.jpg",
       image4postion: "",
 
       // CITY
@@ -61,7 +60,7 @@ const Index = () => {
       image5postion: "",
 
       // ACTIVTIES 4 QUAD BIKE OR Sky
-      image6: "/../../../images/merzouga-images/quad-images/quad-images-9.jpg",
+      image6: "/../../../images/merzouga-images/quad-images/quad-images-3.jpg",
       image6postion: "top",
       tourname: ProgramName,
       category: "Tours From Marrakech",
@@ -128,6 +127,11 @@ const Index = () => {
     {
       dayNumer: "6",
       tourId: "OUR-HIG-MARR",
+      blockstyle: "block",
+    },
+    {
+      dayNumer: "7",
+      tourId: "MARR-VIT",
       blockstyle: "block",
       IsLast: true,
     },

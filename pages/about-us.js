@@ -5,6 +5,7 @@ import Style from "../styles/AbouComponent/aboutpage.module.css";
 import { CardName } from "../components/home_components/HomeDestenatons";
 import SomeText from "../components/AbouComponent/SomeText";
 import { ReviewComponet } from "../components/Reviews/Review";
+import WeAreUe from "../components/AbouComponent/WeAreUe.js";
 
 const index = () => {
   const AboutGuids = [
@@ -17,13 +18,13 @@ const index = () => {
     {
       image: "/../../../images/team/mohamed.jpg",
       name: "Mohamed",
-      massion: "Software Engineer / Technical Director at UE",
+      massion: "Software Engineer / Technical Manager",
       about: ``,
     },
     {
       image: "/../../../images/team/ibrahim.jpg",
       name: "Ibrahim",
-      massion: "co-founder / Program Manager ",
+      massion: "co-founder / Program Manager at UE",
       about: ``,
     },
     {
@@ -79,6 +80,7 @@ const index = () => {
           }
         />
       </div>{" "}
+      <WeAreUe />
       <DivRaf />
       <ReviewComponet />
       <div className={Style.div_some_text}>

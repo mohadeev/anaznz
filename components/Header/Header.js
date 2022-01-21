@@ -5,6 +5,8 @@ import LiveCHat from "../LiveChat/LiveCHat";
 import { TiThMenu } from "@react-icons/all-files/ti/TiThMenu";
 import { AiOutlineClose } from "@react-icons/all-files/ai/AiOutlineClose";
 import Socialmedia from "../socialmedia/Socialmedia";
+import Basket from "../Basket/Basket";
+import Search from "../../DaysData/Fliter/Search";
 
 export const MenuData = [
   { name: "Home", link: "/" },
@@ -54,7 +56,7 @@ const Header = () => {
     { name: "Blog", link: "/coming-soon" },
   ]);
   return (
-    <div>
+    <>
       <div
         className={Style.header}
         style={{
@@ -80,21 +82,19 @@ const Header = () => {
         <div className={Hide ? Style.div_nav_bar : Style.div_nav_bar_hide}>
           <ul className={Style.ul_nav_bar}>
             {MenuData.map(({ link, name }) => (
-                <li key={Math.random()} className={Style.li_nav_bar}>
-                  <Link href={link} passHref={true}>
-                    {name}
-                  </Link>
-                </li>
+              <li key={Math.random()} className={Style.li_nav_bar}>
+                <Link href={link} passHref={true}>
+                  {name}
+                </Link>
+              </li>
             ))}
           </ul>
         </div>
-        <div className={Style.div_socail__icons}>
-          <Socialmedia />
-        </div>
+        <Search />
+        <Basket />
       </div>
       <LiveCHat />
-    </div>
+    </>
   );
 };
 export default Header;
-
