@@ -40,7 +40,7 @@ const Index = () => {
       setLengh(Lengthy);
     });
     // window.addEventListener("change", (event) => alert(event.Shortkey));
-  }, [HandelChange, RefValue]);
+  }, [RefValue]);
   return (
     <select
       style={{ width: `${Lengh}px` }}
