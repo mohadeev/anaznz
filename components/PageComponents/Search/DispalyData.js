@@ -18,31 +18,38 @@ const DispalyData = ({ ColorName, ItemColor, Key }) => {
   const [Display, setDisplay] = useState(false);
 
   useEffect(() => {
-    Ref.current.checked = false;
-    let PathVar = Path;
-    let Params = new URL(window.location.href).searchParams;
-    const color = Params.get("color");
-    if (color) {
-      if (color === ColorName) {
-        Ref.current.checked = true;
-      } else {
-        console.log(ColorName + color);
+    const DispalyDataFun = () => {
+      Ref.current.checked = false;
+      let PathVar = Path;
+      let Params = new URL(window.location.href).searchParams;
+      const color = Params.get("color");
+      if (color) {
+        if (color === ColorName) {
+          Ref.current.checked = true;
+        } else {
+          // console.log(ColorName + color);
+        }
       }
-    }
+    };
+    DispalyDataFun()
   }, []);
 
   useEffect(() => {
-    Ref.current.checked = false;
-    let PathVar = Path;
-    let Params = new URL(window.location.href).searchParams;
-    const color = Params.get("color");
-    if (color) {
-      if (color === ColorName) {
-        Ref.current.checked = true;
-      } else {
-        console.log(ColorName + color);
-      }
-    }
+        DispalyDataFun = ()=>{
+          Ref.current.checked = false;
+          let PathVar = Path;
+          let Params = new URL(window.location.href).searchParams;
+          const color = Params.get("color");
+          if (color) {
+            if (color === ColorName) {
+              Ref.current.checked = true;
+            } else {
+              console.log(ColorName + color);
+            }
+          }
+        }
+        DispalyDataFun()
+
   }, [asPath]);
   const HandelCHange = (data) => {
     let PathVar = Path;
