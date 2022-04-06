@@ -27,7 +27,7 @@ const SheppingAndLocation = ({ Top, Bottom }) => {
   };
   useEffect(() => {
     setRefValue(BrandRef.current.value);
-  }, [dispatch , ReducerSheppingType]);
+  }, [dispatch]);
   return (
     <>
       <div className={Style.container}>
