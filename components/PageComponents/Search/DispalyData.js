@@ -31,11 +31,11 @@ const DispalyData = ({ ColorName, ItemColor, Key }) => {
         }
       }
     };
-    DispalyDataFun()
-  }, []);
+    DispalyDataFun();
+  }, [ColorName]);
 
   useEffect(() => {
-        DispalyDataFun = ()=>{
+        const DispalyDataFun = ()=>{
           Ref.current.checked = false;
           let PathVar = Path;
           let Params = new URL(window.location.href).searchParams;
@@ -50,7 +50,7 @@ const DispalyData = ({ ColorName, ItemColor, Key }) => {
         }
         DispalyDataFun()
 
-  }, [asPath]);
+  }, [asPath , ColorName]);
   const HandelCHange = (data) => {
     let PathVar = Path;
     let Params = new URL(Path).searchParams;
