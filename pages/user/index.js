@@ -8,7 +8,7 @@ const Index = () => {
       Router.push("/404");
     }
     Push();
-  }, []);
+  });
 
   return <></>;
 };

@@ -20,7 +20,6 @@ const DispalyData = ({ ColorName, ItemColor, Key }) => {
   useEffect(() => {
     const DispalyDataFun = () => {
       Ref.current.checked = false;
-      let PathVar = Path;
       let Params = new URL(window.location.href).searchParams;
       const color = Params.get("color");
       if (color) {
@@ -37,7 +36,6 @@ const DispalyData = ({ ColorName, ItemColor, Key }) => {
   useEffect(() => {
         const DispalyDataFun = ()=>{
           Ref.current.checked = false;
-          let PathVar = Path;
           let Params = new URL(window.location.href).searchParams;
           const color = Params.get("color");
           if (color) {
