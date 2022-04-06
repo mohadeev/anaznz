@@ -40,7 +40,7 @@ const ImagesGroup = () => {
       const NewArray = Images.slice(4, Images.length);
       setDataImages(NewArray);
     }
-  }, [Images]);
+  }, [Images, Length]);
   const Reffy = useRef();
   useEffect(() => {
     // Reffy.

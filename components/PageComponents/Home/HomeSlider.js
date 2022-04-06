@@ -13,24 +13,23 @@ const HomeSlider = () => {
   
   useEffect(() => {
     let CahngFuncton = () => {
-    const changeImage = () => {
-      if (i >= Array.length - 1) {
-        setTimeout(() => {
-          seti(0);
-          setBg(Array[i]);
-        }, 2500);
-      } else if (i >= 0) {
-        setTimeout(() => {
-          seti(i + 1);
-          setBg(Array[i]);
-        }, 2500);
-      }
+      const changeImage = () => {
+        if (i >= Array.length - 1) {
+          setTimeout(() => {
+            seti(0);
+            setBg(Array[i]);
+          }, 2500);
+        } else if (i >= 0) {
+          setTimeout(() => {
+            seti(i + 1);
+            setBg(Array[i]);
+          }, 2500);
+        }
+      };
+      setInterval(changeImage(), 1000);
     };
-    setInterval(changeImage(), 1000);
-  };
     CahngFuncton();
-    
-  }, [i]);
+  }, [i, Array]);
   return (
     <div className={Style.div_container}>
       <div

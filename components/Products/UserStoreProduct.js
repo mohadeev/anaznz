@@ -34,7 +34,7 @@ const UserStoreProduct = ({ Id, Url, Price, Name, Rate, Image, Desc }) => {
       }
     }
     number_test(rate);
-  }, []);
+  }, [ParseInt , rate]);
 
   return (
     <div id={Id} className={Style.container}>
