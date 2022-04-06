@@ -8,6 +8,7 @@ const Login = async (req, res) => {
   const { email } = req.body;
   const { password } = req.body;
 
+  //
   if (method === "POST") {
     const filter = { email: email };
     const update = { login: true };
@@ -27,6 +28,7 @@ const Login = async (req, res) => {
           res.json({ user: Resdocument });
         } else if (!document) {
           res.json({ error: "this email was not finded" });
+          
         }
       })
     );
@@ -38,3 +40,4 @@ const Login = async (req, res) => {
   }
 };
 export default Login
+//
