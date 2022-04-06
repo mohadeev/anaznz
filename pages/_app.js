@@ -18,6 +18,7 @@ function MyApp({ Component, pageProps }) {
 
   const sendCookie = Cookies.get("user_ref");
   useEffect(() => {
+    alert(process.env.NEXT_PUBLIC_ANALYTICS_ID + "defdfdfdf");
     const fetchData = async () => {
       socket = io();
       socket.connect();
@@ -73,6 +74,7 @@ function MyApp({ Component, pageProps }) {
       <Layout>
         <PayPalScriptProvider options={{ "client-id": "test" }}>
           <Component {...pageProps} />
+          {process.env.NEXT_PUBLIC_ANALYTICS_ID + "wewewewe"}
         </PayPalScriptProvider>
       </Layout>
       {/* </PersistGate> */}
