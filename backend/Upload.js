@@ -9,5 +9,6 @@ var storage = multer.diskStorage({
     cb(null, file.fieldname + "-" + Date.now());
   },
 });
+//
 
 var upload = multer({ storage: storage });
