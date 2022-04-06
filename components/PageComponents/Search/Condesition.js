@@ -83,7 +83,7 @@ const Condesition = () => {
       {Display && (
         <div className={Style.input_conainer}>
           {condestion.map((item, index) => (
-            <label className={Style.lable} for={item} key={index}>
+            <label className={Style.lable} htmlFor={item} key={index}>
               <input
                 id={item}
                 className={Style.input}

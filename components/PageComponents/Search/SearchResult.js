@@ -17,7 +17,7 @@ const SearchResult = () => {
           </p>
         </div>
         <div claaName={Style.searching}>
-          <p className={Style.p}> "{InputSearch}" </p>
+          <p className={Style.p}> &quot;{InputSearch}&quot; </p>
         </div>
       </div>
       <div className={Style.div_sellect}>

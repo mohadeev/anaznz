@@ -71,7 +71,7 @@ const ModelYear = () => {
       {Display && (
         <div className={Style.input_conainer}>
           {AllYears.map((data, index) => (
-            <label className={Style.lable} for={data} key={index}>
+            <label className={Style.lable} htmlFor={data} key={index}>
               <input
                 id={data}
                 className={Style.input}

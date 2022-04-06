@@ -42,11 +42,13 @@ const Home = () => {
       setChat(msg);
       // console.log(msg);
     });
+  }
     fetchData()
     return () => {
       socket.disconnect();
     };
   }, []);
+
   const onChangeHandler = (e) => {
     setMessage(e.target.value);
   };

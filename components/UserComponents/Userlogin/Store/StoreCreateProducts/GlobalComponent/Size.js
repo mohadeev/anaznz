@@ -12,7 +12,7 @@ const Size = ({ Top, Bottom, ClothingSize, Title }) => {
     return (
       <p className={Style.note}>
         <FcInfo />
-        Please note that we don't review your {date} name , make you write
+        Please note that we don&apos;t review your {date} name , make you write
         corrently
       </p>
     );

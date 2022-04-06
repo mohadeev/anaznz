@@ -76,7 +76,7 @@ const DispalyData = ({ ColorName, ItemColor, Key }) => {
         />
       </div>
 
-      <div for="input" className={Style.container_2}>
+      <div htmlFor="input" className={Style.container_2}>
         <div
           style={{ backgroundColor: `${ItemColor}` }}
           className={Style.div_of_color}
