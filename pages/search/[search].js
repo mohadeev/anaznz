@@ -48,7 +48,7 @@ const Search = () => {
       }
     };
     Displaydata();
-  }, [HeaderSearsch]);
+  }, []);
 
   useEffect(() => {
     const Displaydata = () => {
@@ -57,7 +57,7 @@ const Search = () => {
       }
     };
     Displaydata();
-  }, [HeaderSearsch]);
+  }, []);
 
   return (
     <>
