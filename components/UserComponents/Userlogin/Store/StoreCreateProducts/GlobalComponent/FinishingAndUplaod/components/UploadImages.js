@@ -23,6 +23,7 @@ const UploadImages = () => {
         <div className={Style.div_uplod}>
           <BsImages />
           <span className={Style.span}>upload your product image </span>
+          
         </div>
       </label>
       <ImagesGroup />

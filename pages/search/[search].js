@@ -34,9 +34,9 @@ const [WindiwOathname , setWindiwOathname] = useState()
       const Search = ["/search=?"];
       const SearchPath = asPath.split("");
       const Joig = SearchPath.splice(8, SearchPath.length);
-      const ARAUU = Joig.join(""); 
-      const dfdhdh = "/search/" + "/search=?" + ARAUU.toString()
-      const Lastpsuh = dfdhdh.toString()
+      const ARAUU = Joig.join("");
+      const dfdhdh = "/search/" + "/search=?" + ARAUU.toString();
+      const Lastpsuh = dfdhdh.toString();
       const pathth = pathname;
       if (pathth.includes("/search=?")) {
         alert("included");
@@ -45,13 +45,13 @@ const [WindiwOathname , setWindiwOathname] = useState()
         Router.push(Lastpsuh);
       }
     }
-  }, []);
+  }, [HeaderSearsch]);
 
   useEffect(() => {
     if (asPath !== "/search/[search]") {
       dispatch(HeaderSearsch({ value: asPath }));
     }
-  }, []);
+  }, [HeaderSearsch]);
 
   return (
     <>

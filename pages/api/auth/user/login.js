@@ -2,7 +2,7 @@ import dbConnect from "../../../../backend/db/dbCinnect/index";
 import User from "../../../../backend/db/schema/user";
 import nodemailer from "nodemailer";
 
-export default async (req, res) => {
+const Login = async (req, res) => {
   dbConnect();
   const { method } = req;
   const { email } = req.body;
@@ -37,3 +37,4 @@ export default async (req, res) => {
     res.end()
   }
 };
+export default Login

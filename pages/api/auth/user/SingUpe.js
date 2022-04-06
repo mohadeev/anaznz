@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 import multer from "multer";
 import upload from "multer";
 
-export default async (req, res) => {
+export default const SingUpe = async (req, res) => {
   dbConnect();
   const { method } = req;
   const { email } = req.body;
@@ -60,3 +60,4 @@ export default async (req, res) => {
     res.json({ message: "can not get to" });
   }
 };
+export default SingUpe  

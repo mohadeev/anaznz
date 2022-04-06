@@ -14,21 +14,26 @@ const Home = () => {
   //   path: "/api/socket",
   // });
   const sendCookie = Cookies.get("user_ref");
-  useEffect(async () => {
-    socket = io();
-    socket.connect();
-    await fetch("//localhost:3000/api/socket");
-    socket.emit("send-cookie", sendCookie);
-    socket.on("output-message", (msg) => {
-      setChat(msg);
-      console.log(msg);
-    });
+  useEffect(() => {
+    const fetchData = async () => {
+      socket = io();
+      socket.connect();
+      await fetch("//localhost:3000/api/socket");
+      socket.emit("send-cookie", sendCookie);
+      socket.on("output-message", (msg) => {
+        setChat(msg);
+        console.log(msg);
+      });
+    };
+    fetchData();
     return () => {
       socket.disconnect();
     };
-  });
+  } );
 
-  useEffect(async () => {
+  useEffect( () => {
+        const fetchData = async () => {
+
     socket = io();
     socket.connect();
     await fetch("//localhost:3000/api/socket");
@@ -37,6 +42,7 @@ const Home = () => {
       setChat(msg);
       // console.log(msg);
     });
+    fetchData()
     return () => {
       socket.disconnect();
     };
@@ -59,7 +65,7 @@ const Home = () => {
         <button onClick={DisptchData}>Do it</button>
       </form>
 
-      <Link href={"/contact-us"}>
+      <Link href={"/contact-us"} passHref={true}>
         <h2>go to Conatact us</h2>
       </Link>
     </>

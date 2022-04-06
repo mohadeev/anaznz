@@ -9,7 +9,7 @@ import { AiOutlineEye } from "@react-icons/all-files/ai/AiOutlineEye";
 import { AiOutlineEyeInvisible } from "@react-icons/all-files/ai/AiOutlineEyeInvisible";
 import Link from "next/link";
 
-const singup = () => {
+const Singup = () => {
   const Router = useRouter();
   const [FullName, setFullName] = useState("");
   const [Email, setEmail] = useState("");
@@ -101,11 +101,11 @@ const singup = () => {
           {error ? <p>Eroor</p> : ""}
           <p className={Style._terms}>
             By continuing, you agree to{" "}
-            <Link href="/user/terms">
-              <span className={Style.link_terms}>Mystore's Terms</span>
+            <Link href="/user/terms" passHref={true}>
+              <span className={Style.link_terms}>Mystore&apos;s Terms</span>
             </Link>{" "}
             of Use and{" "}
-            <Link href="/user/privacy-policy">
+            <Link href="/user/privacy-policy" passHref={true}>
               <span className={Style.link_terms}>Privacy Policy.</span>
             </Link>
           </p>
@@ -117,4 +117,4 @@ const singup = () => {
   );
 };
 
-export default singup;
+export default Singup;

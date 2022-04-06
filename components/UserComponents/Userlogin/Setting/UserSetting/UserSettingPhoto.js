@@ -99,7 +99,7 @@ const UserSettingPhoto = () => {
         }}
         className={Style.user_images}
       >
-        <label className={Style.cammera_icon} for="disply">
+        <label className={Style.cammera_icon} htmlFor="disply">
           {Cameraicon}
           <input
             className={Style.input_hidden}

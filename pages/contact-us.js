@@ -14,7 +14,9 @@ const Home = () => {
   const [Chat, setChat] = useState([]);
   const [SeachValue, useSeachValue] = useState(" user name Seach fro anything");
   // const { data, error } = useSWR("/api/test", fetcher);
-  useEffect(async () => {
+  useEffect( () => {
+const fetchMyAPI = async ()=>{
+
     socket.on("connect", () => {
       console.log("hhhhhh works fuck ");
     });
@@ -22,7 +24,8 @@ const Home = () => {
       setChat(msg);
       // setMessage(msg);
     });
-
+}
+fetchMyAPI();
     return socket.on("output-nessage", () => {});
   });
 
@@ -44,7 +47,7 @@ const Home = () => {
       <input placeholder={SeachValue} onChange={onChangeHandler} />
       <button onSubmit={DisptchData}>Do it</button>
       {/* </from> */}
-      <Link href={"/contact-us"}>
+      <Link href={"/contact-us"} passHref={true}>
         <h2>go to Conatact us</h2>
       </Link>
     </>
