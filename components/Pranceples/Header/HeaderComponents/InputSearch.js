@@ -45,7 +45,7 @@ const InputSearch = () => {
     input_Search.current.value = MenuSellect;
     setValue(MenuSellect);
     dispatch(HeaderMenuSearchValue({ value: MenuSellect }));
-  }, [MenuSellect]);
+  }, [MenuSellect , dispatch]);
  
   const HandelChange = (e) => {
     setValue(e.target.value);

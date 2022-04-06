@@ -27,7 +27,7 @@ const SearchResult = () => {
       }
     };
     DispatchData();
-  }, [asPath]);
+  }, [asPath, dispatch]);
 
   return (
     <div className={Style.container}>

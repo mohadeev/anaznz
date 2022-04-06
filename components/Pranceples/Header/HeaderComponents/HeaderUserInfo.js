@@ -20,23 +20,26 @@ const HeaderUserInfo = () => {
   const input_Search = useRef();
   const Ref2 = useRef();
 
-  useEffect((e) => {
-    const HandelClick = (e) => {
-      if (input_Search && input_Search.current) {
-        const refany = input_Search.current;
-        if (refany.contains(e.target)) {
-          setShowDiv(!ShowDiv);
-        } else if (Ref2 && Ref2.current) {
-          const refany = Ref2.current;
-          if (!refany.contains(e.target)) {
-            setShowDiv(false);
+  useEffect(
+    (e) => {
+      const HandelClick = (e) => {
+        if (input_Search && input_Search.current) {
+          const refany = input_Search.current;
+          if (refany.contains(e.target)) {
+            setShowDiv(!ShowDiv);
+          } else if (Ref2 && Ref2.current) {
+            const refany = Ref2.current;
+            if (!refany.contains(e.target)) {
+              setShowDiv(false);
+            }
           }
         }
-      }
-    };
-    window.addEventListener("click", HandelClick);
-    // return window.removeEventListener("click", HandelClick)
-  }, []);
+      };
+      window.addEventListener("click", HandelClick);
+      // return window.removeEventListener("click", HandelClick)
+    },
+    [ShowDiv]
+  );
   const Leaveing = () => {
     setTimeout(() => {
       setShowDiv(false);
