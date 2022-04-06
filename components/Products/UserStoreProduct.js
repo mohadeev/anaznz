@@ -11,29 +11,34 @@ const UserStoreProduct = ({ Id, Url, Price, Name, Rate, Image, Desc }) => {
   const [isIn, setisIn] = useState(false);
   const { rate } = Rate;
   const { count } = Rate;
-  const [Rated, setRated] = useState(parseInt(rate, 10));
+  const [Rated  , setRated ] = useState(parseInt(rate, 10))
   const rating = Rated - 5;
   const rray = rating.toString();
   const ArrayOfRate = rray.slice(1, 2);
-  const [ParseInt, setParseInt] = useState(parseInt(ArrayOfRate));
+  const [ParseInt , setParseInt] = useState(0);
 
   useEffect(() => {
+    // const DATAATA=()=>{
+    setParseInt(parseInt(ArrayOfRate))
     function number_test(n) {
       let result = n - Math.floor(n); //!== 0;
       if (result) {
         console.log(`${result}Number has a decimal place.`);
-        setParseInt(ParseInt - 1);
+        setParseInt(ParseInt-1)
         setisIn(true);
-      } else if (result) {
+      }else if (result  ) {
         console.log(`${result}Number has a decimal place.`);
-        setParseInt(ParseInt - 1);
+        setParseInt(ParseInt-1)
         setisIn(true);
-      } else {
+      }
+       else {
         console.log("It is a whole number.");
-        setisIn(false);
+          setisIn(false);
       }
     }
     number_test(rate);
+      
+      // DATAATA()
   }, []);
 
   return (
@@ -56,17 +61,9 @@ const UserStoreProduct = ({ Id, Url, Price, Name, Rate, Image, Desc }) => {
         <p className={Style.price}>
           <span className={Style.price_price}> {Price} $</span>
           <span className={Style.rating}>
-            {Array(Rated)
-              .fill()
-              .map((i, index) => (
-                <BsStarFill key={index} />
-              ))}
+            {Array(Rated).fill().map(( i , index)=>(<BsStarFill key={index}/>))}
             {isIn && <BsStarHalf />}
-            {Rated < 5
-              ? Array(ParseInt)
-                  .fill()
-                  .map((i, index) => <BsStar key={index} />)
-              : ""}
+            {/* {Rated < 5 ? Array(1).fill().map((i , index)=>(<BsStar key={index}/>)) : ""} */}
             <small className={Style.small_review}>
               <BsChevronDown /> ( {count}.00 )
             </small>
