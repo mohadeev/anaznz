@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 15px;
+  margin-top: 10px;
+  /* margin-left: 15px; */
+  border-top: 0.00000002em solid #8ab4f8;
+  border-bottom: 0.0000002em solid #8ab4f8;
+}
+.div_links {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  row-gap: 20px;
+  column-gap: 10px;
+}
+
+.user_image {
+  background-color: #f3941e;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-size: cover;
+  margin-left: 15px;
+}
+
+.user_name {
+  width: auto;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: Playfair Display;
+  cursor: pointer;
+}

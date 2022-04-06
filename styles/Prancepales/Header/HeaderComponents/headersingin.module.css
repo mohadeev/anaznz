@@ -1,0 +1,86 @@
+.container {
+}
+.div_items {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+.icon_of_profile {
+  color: white;
+  font-size: 20px;
+  cursor : pointer;
+}
+.singin {
+color: white;
+  width: 100%;
+  height: auto;
+  font-size: 13px;
+  font-family: Poppins;
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; */
+  margin: 0;
+  padding: 0;
+  cursor : pointer;
+}
+.div_hidden {
+  width: 180px;
+  height: 150px;
+  background-color: white;
+  box-shadow: 0 4px 20px rgb(34 34 34 / 15%);
+  border-radius: 5px;
+  position: absolute;
+  border: 0.1px solid #f8f8f8;
+  top: 60px;
+  right: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 5%;
+}
+.div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.user_action_button {
+  font-size: 13px;
+  font-family: Poppins;
+  color: #fff;
+  cursor: pointer;
+  background-color: #f3941e;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  padding: 0 10px;
+  width: 60%;
+}
+.div_purchase {
+  width: 100%;
+  height: auto;
+  font-size: 13px;
+  font-family: Poppins;
+  color: #0f1111;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+}
+.p {
+  cursor: pointer;
+}
+.p:hover {
+  text-decoration: underline;
+}
+.div_purchase:hover {
+  color: #c45500;
+}

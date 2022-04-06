@@ -1,0 +1,62 @@
+.user_data_div {
+  width: 100%;
+  height: auto;
+}
+.form_data {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  background-color: #f8f8f8;
+  padding: 60px 0;
+}
+.lable_input {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 10px;
+  padding: 0px 0;
+  border-radius: 5px 0 0 5px;
+}
+.input {
+  height: 35px;
+  width: 80%;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 13px;
+  font-family: Poppins;
+  color: #666;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  font-family: Poppins;
+}
+.succes {
+  font-family: Poppins;
+  font-size: 14px;
+  color: #00ff00;
+}
+.save {
+  font-size: 13px;
+  font-family: Poppins;
+  color: #fff;
+  cursor: pointer;
+  background-color: #f3941e;
+  height: 35px;
+  width: 80px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 0 10px;
+}

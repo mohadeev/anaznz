@@ -1,0 +1,30 @@
+.logo_image {
+  height: 50px;
+  width: 50px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/images/logo/logo.png");
+   margin : 0 ; 
+  padding : 0 ; 
+}
+.logo_container {
+  flex-basis: 15%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin : 0 ; 
+  padding : 0 ; 
+}
+.logo_text {
+  font-family: Playfair Display;
+  color: white;
+  font-size: 20px;
+   margin : 0 ; 
+  padding : 0 ; 
+    cursor: pointer;
+
+}

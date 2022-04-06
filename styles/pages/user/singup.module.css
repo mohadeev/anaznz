@@ -1,0 +1,90 @@
+.singup_container {
+  width: 90%;
+  display: flex;
+  height: auto;
+  flex-direction: row;
+  align-items: center;
+  margin: 50px auto;
+}
+.div_form {
+  flex-basis: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+.form_sing_up {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8f8;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 10px;
+  padding: 50px 0;
+  border-radius: 5px 0 0 5px;
+  position: relative;
+}
+.label_iput {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.form_sing_up_input {
+  height: 35px;
+  width: 80%;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 13px;
+  font-family: Poppins;
+  color: #666;
+}
+.form_sing_up > button {
+  font-size: 13px;
+  font-family: Poppins;
+  color: #fff;
+  cursor: pointer;
+  background-color: #f3941e;
+  height: 35px;
+  width: auto;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+.div_info_singup {
+  width: 75%;
+  background-color: #071c55;
+  border-radius: 0 5px 5px 0;
+  height: 392px;
+}
+._terms {
+  font-family: Poppins;
+  color: #666;
+  font-size: 13px;
+  text-align: center;
+  width: 80%;
+  clear: both;
+    display: inline;
+    white-space: wrap;
+}
+.link_terms {
+  display: inline;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.ayes_display {
+  position: absolute;
+  right: 10%;
+  top: 11px;
+  cursor: pointer;
+}

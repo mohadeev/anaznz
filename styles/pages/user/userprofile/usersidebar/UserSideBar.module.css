@@ -1,0 +1,8 @@
+.div_side_bar{
+    background-color : #fff;
+      box-shadow: 0 4px 20px rgb(34 34 34 / 15%);
+
+    width : 16%; 
+/* flex-basis: 40%; */
+    height : auto;
+}

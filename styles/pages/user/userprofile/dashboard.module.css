@@ -1,0 +1,56 @@
+.div_dashboard {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.loader_container{
+  width : 100%;
+  height : auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.animation{
+  width : 82%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar{
+  width : 16%;
+  height : 400px;
+  background-color : #071C34;
+}
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #071c34; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.failed {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.failed > div {
+  width: 10%;
+  height: 30%;
+  background-image: url("/images/designs/MnQWcWb6SrY.svg");
+  background-size: cotain;
+  background-repeat: no-repeat;
+}

@@ -13,6 +13,8 @@ const Index = () => {
   //       Reeef.current.style.display = "none";
   //     }, 500);
   //   }, [url]);
+
+  
   return (
     <div ref={Reeef} className={Style.anamimation}>
       Coming soon ....
@@ -22,6 +24,14 @@ const Index = () => {
       <div className={Style.sun}>
         <div className={Style.dot}></div>
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      
     </div>
   );
 };

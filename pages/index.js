@@ -1,30 +1,19 @@
-import React from "react";
-import Style from "../styles/Home.module.css";
-import Seo from "../components/Seo";
+import {useEffect,useState} from 'react'
+import HomeSlider from "../components/PageComponents/Home/HomeSlider";
 import Link from "next/link";
-import HomeDestenatons from "../components/home_components/HomeDestenatons";
-import HeaderMedaiVideo from "../components/home_components/HeaderMedaiVideo";
-import Chooseus from "../components/home_components/Chooseus";
-import DivRaf from "../components/AbouComponent/DivRaf";
-import ShortAboutUrEx from "../components/AbouComponent/ShortAboutUrEx";
-import FamouseDest from "../components/home_components/FamouseDest";
+import Style from "../styles/home/home.module.css"
 
-const index = ({ datas }) => {
+const Index = () => {
+  // useEffect(async () => {
+  //     await fetch("/api/test").then(async (doc) => {
+  //     const newDoc = await doc.json();
+  //     console.log(newDoc + "hhhh");
+  //   });
+  // });
   return (
-    <div className={Style.home_container}>
-      <head>
-        <title>Ur Excuersions || Home</title>
-      </head>
-      <Seo />
-      <HeaderMedaiVideo />
-      {/*---------------------------------------------------------------------------------*/}
-      <ShortAboutUrEx />
-      <Chooseus />
-      <HomeDestenatons ArraySlice={3} />
-      <DivRaf />
-      <FamouseDest ByWhat={"id"} />
+    <div className={Style.home_contsiner}>
+      <HomeSlider />
     </div>
   );
 };
-
-export default index;
+export default Index;

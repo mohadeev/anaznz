@@ -1,0 +1,39 @@
+.div_uplod{
+background-color: #fff;
+  border-radius: 5px;
+  height: 100px;
+  width: 400px;
+  border: none;
+  outline: none;
+  border: 2px dashed #eaeaea;
+  padding: 0 10px;
+  font-size: 13px;
+  font-family: Poppins;
+  color: #666;
+  border-left: none;
+  display: flex;
+  flex-direction: column;
+  align-items : center;
+  justify-content: center;
+  cursor: pointer;
+}
+.div_uplod > svg {
+    font-size : 20px;
+}
+.span{
+
+}
+.title {
+  width: 400px;
+  color: #071c34;
+  font-family: poppins;
+  font-size: 15px;
+  text-align: justify;
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  margin-left: 0px;
+  margin-top: 20px;
+}

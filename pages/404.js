@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
+import BreakLink from '../components/Modals/BreakLink';
 
 const Index = () => {
-  return <div>this page wont finded yet</div>;
+  return <BreakLink />
 };
 
 export default Index;

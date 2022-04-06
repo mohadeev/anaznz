@@ -1,0 +1,25 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top : 50px;
+}
+.button {
+  font-size: 13px;
+  font-family: Poppins;
+  color: #fff;
+  cursor: pointer;
+  background-color: #f3941e;
+  height: 35px;
+  width: 90px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}

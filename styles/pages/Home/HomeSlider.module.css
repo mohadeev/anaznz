@@ -1,0 +1,21 @@
+/* .div_slider {
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+} */
+
+.div_container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+.div_slider {
+  width: 100%;
+  height: 600px;
+  background-position: top;
+  background-size: cover;
+  position: absolute;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
+}

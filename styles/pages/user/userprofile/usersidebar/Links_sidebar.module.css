@@ -1,0 +1,6 @@
+.div_side_bar{
+    background-color : #fff;
+    width : 20%; 
+/* flex-basis: 40%; */
+    height : auto;
+}

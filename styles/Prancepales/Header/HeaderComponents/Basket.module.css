@@ -1,0 +1,20 @@
+.basket_container > svg {
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.basket_items {
+  font-family: Poppins;
+  font-size: 13px;
+  background-color: #f3941e;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50%;
+cursor: pointer;
+
+}

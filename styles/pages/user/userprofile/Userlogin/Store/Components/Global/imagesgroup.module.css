@@ -1,0 +1,40 @@
+.conainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.div_image {
+  width: 20%;
+  height: 80px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 4px 20px rgb(34 34 34 / 15%);
+  border: solid 1px #eaeaea;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.conainer> svg{
+    font-size: 20px;
+color: #071c34;
+  border-radius: 50%;
+  background-color: white;
+  padding : 2px;
+  cursor : pointer
+
+}
+.div_image > svg {
+  font-size: 15px;
+  position: absolute;
+  top: -10px;
+  left: -5px;
+  background-color: white;
+  color: #071c34;
+  border-radius: 50%;
+  padding : 2px;
+}

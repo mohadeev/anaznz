@@ -1,0 +1,27 @@
+.container {
+  /* background-color: #eaeaea; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid #f8f8f8;
+
+}
+
+.container > p {
+  color: #000;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.container > svg {
+  color: #666;
+  font-size: 16px;
+  margin-right: 20px;
+  cursor: pointer;
+}

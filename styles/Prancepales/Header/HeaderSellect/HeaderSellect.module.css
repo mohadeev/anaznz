@@ -1,0 +1,18 @@
+.button_catgory {
+  background-color: #f8f8f8;
+  height: 100%;
+  font-family: Poppins;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  border-radius: 5px 0px 0px 5px;
+  cursor: pointer;
+  text-align: start;
+  font-size: 14px;
+   
+}
+.button_catgory  > option {
+  margin : 5px;
+}

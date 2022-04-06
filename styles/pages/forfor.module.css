@@ -1,0 +1,14 @@
+.failed {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.failed > div {
+  width: 10%;
+  height: 30%;
+  background-image: url("/images/designs/MnQWcWb6SrY.svg");
+  background-size: cotain;
+  background-repeat: no-repeat;
+}

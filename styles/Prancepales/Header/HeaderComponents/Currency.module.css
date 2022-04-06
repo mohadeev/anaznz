@@ -1,0 +1,17 @@
+.icon_container {
+    text-align: center;
+}
+.icon_container > svg {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.icon_items {
+  font-family: Poppins;
+  font-size: 13px;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+}
