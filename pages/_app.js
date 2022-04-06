@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
     const fetchData = async () => {
       socket = io();
       socket.connect();
-      await fetch("//localhost:3000/api/socket");
+      await fetch(`${process.env.PORT}/api/socket`);
       if (sendCookie) {
         socket.emit("send-cookie", sendCookie);
         socket.on("user-res", (payload) => {
@@ -38,9 +38,10 @@ function MyApp({ Component, pageProps }) {
     return () => {
       socket.disconnect();
     };
-  } , )
+  });
   useEffect(() => {
     const fetchData = async () => {
+      alert(process.env.NEXT_PUBLIC_ANALYTICS_ID);
       socket = io();
       socket.connect();
       await fetch("//localhost:3000/api/socket");

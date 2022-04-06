@@ -10,6 +10,7 @@ const Index = () => {
   //     console.log(newDoc + "hhhh");
   //   });
   // });
+
   return (
     <div className={Style.home_contsiner}>
       <HomeSlider />
