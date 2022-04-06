@@ -60,7 +60,7 @@ function MyApp({ Component, pageProps }) {
     return () => {
       socket.disconnect();
     };
-  }, [sendCookie, socket]);
+  }, [sendCookie, dispatch]);
 
   return (
     <Provider store={store}>
