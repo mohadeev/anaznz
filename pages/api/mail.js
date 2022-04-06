@@ -3,7 +3,7 @@ const accountSid = process.env.PUBLIC_KEY_FOR_SMS;
 const authToken = process.env.SECRET_KEY_FOR_SMS;
 import Client from "twilio";
 const client = new Client(accountSid, authToken);
-
+//
 const Handler = (req, res) => {
   const Body = JSON.parse(req.body);
   const Email = Body.map((item) => item.email);
