@@ -41,6 +41,7 @@ function MyApp({ Component, pageProps }) {
   });
   useEffect(() => {
     const fetchData = async () => {
+      alert(process.env.NEXT_PUBLIC_ANALYTICS_ID);
       socket = io();
       socket.connect();
       await fetch(`${process.env.NEXT_PUBLIC_ANALYTICS_ID}/api/socket`);
