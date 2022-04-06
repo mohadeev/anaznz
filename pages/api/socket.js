@@ -6,7 +6,7 @@ import User from "../../backend/db/schema/user";
 const SocketHandler = async (req, res) => {
   if (res.socket.server.io) {
     console.log("Socket is already running");
-  } else {
+  } else 
     console.log("Socket is initializing");
     const io = new Server(res.socket.server);
     res.socket.server.io = io;
@@ -14,11 +14,11 @@ const SocketHandler = async (req, res) => {
       dbConnect();
       socket.on("send-cookie", async (msg) => {
         await User.findOne({ _id: msg }).then((document) => {
-          const _id = document._id.toHexString();
+          const _id = document._id;
           const email = document.email;
           const name = document.name;
           const image = document.image;
-          const First = [{name , _id, email, name, image}];
+          const First = [{name , _id.toHexString(), email, name, image}];
           console.log(First);
           if (msg !== null) {
             socket.emit("user-res", First);

@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
 
   const sendCookie = Cookies.get("user_ref");
   useEffect(() => {
-    alert(process.env.NEXT_PUBLIC_ANALYTICS_ID + "defdfdfdf");
+    // alert(process.env.NEXT_PUBLIC_ANALYTICS_ID + "defdfdfdf");
     const fetchData = async () => {
       socket = io();
       socket.connect();
@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }) {
   });
   useEffect(() => {
     const fetchData = async () => {
-      alert(process.env.NEXT_PUBLIC_ANALYTICS_ID + "defdfdfdf");
+      // alert(process.env.NEXT_PUBLIC_ANALYTICS_ID + "defdfdfdf");
       socket = io();
       socket.connect();
       await fetch(`${process.env.NEXT_PUBLIC_ANALYTICS_ID}/api/socket`);

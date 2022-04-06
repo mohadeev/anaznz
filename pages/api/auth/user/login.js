@@ -32,10 +32,10 @@ const Login = async (req, res) => {
       })
     );
   } else if (method === "GET") {
-    // User.findOne({ user_ref: req.cookies.user_ref }).then((Document) => {
-    //   res.json(Document);
-    // });
-    res.json({ sdsdsdsdsdsdsdsd: "sdsdsdklsdklsldklsdlksdlksdlksdk" });
+    User.findOne({ user_ref: req.cookies.user_ref }).then((Document) => {
+      res.json(Document);
+    });
+    // res.json({ sdsdsdsdsdsdsdsd: "sdsdsdklsdklsldklsdlksdlksdlksdk" });
   }
 };
 export default Login;
