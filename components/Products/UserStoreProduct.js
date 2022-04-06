@@ -21,20 +21,20 @@ const UserStoreProduct = ({ Id, Url, Price, Name, Rate, Image, Desc }) => {
     function number_test(n) {
       let result = n - Math.floor(n); //!== 0;
       if (result) {
-        // console.log(`${result}Number has a decimal place.`);
+        console.log(`${result}Number has a decimal place.`);
         setParseInt(ParseInt - 1);
         setisIn(true);
       } else if (result) {
-        // console.log(`${result}Number has a decimal place.`);
+        console.log(`${result}Number has a decimal place.`);
         setParseInt(ParseInt - 1);
         setisIn(true);
       } else {
-        // console.log("It is a whole number.");
+        console.log("It is a whole number.");
         setisIn(false);
       }
     }
     number_test(rate);
-  }, [ParseInt , rate]);
+  }, []);
 
   return (
     <div id={Id} className={Style.container}>

@@ -16,7 +16,7 @@ const Basket = () => {
    
   });
   return (
-    <Link href="/your-card" passHref={true} passHref={true}>
+    <Link href="/your-card" passHref={true}>
       <div className={Style.basket_container}>
         <AiFillShopping />
         <span className={Style.basket_items}>{BasketLenght.length}</span>
