@@ -5,7 +5,7 @@ import multer from "multer";
 import upload from "multer";
 import mongoose from "mongoose";
 
-const Singup async (req, res) => {
+const Singup  = async (req, res) => {
   dbConnect();
   const { method } = req;
   const { email } = req.body;

@@ -10,7 +10,7 @@ const UserProfile = useSelector((state) => state.UserSlice.userRudux);
 const DataPayload = UserProfile.map((item) => item.payload);
 const Id = DataPayload.map((item) => item.map(({ _id }) => _id));
   return (
-    <Link href={`/user/${Id}=store`}>
+    <Link href={`/user/${Id}=store`} passHref={true}>
       <div className={Style.icon_container}>
         <span className={Style.icon_items}>Sell now</span>
         <br />

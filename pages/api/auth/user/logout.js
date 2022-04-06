@@ -2,7 +2,7 @@ import dbConnect from "../../../../backend/db/dbCinnect/index";
 import User from "../../../../backend/db/schema/user";
 import nodemailer from "nodemailer";
 
-export default async (req, res) => {
+ const  logout = async (req, res) => {
   dbConnect();
   const { method } = req;
   const { login } = req.body;
@@ -23,3 +23,4 @@ export default async (req, res) => {
     res.send("Sory cant get / ");
   }
 };
+export default logout
