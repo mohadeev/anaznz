@@ -28,7 +28,6 @@ const Login = async (req, res) => {
           res.json({ user: Resdocument });
         } else if (!document) {
           res.json({ error: "this email was not finded" });
-          
         }
       })
     );
@@ -36,8 +35,8 @@ const Login = async (req, res) => {
     // User.findOne({ user_ref: req.cookies.user_ref }).then((Document) => {
     //   res.json(Document);
     // });
-    res.end()
+    res.json({ sdsdsdsdsdsdsdsd: "sdsdsdklsdklsldklsdlksdlksdlksdk" });
   }
 };
-export default Login
+export default Login;
 //
