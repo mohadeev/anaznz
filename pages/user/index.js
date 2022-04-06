@@ -4,12 +4,13 @@ import { useRouter } from "next/router";
 const Index = () => {
   const Router = useRouter();
   useEffect(() => {
-    Router.push("/404");
+    const Push = () => {
+      Router.push("/404");
+    }
+    Push();
   }, []);
-  
-  return (
-    <></>
-  )
+
+  return <></>;
 };
 
 export default Index;
