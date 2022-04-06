@@ -1,7 +1,8 @@
 import mongoose from "mongoose";
 
 const connnection = {};
-const conectUrl = process.env.MONGO_DB_CONECT;
+const conectUrl = "mongodb+srv://uradmine:guYGHY4GWEN53MbT@cluster0.itamj.mongodb.net/UserDb?retryWrites=true&w=majority"
+// process.env.MONGO_DB_CONECT;
 const dbConnect = async () => {
   if (connnection.isConnected) {
     return;
