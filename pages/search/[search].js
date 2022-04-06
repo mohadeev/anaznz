@@ -29,35 +29,32 @@ const Search = () => {
   }, []);
 
   useEffect(() => {
-    const Displaydata = () => {
-      if (asPath !== "/search/[search]") {
-        dispatch(HeaderSearsch({ value: asPath }));
-        const Search = ["/search=?"];
-        const SearchPath = asPath.split("");
-        const Joig = SearchPath.splice(8, SearchPath.length);
-        const ARAUU = Joig.join("");
-        const dfdhdh = "/search/" + "/search=?" + ARAUU.toString();
-        const Lastpsuh = dfdhdh.toString();
-        const pathth = pathname;
-        if (pathth.includes("/search=?")) {
-          alert("included");
-        } else if (!pathth.includes("/search=?")) {
-          // alert(" not included");
-          Router.push(Lastpsuh);
-        }
+    if (asPath !== "/search/[search]") {
+      dispatch(HeaderSearsch({ value: asPath }));
+      const Search = ["/search=?"];
+      const SearchPath = asPath.split("");
+      const Joig = SearchPath.splice(8, SearchPath.length);
+      const ARAUU = Joig.join("");
+      const dfdhdh = "/search/" + "/search=?" + ARAUU.toString();
+      const Lastpsuh = dfdhdh.toString();
+      const pathth = pathname;
+      if (pathth.includes("/search=?")) {
+        alert("included");
+      } else if (!pathth.includes("/search=?")) {
+        // alert(" not included");
+        Router.push(Lastpsuh);
       }
-    };
-    Displaydata();
-  }, []);
+    }
+  }, [HeaderSearsch]);
 
   useEffect(() => {
-    const Displaydata = () => {
+    const DataPayload = () => {
       if (asPath !== "/search/[search]") {
         dispatch(HeaderSearsch({ value: asPath }));
       }
     };
-    Displaydata();
-  }, []);
+    DataPayload();
+  }, [HeaderSearsch]);
 
   return (
     <>
