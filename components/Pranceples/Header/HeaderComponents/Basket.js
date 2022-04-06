@@ -6,11 +6,10 @@ import Link from "next/link";
 
 const Basket = () => {
   return (
-    <Link href="/your-card">
+    <Link href="/your-card" passHref={true}>
       <div className={Style.basket_container}>
-      <span className={Style.basket_items}>20</span>
+        <span className={Style.basket_items}>20</span>
         <TiShoppingCart />
-
       </div>
     </Link>
   );

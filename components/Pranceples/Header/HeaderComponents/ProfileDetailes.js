@@ -32,7 +32,7 @@ const ProfileDetailes = () => {
   useEffect(() => {
     setUserNameState(UserName);
     setIdState(Id);
-  }, [Displayprofile]);
+  }, [Displayprofile , Id,UserName]);
 
   const Handellogout = async () => {
     dispatch(UserLogOut());

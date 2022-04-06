@@ -28,7 +28,7 @@ const Index = () => {
     let Lengthy = 0;
     ArryLength.map((item) => {
       if (RefValue <= 6) {
-        console.log(RefValue)
+        console.log(RefValue);
         Lengthy += 15;
       } else if (RefValue <= 10) {
         Lengthy += 12;
@@ -40,7 +40,7 @@ const Index = () => {
       setLengh(Lengthy);
     });
     // window.addEventListener("change", (event) => alert(event.Shortkey));
-  }, [HandelChange]);
+  }, [HandelChange, RefValue]);
   return (
     <select
       style={{ width: `${Lengh}px` }}
