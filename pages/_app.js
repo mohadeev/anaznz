@@ -17,69 +17,65 @@ function MyApp({ Component, pageProps }) {
   const dispatch = useDispatch();
 
   const sendCookie = Cookies.get("user_ref");
-  useEffect(async () => {
-    socket = io();
-    socket.connect();
-    await fetch("//localhost:3000/api/socket");
-    if (sendCookie) {
-      socket.emit("send-cookie", sendCookie);
-      socket.on("user-res", (payload) => {
-        
-        dispatch(UserLoginSuccessed({ payload: payload }));
-        
-      });
-    } else {
-      socket.emit("send-cookie", sendCookie);
-      socket.on("user-res", (payload) => {
-
-        dispatch(UserLogOut());
-      });
-    }
+  useEffect(() => {
+    const fetchData = async () => {
+      socket = io();
+      socket.connect();
+      await fetch("//localhost:3000/api/socket");
+      if (sendCookie) {
+        socket.emit("send-cookie", sendCookie);
+        socket.on("user-res", (payload) => {
+          dispatch(UserLoginSuccessed({ payload: payload }));
+        });
+      } else {
+        socket.emit("send-cookie", sendCookie);
+        socket.on("user-res", (payload) => {
+          dispatch(UserLogOut());
+        });
+      }
+    };
+    fetchData();
     return () => {
       socket.disconnect();
     };
-  });
-  useEffect(async () => {
-    socket = io();
-    socket.connect();
-    await fetch("//localhost:3000/api/socket");
-    if (sendCookie) {
-      socket.emit("send-cookie", sendCookie);
-      socket.on("user-res", (payload) => {
-
-
-        dispatch(UserLoginSuccessed({ payload: payload }));
-      });
-    } else {
-      socket.emit("send-cookie", sendCookie);
-      socket.on("user-res", (payload) => {
-
-
-        dispatch(UserLogOut());
-      });
-    }
+  } , )
+  useEffect(() => {
+    const fetchData = async () => {
+      socket = io();
+      socket.connect();
+      await fetch("//localhost:3000/api/socket");
+      if (sendCookie) {
+        socket.emit("send-cookie", sendCookie);
+        socket.on("user-res", (payload) => {
+          dispatch(UserLoginSuccessed({ payload: payload }));
+        });
+      } else {
+        socket.emit("send-cookie", sendCookie);
+        socket.on("user-res", (payload) => {
+          dispatch(UserLogOut());
+        });
+      }
+    };
+    fetchData();
     return () => {
       socket.disconnect();
     };
-  }, [sendCookie , socket]);
+  }, [sendCookie, socket]);
 
   return (
-    
-   
-      <Provider store={store}>
-        {/* <PersistGate
+    <Provider store={store}>
+      {/* <PersistGate
         loading={<div>Please Wait A momnet</div>}
         persistor={persistor}
       > */}
-        
-        <Layout>
-          <PayPalScriptProvider options={{ "client-id": "test" }}>
-            <Component {...pageProps} />
-          </PayPalScriptProvider>
-        </Layout>
-        {/* </PersistGate> */}
-      </Provider>
-    
+
+      <Layout>
+        <PayPalScriptProvider options={{ "client-id": "test" }}>
+          <Component {...pageProps} />
+        </PayPalScriptProvider>
+      </Layout>
+      {/* </PersistGate> */}
+    </Provider>
   );
 }
 // export default MyApp

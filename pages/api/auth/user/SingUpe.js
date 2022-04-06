@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 import multer from "multer";
 import upload from "multer";
 
-export default const SingUpe = async (req, res) => {
+const SingUpe = async (req, res) => {
   dbConnect();
   const { method } = req;
   const { email } = req.body;
