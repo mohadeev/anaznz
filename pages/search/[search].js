@@ -28,33 +28,26 @@ const Search = () => {
     setWindiwOathname(window.location.pathname);
   }, []);
 
-  useEffect(() => {
-    if (asPath !== "/search/[search]") {
-      dispatch(HeaderSearsch({ value: asPath }));
-      const Search = ["/search=?"];
-      const SearchPath = asPath.split("");
-      const Joig = SearchPath.splice(8, SearchPath.length);
-      const ARAUU = Joig.join("");
-      const dfdhdh = "/search/" + "/search=?" + ARAUU.toString();
-      const Lastpsuh = dfdhdh.toString();
-      const pathth = pathname;
-      if (pathth.includes("/search=?")) {
-        alert("included");
-      } else if (!pathth.includes("/search=?")) {
-        // alert(" not included");
-        Router.push(Lastpsuh);
-      }
-    }
-  }, [HeaderSearsch]);
+  // useEffect(() => {
+  //   if (asPath !== "/search/[search]") {
+  //     dispatch(HeaderSearsch({ value: asPath }));
+  //     const Search = ["/search=?"];
+  //     const SearchPath = asPath.split("");
+  //     const Joig = SearchPath.splice(8, SearchPath.length);
+  //     const ARAUU = Joig.join("");
+  //     const dfdhdh = "/search/" + "/search=?" + ARAUU.toString();
+  //     const Lastpsuh = dfdhdh.toString();
+  //     const pathth = pathname;
+  //     if (pathth.includes("/search=?")) {
+  //       alert("included");
+  //     } else if (!pathth.includes("/search=?")) {
+  //       // alert(" not included");
+  //       Router.push(Lastpsuh);
+  //     }
+  //   }
+  // }, [HeaderSearsch]);
 
-  useEffect(() => {
-    const DataPayload = () => {
-      if (asPath !== "/search/[search]") {
-        dispatch(HeaderSearsch({ value: asPath }));
-      }
-    };
-    DataPayload();
-  }, [HeaderSearsch]);
+ 
 
   return (
     <>

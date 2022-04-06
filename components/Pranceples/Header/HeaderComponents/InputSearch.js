@@ -51,14 +51,14 @@ const InputSearch = () => {
     setValue(e.target.value);
     setShowDiv(true);
     dispatch(HeaderMenuSearchValue({ value: e.target.value }));
-        Router.push(`/search/&text=${e.target.value}`);
+    Router.push(`/search/search=?&text=${e.target.value}`);
 
   };
   const PushtoSearch = (e) => {
     e.preventDefault();
     setValue(Value);
     dispatch(HeaderMenuSearch({ value: Value }));
-    Router.push(`/search/text=${Value}`);
+    Router.push(`/search//search=?&text=${Value}`);
   };
 
   return (

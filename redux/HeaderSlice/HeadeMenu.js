@@ -31,29 +31,8 @@ export const HeadeMenuFunc = createSlice({
     HeaderMenuSearch: (state, action) => {
       state.MenuSearch = action.payload.value;
     },
-    HeaderSearsch: (state, action) => {
-      const data = action.payload.value;
-      const Split = data.split("");
-      let NewArray = Split.splice(13, Split.length);
-
-      let index = NewArray.indexOf("%");
-      const Map = () => {
-        if (index >= 0) {
-          const datata = NewArray.splice(index, 3, " ");
-          index = NewArray.indexOf("%");
-          state.InputSearch = NewArray.join("");
-        }
-      };
-      const filtert = NewArray.filter((item) => item === "%");
-      const JoinFilter = filtert.join("");
-      const SplitFilter = JoinFilter.split("");
-      const Fuc = () => {
-        SplitFilter.map((item) => {
-          Map();
-        });
-      };
-      state.InputSearch = NewArray.join("");
-      Fuc();
+    HeaderSearsch: (state, action) => {      
+      state.InputSearch = action.payload.value
     },
   },
 });

@@ -1,12 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Style from "../../../styles/pages/Search/components/searchresult.module.css";
 import { AllDepatment } from "../../../backend/AllDepatment";
+import {
+  HeaderMenuSearch,
+  HeaderSearsch,
+} from "../../../redux/HeaderSlice/HeadeMenu";
+import { useRouter } from "next/router";
 
 const SearchResult = () => {
+  const { asPath, pathname } = useRouter();
+  const dispatch = useDispatch();
+
+  const MenuSearchValue = useSelector(
+    (state) => state.HeaderMenuRuducer.MenuSearchValue
+  );
   const InputSearch = useSelector(
     (state) => state.HeaderMenuRuducer.InputSearch
   );
+  useEffect(() => {
+    const DispatchData = () => {
+      if (window.location.pathname !== "/search/[search]") {
+        let Params = new URL(window.location.href).searchParams;
+        const text = Params.get("text");
+        dispatch(HeaderSearsch({ value: text }));
+      }
+    };
+    DispatchData();
+  }, [asPath]);
+
   return (
     <div className={Style.container}>
       <div className={Style.div_search}>
