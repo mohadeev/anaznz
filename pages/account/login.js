@@ -61,7 +61,7 @@ const Singup = () => {
   return (
     <div className={Style.singup_container}>
       <div className={Style.div_form}>
-      e
+      
         <form className={Style.form_sing_up} onSubmit={HandelSumite}>
           <label htmlFor="email" className={Style.label_iput}>
             <input
